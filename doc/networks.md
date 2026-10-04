@@ -10,7 +10,7 @@ Two SWARM networks run. The rule to remember: **the plain hostnames are the test
 | Light-wallet server (gRPC over TLS) | `lwd-main.swarm.green:443` | `lwd.swarm.green:443` |
 | Explorer | https://mainnet.explore.swarm.green (also https://explore.swarm.green) | https://testnet.explore.swarm.green/ |
 | Status feed | https://lwd-main.swarm.green/status.json | — |
-| Downloads | https://lwd-main.swarm.green/downloads/ (linked from swarm.green) | — |
+| Downloads | `lwd-main.swarm.green/downloads/<tag>/<file>`, linked with checksums from swarm.green | — |
 | Shielded address prefix | `swm1…` | `swarm1…` |
 | Transparent address prefixes | `s1…` (P2PKH), `s3…` (P2SH) | testnet prefixes |
 | Messenger | `chat.swarm.green` | — |

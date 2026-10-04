@@ -14,5 +14,6 @@ jobs:
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --exclude-all-private --accept 200,204,429 './**/*.md'
+          # x.com answers 403 to robots; the SWARM hosts rate-limit them. Both are checked by people, not by this job.
+          args: --no-progress --exclude-all-private --accept 200,204,429 --timeout 30 --exclude 'x\.com' --exclude 'swarm\.green' './**/*.md'
           fail: true
