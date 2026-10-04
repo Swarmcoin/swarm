@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security problem
+    url: https://github.com/louisinthesubway/swarm/blob/main/SECURITY.md
+    about: Report vulnerabilities privately, never in a public issue.
+  - name: Downloads and checksums
+    url: https://swarm.green/ecosystem/
+    about: The current builds and their SHA-256 checksums.
+  - name: Mainnet explorer
+    url: https://mainnet.explore.swarm.green
+    about: Check a block, a transaction or an address before reporting a chain problem.
