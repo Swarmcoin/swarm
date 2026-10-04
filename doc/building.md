@@ -17,7 +17,7 @@ Every component repository carries the authoritative instructions and the pinned
 ## Full node: privacy-zebra
 
 ```bash
-git clone https://github.com/louisinthesubway/privacy-zebra
+git clone https://github.com/Swarmcoin/privacy-zebra
 cd privacy-zebra
 cargo build --release --bin zebrad
 ./target/release/zebrad start          # joins SwarmMainnet with the default configuration
@@ -28,7 +28,7 @@ The repository's CI builds Linux, Windows, macOS Apple silicon and macOS Intel b
 ## Indexer and light-wallet server: privacy-zaino
 
 ```bash
-git clone https://github.com/louisinthesubway/privacy-zaino
+git clone https://github.com/Swarmcoin/privacy-zaino
 cd privacy-zaino
 cargo build --release
 cargo nextest run                      # unit tests; the live tests need a running node
@@ -39,7 +39,7 @@ cargo nextest run                      # unit tests; the live tests need a runni
 ## Desktop wallet: privacy-wallet
 
 ```bash
-git clone https://github.com/louisinthesubway/privacy-wallet
+git clone https://github.com/Swarmcoin/privacy-wallet
 cd privacy-wallet
 yarn install
 yarn build                             # builds the Rust addon, then the app
@@ -53,7 +53,7 @@ macOS packages are built from the same tree on a Mac; the CI publishes Apple sil
 ## Node and miner app: swarm-node
 
 ```bash
-git clone https://github.com/louisinthesubway/swarm-node
+git clone https://github.com/Swarmcoin/swarm-node
 cd swarm-node
 npm install
 npm run lint && npm test
@@ -66,7 +66,7 @@ The app bundles a `zebrad` built from privacy-zebra; the README names the exact 
 ## Wallet core: swarm-wallet-core
 
 ```bash
-git clone https://github.com/louisinthesubway/swarm-wallet-core
+git clone https://github.com/Swarmcoin/swarm-wallet-core
 cd swarm-wallet-core
 npm ci
 npm run typecheck && npm test          # the addon is mocked
@@ -75,16 +75,16 @@ npm run neon                           # builds the native addon; needs Rust and
 
 ## Messenger
 
-Desktop client: [swarm-messenger](https://github.com/louisinthesubway/swarm-messenger) (pnpm; the build and start scripts, the SWARM-specific steps and the test-instance rules are in its README). Server side: [swarm-messenger-server](https://github.com/louisinthesubway/swarm-messenger-server), [swarm-storage-service](https://github.com/louisinthesubway/swarm-storage-service), [swarm-calling-service](https://github.com/louisinthesubway/swarm-calling-service) and [swarm-libsignal](https://github.com/louisinthesubway/swarm-libsignal); the server repository contains the staging stack. A rebranded build must never be pointed at Signal's servers; the SWARM builds carry SWARM's trust roots and endpoints.
+Desktop client: [swarm-messenger](https://github.com/Swarmcoin/swarm-messenger) (pnpm; the build and start scripts, the SWARM-specific steps and the test-instance rules are in its README). Server side: [swarm-messenger-server](https://github.com/Swarmcoin/swarm-messenger-server), [swarm-storage-service](https://github.com/Swarmcoin/swarm-storage-service), [swarm-calling-service](https://github.com/Swarmcoin/swarm-calling-service) and [swarm-libsignal](https://github.com/Swarmcoin/swarm-libsignal); the server repository contains the staging stack. A rebranded build must never be pointed at Signal's servers; the SWARM builds carry SWARM's trust roots and endpoints.
 
 ## Browser
 
-[swarm-browser](https://github.com/louisinthesubway/swarm-browser) builds ungoogled-chromium for Windows with the SWARM patches and the wallet host. A full Chromium build takes many hours and a large machine; the repository's CI does it, one build at a time.
+[swarm-browser](https://github.com/Swarmcoin/swarm-browser) builds ungoogled-chromium for Windows with the SWARM patches and the wallet host. A full Chromium build takes many hours and a large machine; the repository's CI does it, one build at a time.
 
 ## Website
 
 ```bash
-git clone https://github.com/louisinthesubway/swarm.green
+git clone https://github.com/Swarmcoin/swarm.green
 cd swarm.green
 python tools/build_pages.py && python tools/build_ecosystem.py && python tools/seo.py
 python tools/seo.py --check && python tools/build_ecosystem.py --check
@@ -94,4 +94,4 @@ Static HTML, no framework; the generators keep the shared navigation identical a
 
 ## Reproducibility
 
-Release notes in [swarm-releases](https://github.com/louisinthesubway/swarm-releases) name the commit each build was made from and its SHA-256. Rebuilding bit-for-bit is not yet guaranteed for the Electron apps; the Rust binaries are built in CI from pinned toolchains.
+Release notes in [swarm-releases](https://github.com/Swarmcoin/swarm-releases) name the commit each build was made from and its SHA-256. Rebuilding bit-for-bit is not yet guaranteed for the Electron apps; the Rust binaries are built in CI from pinned toolchains.

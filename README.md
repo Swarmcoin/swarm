@@ -85,18 +85,18 @@ Every component is open source. Installers are served from the project's own ser
 
 | Repository | What it is | Based on | Licence |
 | --- | --- | --- | --- |
-| [privacy-zebra](https://github.com/louisinthesubway/privacy-zebra) | The full node: validates blocks and transactions, serves the network. Consensus rules and cryptography unmodified. | [Zebra](https://github.com/ZcashFoundation/zebra) (Zcash Foundation) | MIT / Apache-2.0 |
-| [privacy-zaino](https://github.com/louisinthesubway/privacy-zaino) | The indexer behind the light-wallet servers and the explorer. | [Zaino](https://github.com/zingolabs/zaino) (Zingo Labs) | Apache-2.0 |
-| [privacy-zingolib](https://github.com/louisinthesubway/privacy-zingolib) · [privacy-lightwallet-protocol-rust](https://github.com/louisinthesubway/privacy-lightwallet-protocol-rust) | The light-wallet SDK and protocol crate carrying the SWARM network definition (release `swarm-sdk-mainnet-1`), so other wallets can be built against the same chain. | [zingolib](https://github.com/zingolabs/zingolib) | MIT |
-| [swarm-node](https://github.com/louisinthesubway/swarm-node) | **SWARM Node**: the desktop node and mining app for Windows, Linux and macOS, with a live map of the swarm. | own code, wraps `zebrad` | MIT |
-| [privacy-wallet](https://github.com/louisinthesubway/privacy-wallet) | **SWARM Wallet** for desktop (Windows, Linux, macOS): shielded or transparent payments, 24-word recovery phrase, lock code. | [Zingo PC](https://github.com/zingolabs/zingo-pc) | MIT |
-| [swarm-mobile](https://github.com/louisinthesubway/swarm-mobile) | **SWARM Wallet for Android**, and the iOS work. | [zingo-mobile](https://github.com/zingolabs/zingo-mobile) | MIT |
-| [swarm-wallet-core](https://github.com/louisinthesubway/swarm-wallet-core) | The typed wallet core (TypeScript over the Rust addon) used by SWARM Messenger and SWARM Browser. | own code over zingolib | MIT |
-| [swarm-messenger](https://github.com/louisinthesubway/swarm-messenger) · [swarm-messenger-server](https://github.com/louisinthesubway/swarm-messenger-server) · [swarm-libsignal](https://github.com/louisinthesubway/swarm-libsignal) · [swarm-storage-service](https://github.com/louisinthesubway/swarm-storage-service) · [swarm-calling-service](https://github.com/louisinthesubway/swarm-calling-service) | **SWARM Messenger**: end-to-end encrypted messaging between SWARM wallets with payments inside the chat; sign-in with the 24 words, no phone number. Runs on SWARM's own server, never on Signal's. | Signal Desktop, Signal Server, libsignal, storage-service, calling-service (Signal Messenger, LLC) | AGPL-3.0 |
-| [swarm-browser](https://github.com/louisinthesubway/swarm-browser) | **SWARM Browser**: Chromium with Google's services removed and the SWARM wallet inside. | [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium) | BSD-3-Clause |
-| [swarm-explorer](https://github.com/louisinthesubway/swarm-explorer) | The block explorer: every block, every transaction, every allocation, with the network named on every page. | own fork | Apache-2.0 |
-| [swarm.green](https://github.com/louisinthesubway/swarm.green) | The website. Static, no build step, no tracking of downloads. | own code | see repository |
-| [swarm-releases](https://github.com/louisinthesubway/swarm-releases) | Release notes and SHA-256 checksums for every published build. | — | — |
+| [privacy-zebra](https://github.com/Swarmcoin/privacy-zebra) | The full node: validates blocks and transactions, serves the network. Consensus rules and cryptography unmodified. | [Zebra](https://github.com/ZcashFoundation/zebra) (Zcash Foundation) | MIT / Apache-2.0 |
+| [privacy-zaino](https://github.com/Swarmcoin/privacy-zaino) | The indexer behind the light-wallet servers and the explorer. | [Zaino](https://github.com/zingolabs/zaino) (Zingo Labs) | Apache-2.0 |
+| [privacy-zingolib](https://github.com/Swarmcoin/privacy-zingolib) · [privacy-lightwallet-protocol-rust](https://github.com/Swarmcoin/privacy-lightwallet-protocol-rust) | The light-wallet SDK and protocol crate carrying the SWARM network definition (release `swarm-sdk-mainnet-1`), so other wallets can be built against the same chain. | [zingolib](https://github.com/zingolabs/zingolib) | MIT |
+| [swarm-node](https://github.com/Swarmcoin/swarm-node) | **SWARM Node**: the desktop node and mining app for Windows, Linux and macOS, with a live map of the swarm. | own code, wraps `zebrad` | MIT |
+| [privacy-wallet](https://github.com/Swarmcoin/privacy-wallet) | **SWARM Wallet** for desktop (Windows, Linux, macOS): shielded or transparent payments, 24-word recovery phrase, lock code. | [Zingo PC](https://github.com/zingolabs/zingo-pc) | MIT |
+| [swarm-mobile](https://github.com/Swarmcoin/swarm-mobile) | **SWARM Wallet for Android**, and the iOS work. | [zingo-mobile](https://github.com/zingolabs/zingo-mobile) | MIT |
+| [swarm-wallet-core](https://github.com/Swarmcoin/swarm-wallet-core) | The typed wallet core (TypeScript over the Rust addon) used by SWARM Messenger and SWARM Browser. | own code over zingolib | MIT |
+| [swarm-messenger](https://github.com/Swarmcoin/swarm-messenger) · [swarm-messenger-server](https://github.com/Swarmcoin/swarm-messenger-server) · [swarm-libsignal](https://github.com/Swarmcoin/swarm-libsignal) · [swarm-storage-service](https://github.com/Swarmcoin/swarm-storage-service) · [swarm-calling-service](https://github.com/Swarmcoin/swarm-calling-service) | **SWARM Messenger**: end-to-end encrypted messaging between SWARM wallets with payments inside the chat; sign-in with the 24 words, no phone number. Runs on SWARM's own server, never on Signal's. | Signal Desktop, Signal Server, libsignal, storage-service, calling-service (Signal Messenger, LLC) | AGPL-3.0 |
+| [swarm-browser](https://github.com/Swarmcoin/swarm-browser) | **SWARM Browser**: Chromium with Google's services removed and the SWARM wallet inside. | [ungoogled-chromium](https://github.com/ungoogled-software/ungoogled-chromium) | BSD-3-Clause |
+| [swarm-explorer](https://github.com/Swarmcoin/swarm-explorer) | The block explorer: every block, every transaction, every allocation, with the network named on every page. | own fork | Apache-2.0 |
+| [swarm.green](https://github.com/Swarmcoin/swarm.green) | The website. Static, no build step, no tracking of downloads. | own code | see repository |
+| [swarm-releases](https://github.com/Swarmcoin/swarm-releases) | Release notes and SHA-256 checksums for every published build. | — | — |
 
 Current public versions: SWARM Wallet 0.1.0-mainnet.10 (desktop), SWARM Wallet for Android 0.2.0-mainnet.4 (direct APK), SWARM Messenger 0.1.4, SWARM Browser 153.0.8010.52-5 (Windows, pre-release), SWARM Node 0.2.0-mainnet.5 (published again when public mining opens).
 
@@ -160,23 +160,23 @@ Each repository has its own README with the exact toolchain. The short version:
 
 ```bash
 # Full node (Rust 1.96, see the repository's rust-toolchain)
-git clone https://github.com/louisinthesubway/privacy-zebra && cd privacy-zebra
+git clone https://github.com/Swarmcoin/privacy-zebra && cd privacy-zebra
 cargo build --release --bin zebrad
 
 # Indexer / light-wallet server
-git clone https://github.com/louisinthesubway/privacy-zaino && cd privacy-zaino
+git clone https://github.com/Swarmcoin/privacy-zaino && cd privacy-zaino
 cargo build --release
 
 # Desktop wallet (Node 22, Yarn, Rust for the addon)
-git clone https://github.com/louisinthesubway/privacy-wallet && cd privacy-wallet
+git clone https://github.com/Swarmcoin/privacy-wallet && cd privacy-wallet
 yarn install && yarn build && yarn start
 
 # SWARM Node app (Node 22)
-git clone https://github.com/louisinthesubway/swarm-node && cd swarm-node
+git clone https://github.com/Swarmcoin/swarm-node && cd swarm-node
 npm install && npm test && npm start
 
 # Wallet core used by Messenger and Browser
-git clone https://github.com/louisinthesubway/swarm-wallet-core && cd swarm-wallet-core
+git clone https://github.com/Swarmcoin/swarm-wallet-core && cd swarm-wallet-core
 npm ci && npm run typecheck && npm test
 ```
 
@@ -192,7 +192,7 @@ Details per component, including the messenger and the browser builds: [doc/buil
 
 ## Releases and verification
 
-Installers are hosted on the project's own server, `lwd-main.swarm.green/downloads/<tag>/<file>`, and every download row on [swarm.green/ecosystem](https://swarm.green/ecosystem/) carries its SHA-256. The release notes and checksum files are published in [swarm-releases](https://github.com/louisinthesubway/swarm-releases). Verify before you install:
+Installers are hosted on the project's own server, `lwd-main.swarm.green/downloads/<tag>/<file>`, and every download row on [swarm.green/ecosystem](https://swarm.green/ecosystem/) carries its SHA-256. The release notes and checksum files are published in [swarm-releases](https://github.com/Swarmcoin/swarm-releases). Verify before you install:
 
 ```bash
 sha256sum SWARM-Wallet-0.1.0-mainnet.10-x86_64.AppImage

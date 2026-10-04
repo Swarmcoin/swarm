@@ -24,7 +24,7 @@ Two SWARM networks run. The rule to remember: **the plain hostnames are the test
 
 ## Running your own
 
-A full node (`zebrad` from [privacy-zebra](https://github.com/louisinthesubway/privacy-zebra)) joins the network by itself; it needs no account and no key. A light-wallet server (`zainod` from [privacy-zaino](https://github.com/louisinthesubway/privacy-zaino)) sits beside a node and serves wallets; pointing SWARM Wallet at your own server removes the project's server from the picture. Build instructions: [building.md](building.md).
+A full node (`zebrad` from [privacy-zebra](https://github.com/Swarmcoin/privacy-zebra)) joins the network by itself; it needs no account and no key. A light-wallet server (`zainod` from [privacy-zaino](https://github.com/Swarmcoin/privacy-zaino)) sits beside a node and serves wallets; pointing SWARM Wallet at your own server removes the project's server from the picture. Build instructions: [building.md](building.md).
 
 ## Operational note
 

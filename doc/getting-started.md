@@ -46,7 +46,7 @@ A Windows build of Chromium 153 from the ungoogled-chromium code base with Googl
 
 ## 8. Running your own node
 
-`zebrad` from [privacy-zebra](https://github.com/louisinthesubway/privacy-zebra) joins the mainnet with the default configuration; see [building.md](building.md). The chain is young, so disk use is small today; it grows with the chain.
+`zebrad` from [privacy-zebra](https://github.com/Swarmcoin/privacy-zebra) joins the mainnet with the default configuration; see [building.md](building.md). The chain is young, so disk use is small today; it grows with the chain.
 
 ## Help
 
