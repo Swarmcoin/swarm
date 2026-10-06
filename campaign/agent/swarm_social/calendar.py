@@ -16,6 +16,7 @@ class CalendarPost:
     pillar: str = ""
     thread: list[str] = field(default_factory=list)   # follow-up posts, in order
     media: list[str] = field(default_factory=list)    # public image URLs (Metricool only)
+    reply: str = ""                                   # first reply under the post, after the thread: the link or the source
     notes: str = ""
 
     @classmethod
@@ -24,7 +25,7 @@ class CalendarPost:
         if when.tzinfo is None:
             when = when.replace(tzinfo=timezone.utc)
         return cls(id=d["id"], when=when.astimezone(timezone.utc), text=d["text"], pillar=d.get("pillar", ""),
-                   thread=list(d.get("thread", [])), media=list(d.get("media", [])), notes=d.get("notes", ""))
+                   thread=list(d.get("thread", [])), media=list(d.get("media", [])), reply=d.get("reply", "") or "", notes=d.get("notes", ""))
 
 
 def load_calendar(path: Path) -> list[CalendarPost]:

@@ -27,6 +27,8 @@ class Policy:
         self.banned_phrases: list[str] = [p.lower() for p in data.get("banned_phrases", [])]
         self.banned_regex = [re.compile(r, re.IGNORECASE) for r in data.get("banned_regex", [])]
         self.allowed_link_hosts: list[str] = data.get("allowed_link_hosts", [])
+        # Hosts a *source* reply may never cite, even though source replies may link anywhere else.
+        self.source_link_denied = [re.compile(r, re.IGNORECASE) for r in data.get("source_link_denied_regex", [])]
         self.disclaimer_triggers = [t.lower() for t in data.get("disclaimer_triggers", [])]
         self.disclaimers = [d.lower() for d in data.get("disclaimers", [])]
         self.max_post_chars: int = int(data.get("max_post_chars", 280))
@@ -48,8 +50,13 @@ class Policy:
 
     # ----- text checks ---------------------------------------------------
 
-    def check_text(self, text: str, *, is_reply: bool = False, max_chars: int | None = None) -> list[Violation]:
-        """Return every rule the text breaks. Empty list means publishable."""
+    def check_text(self, text: str, *, is_reply: bool = False, max_chars: int | None = None,
+                   source_links: bool = False) -> list[Violation]:
+        """Return every rule the text breaks. Empty list means publishable.
+
+        source_links=True is for the first reply under a story or explainer: it may cite any
+        host (a court, an archive, a newspaper) except the ones in source_link_denied_regex.
+        Every other text may link only to the official channels."""
         out: list[Violation] = []
         lowered = text.lower()
         limit = max_chars or self.max_post_chars
@@ -72,6 +79,10 @@ class Policy:
             url = url.rstrip(".,;:!?'\"")   # punctuation after a link is not part of it
             host = urlparse(url).netloc.lower()
             path = urlparse(url).path
+            if source_links:
+                if any(rx.search(url) for rx in self.source_link_denied):
+                    out.append(Violation("link_host", f"source link to {host} is on the denied list"))
+                continue
             ok = any(
                 host == h or host.endswith("." + h) or (("/" in h) and (host + path).startswith(h))
                 for h in self.allowed_link_hosts

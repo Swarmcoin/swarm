@@ -40,7 +40,7 @@ def test_scheduler_publishes_thread_and_refuses_policy_breaks(tmp_path):
     now = datetime.now(timezone.utc)
     when = (now - timedelta(minutes=5)).isoformat()
     cal = [
-        {"id": "ok", "when": when, "text": "SWARM is private money. https://swarm.green", "thread": ["Shielded by default.", "Transparent when you choose."]},
+        {"id": "ok", "when": when, "text": "SWARM is private money.", "thread": ["Shielded by default.", "Transparent when you choose."], "reply": "Details: https://swarm.green"},
         {"id": "bad", "when": when, "text": "SWM to the moon 🚀"},
     ]
     s = _settings(tmp_path, cal, dry_run=True)
@@ -49,7 +49,9 @@ def test_scheduler_publishes_thread_and_refuses_policy_breaks(tmp_path):
     published = run_scheduler(s, POLICY, state, x)
     assert published == ["ok"]
     posts = [w for w in x.written if w["kind"] == "post"]
-    assert len(posts) == 3 and posts[1]["reply_to"] == posts[0]["id"] and posts[2]["reply_to"] == posts[1]["id"]
+    assert len(posts) == 4 and posts[1]["reply_to"] == posts[0]["id"] and posts[2]["reply_to"] == posts[1]["id"]
+    # the link travels in the first reply under the thread, never in the post itself
+    assert posts[3]["reply_to"] == posts[2]["id"] and "https://swarm.green" in posts[3]["text"]
     assert state.data["posted_calendar_ids"] == ["ok"]
     assert any(e["action"] == "refused_calendar_post" for e in state.data["log"])
     # second run: nothing new

@@ -5,368 +5,453 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 ## Wednesday 07 October 2026
 
-**09:00 UTC** · `d01-a` · facts · image
+**07:30 UTC** · `d01-a` · quote
 
-> SWARM is private money. A shielded payment keeps the sender, the receiver and the amount encrypted on the chain; the network still verifies it. Proof of work, 75-second blocks, 20,999,987 SWM at most. Mainnet has been live since 2 October 2026.  
-> https://swarm.green/what-is-swarm
+> "Privacy is not secrecy. A private matter is something one doesn't want the whole world to know, but a secret matter is something one doesn't want anybody to know."  
+> Eric Hughes, A Cypherpunk's Manifesto, 9 March 1993. Still the clearest line on the subject.
+>
+> ↳ *first reply:* The whole manifesto is 700 words and worth the five minutes: https://www.activism.net/cypherpunk/manifesto.html
 
-**16:00 UTC** · `d01-b` · facts · thread
+**13:30 UTC** · `d01-b` · story · thread
 
-> How a shielded payment works, in five posts. 🐝
->> 1/ Most digital money is surveillance money: every transfer is a public record of who paid whom, how much and when, forever.
->> 2/ A shielded SWARM payment uses a zero-knowledge proof. The chain records that a valid payment happened. It does not record who paid, who received or how much.
->> 3/ The wallet gives you a shielded address by default. It starts with swm1. A transparent address (s1) exists for the cases where visibility is wanted, for example an exchange deposit.
->> 4/ Shielding protects what is written to the chain. It does not hide that you use SWARM from your network provider or from the light-wallet server. Run your own node when that matters.
->> 5/ The cryptography is the Zcash protocol stack, unmodified. SWARM adds its own network, its economics and its apps. Details: https://swarm.green/what-is-swarm
+> On 27 March 1943 a sculptor and a painter dressed as policemen walked into the Amsterdam population registry and set it on fire. They were trying to destroy a database. Here is why it mattered.
+>> 1/ The Dutch registry was excellent. It recorded every resident's address and religion. When Germany occupied the Netherlands in 1940, the occupiers did not need to find the Jews. The cards had already done it.
+>> 2/ Gerrit van der Veen, a sculptor, and Willem Arondeus, a painter, led a resistance group that drugged the guards, drenched the card files and set explosives. About 15 percent of the records burned. The rest survived.
+>> 3/ Twelve of the attackers, Arondeus among them, were executed on 1 July 1943. Van der Veen was shot in 1944. Arondeus' last message asked that people be told that homosexuals were not cowards.
+>> 4/ A well-kept database became a kill list. Nobody who built it meant that. That is the point: the harm of a record is decided by whoever holds it later, not by whoever created it.
+>> 5/ That is why we care about what gets written down at all. The safest record is the one that was never made. Which records about you exist today that you would not want in the wrong hands in ten years?
+>
+> ↳ *first reply:* Sources: Anne Frank House https://www.annefrank.org/en/timeline/128/the-resistance-attacks-the-population-register-of-amsterdam/ and the Dutch Resistance Museum https://www.verzetsmuseum.org/en/kennisbank/armed-resistance-1
 
 
 ## Thursday 08 October 2026
 
-**09:00 UTC** · `d02-a` · facts
+**07:30 UTC** · `d02-a` · explain
 
-> The numbers, fixed in the genesis rules:  
-> 6.25 SWM per block  
-> a block every 75 seconds  
-> halving every 1,680,000 blocks, about four years  
-> 20,999,987.3152 SWM at most  
-> 0 coins in the genesis block  
-> Every SWM that exists has been mined.
+> How do you prove you know a secret without saying it? A 1989 paper used a cave: a ring with a locked door at the back. You walk in. I shout which side to come out of. Come out right 20 times in a row and you know the password. I never heard it. That is a zero-knowledge proof.
+>
+> ↳ *first reply:* The paper: Quisquater, Guillou and others, "How to Explain Zero-Knowledge Protocols to Your Children", CRYPTO 1989 https://doi.org/10.1007/0-387-34805-0_60 A shielded payment works the same way: the chain checks the proof and never sees the amount.
 
-**16:00 UTC** · `d02-b` · product
+**13:30 UTC** · `d02-b` · promo · image
 
-> SWARM Wallet 0.1.0-mainnet.11 is out for Windows, macOS (Apple silicon and Intel) and Linux (.deb and AppImage). Shielded by default, 24-word recovery phrase, lock code. Every file carries its SHA-256; compare it before you install.  
-> https://swarm.green/ecosystem/wallet
+> SWARM is private money. A shielded payment keeps the sender, the receiver and the amount encrypted on the chain, and the network still verifies it, with a proof like this morning's cave. Proof of work, open source, no premine. This account is mostly about why that matters.
+>
+> ↳ *first reply:* What it is, in one page: https://swarm.green/what-is-swarm
 
 
 ## Friday 09 October 2026
 
-**09:00 UTC** · `d03-a` · facts
+**07:30 UTC** · `d03-a` · story
 
-> Where every block goes, for the whole life of the chain: 80% to the miner who found it, 8% Core Development, 4% Grants & Ecosystem, 8% Community & Development Reserve. Paid block by block to three published addresses. Not a premine, and not without allocation. Mined, not sold.
+> 8 November 2016, 20:00: India announced that its 500 and 1,000 rupee notes, 86 percent of cash by value, would be void at midnight. Queues lasted weeks; reports counted over 80 deaths. The central bank found 99.3 percent came back. The black money was not there.
+>
+> ↳ *first reply:* The 99.3 percent figure is from the Reserve Bank of India's 2017-18 annual report: https://m.thewire.in/article/banking/rbi-says-99-3-of-scrapped-money-returned-to-the-banking-system
 
-**16:00 UTC** · `d03-b` · community
+**13:30 UTC** · `d03-b` · question
 
-> Question for people who use privacy tools every day: what made you stop trusting a product that called itself private? We are collecting the answers for the things we have not shipped yet.
+> A question for people who use privacy tools every day: what made you stop trusting a product that called itself private? Not the brand, the moment. We are collecting the answers for the things we have not built yet.
 
 
 ## Saturday 10 October 2026
 
-**09:00 UTC** · `d04-a` · build
+**10:00 UTC** · `d04-a` · quote
 
-> You can check that you are on the real chain. SWARM mainnet's genesis block hash is 01b76d8a0f18c502b23ab6605e26296d189aa5770fc4a34155e5c7b250a0eff2. Height 0 in the explorer shows the same hash, the same header time and an empty coinbase.  
-> https://swarm.green/verify
-
-**16:00 UTC** · `d04-b` · mining
-
-> SWARM is in a closed start. Until 31 October 2026, 15:42 UTC only the project's own machines mine. Then 24 hours of early access for the waiting list, and from 1 November 2026, 15:42 UTC anyone can mine. No coins are promised.  
-> https://swarm.green/waitlist
+> "The right to be let alone, the most comprehensive of rights and the right most valued by civilized men."  
+> Justice Louis Brandeis, dissenting, 4 June 1928, in a case about wiretaps. He lost 5 to 4. The Supreme Court adopted his view in 1967. Being right took 39 years.
+>
+> ↳ *first reply:* Olmstead v. United States (1928) and the dissent, explained by the National Constitution Center: https://constitutioncenter.org/blog/olmstead-case-was-a-watershed-for-supreme-court
 
 
 ## Sunday 11 October 2026
 
-**10:00 UTC** · `d05-a` · landscape
+**10:00 UTC** · `d05-a` · explain
 
-> Privacy is a choice you make per payment on SWARM: shielded payments are encrypted on the chain, transparent payments are public, and the wallet tells you which kind you are about to make before you confirm. We think that honesty belongs in the UI, not the footnotes.
+> What does a year of your bank statement reveal? Where you sleep, who you sleep with, your doctor, your church, your politics, your drinking. In the US you have no constitutional privacy interest in it; the Supreme Court decided that in 1976. The bank's records are the bank's.
+>
+> ↳ *first reply:* United States v. Miller, 425 U.S. 435 (1976): https://supreme.justia.com/cases/federal/us/425/435/ The 1970 Bank Secrecy Act that started it was upheld in 1974.
 
 
 ## Monday 12 October 2026
 
-**10:00 UTC** · `d06-a` · product
+**07:30 UTC** · `d06-a` · story
 
-> SWARM Messenger: end-to-end encrypted messages and calls between SWARM wallets, with payments inside the chat. Sign in with your 24 words; no phone number, no account. Runs on SWARM's own server, never on Signal's. Desktop only for now, unsigned.  
-> https://swarm.green/ecosystem/messenger
+> In 1993 the US government began investigating Phil Zimmermann because his encryption program had left the country. Strong cryptography was legally a munition. In 1995 MIT Press printed the source code as a book. Books could be exported. The case was dropped in 1996.
+>
+> ↳ *first reply:* Zimmermann's own note on the day the case was dropped, 11 January 1996: https://www.mit.edu/~prz/EN/news/PRZ_case_dropped.html
+
+**13:30 UTC** · `d06-b` · value
+
+> Thirty seconds that protect your money. Before you install a wallet, check its SHA-256:  
+> Linux: sha256sum file  
+> macOS: shasum -a 256 file  
+> Windows: Get-FileHash file  
+> Compare it with the download page. One character different means a different file. Do not install it.
 
 
 ## Tuesday 13 October 2026
 
-**09:00 UTC** · `d07-a` · build
+**07:30 UTC** · `d07-a` · explain
 
-> Everything is open source and every component says what it is built on: Zebra and Zaino for the node and indexer, zingolib for the wallet SDK, Signal's code for the messenger, ungoogled-chromium for the browser. Consensus and cryptography unmodified.  
-> https://github.com/Swarmcoin/swarm
+> A bank sees your payments. A transparent blockchain shows them to everyone, forever, and lets anyone link them. That is not a flaw in Bitcoin; it is the design. Chain-analysis firms exist because it works. The only amount nobody can analyse is the one that was never written down.
+>
+> ↳ *first reply:* How linking works, in plain words (the common-input-ownership heuristic and friends): https://en.bitcoin.it/wiki/Privacy
 
-**16:00 UTC** · `d07-b` · product
+**13:30 UTC** · `d07-b` · question
 
-> Why the messenger signs you in with 24 words: your wallet is already an identity nobody issued to you. Your chat identity is separate from your spending key, relays see only what they need to deliver, and no message is ever written to the chain.
+> If a stranger could read one year of your card statements, what would they know about you that you have never told anyone? Not asking for the answer. Asking whether there is one.
 
 
 ## Wednesday 14 October 2026
 
-**09:00 UTC** · `d08-a` · product
+**07:30 UTC** · `d08-a` · value
 
-> SWARM Browser, Windows pre-release: Chromium 153 from the ungoogled-chromium code base, Google's services removed, the SWARM wallet in the toolbar. Not in it yet: tracker blocking, phishing lists, paying websites, macOS, Linux. We list what is missing.  
-> https://swarm.green/ecosystem/browser
+> Your 24 words are the wallet. Not the app, not the phone. Write them on paper, twice, and keep the copies apart. Never a photo: phone photos go to cloud backups, and backups get read. Never a text file. Anyone with the words has the money; nobody without them can recover it.
+>
+> ↳ *first reply:* Why 24 words are enough: each list of words encodes 256 bits of randomness (BIP-39) https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki
 
-**16:00 UTC** · `d08-b` · product · thread
+**13:30 UTC** · `d08-b` · story · thread
 
-> What "ungoogled" means in SWARM Browser, in five posts.
->> 1/ No Google API keys, no Safe Browsing lookups, no usage reports, no remote feature switches. Nothing phones home.
->> 2/ Other sites are not told which page you came from. Client hints are not sent. WebRTC does not reveal your local network address. Link-tracking pings are off. Always use secure connections is on.
->> 3/ DuckDuckGo is the default search engine, with suggestions off, so nothing is sent while you type. Change it in Settings if you want.
->> 4/ The wallet lives in the toolbar, but the keys do not live in the browser: the wallet talks to a small wallet host installed beside it on your computer.
->> 5/ Still missing: ad and tracker blocking, phishing protection (Safe Browsing is gone with the rest of Google), signed builds, auto-updates. Be careful with links near your wallet. https://swarm.green/ecosystem/browser
+> In 1993 the US government built a phone chip with a government key inside. It promised the key would only be used by the good guys. One researcher broke it in a year. The argument it settled is being had again in 2026.
+>> 1/ April 1993: the Clipper chip. NSA-designed encryption for phones, with every key held in escrow by the government. The algorithm, Skipjack, was classified. "Trust us" was the design.
+>> 2/ 1994: Matt Blaze at AT&T Bell Labs showed the escrow field had a 16-bit checksum. Brute-force it and you keep the encryption while the government's copy of the key stops working. The backdoor was the weakest part.
+>> 3/ Industry and civil-liberties groups refused it. By 1996 the programme was dead. Nobody has since built a key escrow that only the intended party can use, because mathematics does not know who the good guys are.
+>> 4/ 2025: the EU's "chat control" proposal would have ordered messaging apps to scan encrypted messages. It was pulled from a vote in October 2025 after Germany joined a blocking minority. The Council settled on voluntary scanning in November. It will be back.
+>> 5/ The lesson has not changed in 33 years: a door that opens for one party opens for whoever finds the key. Which messaging app would you drop first if it added a scanner?
+>
+> ↳ *first reply:* Sources: EFF on Clipper https://www.eff.org/deeplinks/2015/04/clipper-chips-birthday-looking-back-22-years-key-escrow-failures and eucrim on the November 2025 Council position https://eucrim.eu/news/csa-regulation-council-position-reached/
 
 
 ## Thursday 15 October 2026
 
-**09:00 UTC** · `d09-a` · facts
+**07:30 UTC** · `d09-a` · quote
 
-> A SWARM address tells you what it is. swm1… is shielded and the wallet's default. s1… is transparent: anything sent there is public forever. s3… is a transparent script address; the three project funds use it. The wallet refuses an address from the other network.
+> "Watch someone long enough, and you'll find something to arrest, or just blackmail, with."  
+> Bruce Schneier, 18 May 2006. The question was never whether you have something to hide. It is whether someone with power over you wants to find it.
+>
+> ↳ *first reply:* The essay, "The Eternal Value of Privacy": https://www.schneier.com/essays/archives/2006/05/the_eternal_value_of.html
 
-**16:00 UTC** · `d09-b` · community
+**13:30 UTC** · `d09-b` · promo
 
-> Found a bug? Open an issue in the repository of the app it belongs to. Found a security problem? Report it privately, never in a public issue: GitHub's private reporting, or swarmofficial@atomicmail.io with SECURITY in the subject.  
-> https://github.com/Swarmcoin/swarm/blob/main/SECURITY.md
+> SWARM Wallet for Windows, macOS and Linux: shielded by default, a 24-word phrase, a lock code. Every address is labelled with what it is, and the wallet refuses one from the wrong network. Unsigned for now; compare the SHA-256 before you install. Open source, based on Zingo.
+>
+> ↳ *first reply:* Downloads with checksums: https://swarm.green/ecosystem/wallet
 
 
 ## Friday 16 October 2026
 
-**09:00 UTC** · `d10-a` · landscape
+**07:30 UTC** · `d10-a` · story
 
-> SWARM is built on the Zcash protocol stack, the most reviewed shielded-payment system there is. We did not change the consensus rules or the cryptography, on purpose. Changes to either belong upstream, and our existence depends on the people who maintain it.
+> 14 February 2022: Canada invoked the Emergencies Act and banks froze about 280 accounts with no court order. In January 2024 a federal judge ruled the orders unreasonable and a Charter breach. In January 2026 the appeal court agreed. The money was frozen when it mattered.
+>
+> ↳ *first reply:* The 2024 ruling https://www.cbc.ca/news/politics/emergencies-act-federal-court-1.7091891 and the 2026 appeal https://www.cbc.ca/news/politics/convoy-protest-emergencies-act-appeal-9.7046769 A 2023 public inquiry had found the invocation justified; the courts disagreed on the financial orders.
 
-**16:00 UTC** · `d10-b` · mining
+**13:30 UTC** · `d10-b` · explain
 
-> What public mining will look like on 1 November: install SWARM Node, enter the swm1 address from your wallet, start. It runs a full node and mines Equihash 200,9 on your CPU, reports its rate and the blocks it found. Rewards mature after 100 blocks. No coins are promised.
+> "We kill people based on metadata." Michael Hayden, former NSA and CIA director, 2014. Metadata is who, when, how often, from where. In 2016 Stanford researchers used phone logs alone to infer illnesses and gun ownership. Encryption protects the words. Metadata is the rest.
+>
+> ↳ *first reply:* The Stanford study (Mayer, Mutchler, Mitchell, PNAS 2016): https://www.pnas.org/doi/10.1073/pnas.1508081113 Hayden's remark, Johns Hopkins, April 2014: https://www.nybooks.com/online/2014/05/10/we-kill-people-based-metadata/
 
 
 ## Saturday 17 October 2026
 
-**10:00 UTC** · `d11-a` · facts
+**10:00 UTC** · `d11-a` · story
 
-> Honest statement of the current state: SWARM is experimental. No independent audit of the SWARM-specific changes has been published. Windows and macOS builds are not yet signed. The light-wallet server learns which encrypted notes your wallet asked for. Treat a claim as a claim.
+> "Running bitcoin." Hal Finney posted those two words on 11 January 2009. The next day he received the first Bitcoin transaction. Diagnosed with ALS that year, he kept writing code until he could only move his eyes. He died in 2014. The tools you use were built by people.
+>
+> ↳ *first reply:* His own account, "Bitcoin and Me", written in 2013: https://bitcointalk.org/index.php?topic=155054.0
 
 
 ## Sunday 18 October 2026
 
-**10:00 UTC** · `d12-a` · community
+**10:00 UTC** · `d12-a` · story
 
-> Weekend reading from the people whose work SWARM stands on: the Zcash protocol specification, the Zebra node documentation, Signal's protocol docs, the ungoogled-chromium feature list. If you only read one, read how a shielded transaction is validated without being revealed.
+> 25 July 2025: the UK began requiring ID or a face scan to view parts of the internet. Proton VPN reported sign-ups up 1,400 percent within hours. Half of the UK App Store's top ten free apps were VPNs. People route around a checkpoint faster than a law can be written.
+>
+> ↳ *first reply:* ITV News, 28 July 2025: https://www.itv.com/news/2025-07-28/vpn-downloads-spike-as-uk-introduces-age-checks-for-adult-online-content The percentages are the VPN companies' own.
 
 
 ## Monday 19 October 2026
 
-**09:00 UTC** · `d13-a` · landscape
+**07:30 UTC** · `d13-a` · story
 
-> In 2026 the privacy-coin question is no longer "does it hide the amount". It is: default or optional, what does the chain record, what does the server learn, who gets a share of every block, and has the exact code you run been reviewed. Ask all five of any project, ours included.
+> In 1983 West Germans boycotted their own census. On 15 December 1983 the Constitutional Court struck down parts of it and wrote a new right into law: informational self-determination. Its reasoning: people who cannot know who knows what about them stop exercising their freedoms.
+>
+> ↳ *first reply:* The court's English summary of the census judgment: https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/EN/1983/12/rs19831215_1bvr020983en.html
 
-**16:00 UTC** · `d13-b` · facts
+**13:30 UTC** · `d13-b` · explain
 
-> Our answers to the five questions: shielded by default, transparent by choice. The chain records that a valid payment happened. The light-wallet server learns which notes you fetched. 20% of every block goes to three published funds. No independent audit yet.
+> Why privacy by default beats privacy as an option: a private payment hides in a crowd. If privacy is optional, the crowd is small and using it marks you out. If it is the default, the crowd is everyone. The maths is the same; the number of people inside it is the difference.
 
 
 ## Tuesday 20 October 2026
 
-**09:00 UTC** · `d14-a` · product
+**07:30 UTC** · `d14-a` · story
 
-> The light-wallet model: your wallet never holds a copy of the chain. It asks lwd-main.swarm.green for the encrypted outputs and decrypts only what is yours. The server learns which notes you asked for, not the amounts or counterparties. Your own node removes even that.
+> July 1977: a letter signed "J. A. Meyer" warned the IEEE that publishing cryptography research might break export law. Meyer worked at the NSA. Martin Hellman presented his students' papers himself, so only he risked prosecution. They were published. You use them daily.
+>
+> ↳ *first reply:* Stanford Magazine, "Keeping Secrets": https://stanfordmag.org/contents/keeping-secrets Whether the agency ordered the letter is disputed; its director later called it a personal initiative.
 
-**16:00 UTC** · `d14-b` · community
+**13:30 UTC** · `d14-b` · explain
 
-> To everyone who has installed the wallet this week and written down the 24 words on paper: that is the whole security model, and you did it right. Nobody at SWARM can recover a phrase. The lock code protects the device, not the words.
+> Five questions sort most privacy claims, for any coin or app:  
+> 1. Default, or an option?  
+> 2. What does the record contain?  
+> 3. What does the server, or your ISP, still see?  
+> 4. Who gets a share of every block, fee or sale?  
+> 5. Has the exact code you run been reviewed, and by whom?
 
 
 ## Wednesday 21 October 2026
 
-**09:00 UTC** · `d15-a` · landscape
+**07:30 UTC** · `d15-a` · value
 
-> The EU's anti-money-laundering regulation bars banks and crypto service providers from keeping anonymous accounts, anonymity-enhancing coins included, from 10 July 2027. It does not touch self-custody or peer-to-peer use. Read what it says before someone summarises it for you.
+> Five-minute check: open a browser-leak test page in your usual browser. Look for three things: the referrer it sends, your local IP address via WebRTC, and the fingerprint it builds from your fonts and canvas. Most people find all three. Each one is a setting, not a fate.
+>
+> ↳ *first reply:* Two test pages that explain what they find: https://coveryourtracks.eff.org/ and https://browserleaks.com/
 
-**16:00 UTC** · `d15-b` · facts · thread
+**13:30 UTC** · `d15-b` · story · thread
 
-> The closed start, in five posts, because it deserves a straight explanation.
->> 1/ Mainnet has been live since 2 October 2026, 15:42 UTC. Until 31 October 2026, 15:42 UTC only the project's own machines mine.
->> 2/ In those 29 days about 33,408 blocks and about 208,800 SWM are produced, about 0.99% of the maximum supply. They are ordinary blocks: 80% to the project's mining wallet, 20% to the three funds, all visible in the explorer.
->> 3/ Why: the infrastructure around the coin, liquidity pools included, needs coins before public mining begins. The aim is an orderly start. It is an aim, not a promise about a price.
->> 4/ Then 24 hours of early access for the waiting list, from 31 October 15:42 UTC. From 1 November 2026, 15:42 UTC mining is open to everyone and the node software is published.
->> 5/ Every coin, those included, has to be mined, and rewards mature after 100 blocks. No coins are promised. https://swarm.green/network
+> On 8 March 1971, while America watched Ali fight Frazier, eight people broke into an FBI office in Media, Pennsylvania and took every file. What they found changed the law on surveillance. A story about the people who looked.
+>> 1/ They called themselves the Citizens' Commission to Investigate the FBI and mailed the documents to journalists. Betty Medsger at the Washington Post published. The FBI never caught them; seven came forward to her in 2014.
+>> 2/ The files revealed COINTELPRO: a secret programme against civil-rights, anti-war and Black organisations. Infiltration, forged letters, pressure on employers. The targets were citizens, not spies.
+>> 3/ 1975: the Senate's Church Committee read 110,000 documents and heard 800 witnesses. It confirmed the FBI had bugged Martin Luther King Jr. and sent him an anonymous letter urging him to kill himself. The NSA had read Americans' telegrams for decades.
+>> 4/ The result was the Foreign Intelligence Surveillance Act of 1978: a court between the state and the wiretap. Not perfect. Better than nothing, which is what existed before.
+>> 5/ "Nothing to hide" assumes the watcher agrees with you about what counts as dangerous. King had nothing to hide. Which of your lawful beliefs would a future watcher dislike?
+>
+> ↳ *first reply:* Sources: the Church Committee's reports https://www.senate.gov/about/resources/pdf/church-committee-full-citations.pdf and PBS on the Media burglary https://www.pbs.org/newshour/show/unlikely-group-changed-face-fbi-retold-burglary
 
 
 ## Thursday 22 October 2026
 
-**09:00 UTC** · `d16-a` · build
+**07:30 UTC** · `d16-a` · quote
 
-> The explorer shows every block, every transaction and, for each block, the four parts of the reward. Shielded amounts and counterparties are not visible there, by design. Search by height, block hash, transaction id or transparent address. Mined, not sold.  
-> https://mainnet.explore.swarm.green
+> In 2014 Glenn Greenwald answered "I have nothing to hide" with an offer: email him the passwords to all your accounts, so he could read what he liked and publish what he found interesting. Not one person has taken him up on it. Everyone has a door they lock.
+>
+> ↳ *first reply:* The talk, "Why privacy matters", TEDGlobal 2014: https://www.ted.com/talks/glenn_greenwald_why_privacy_matters
 
-**16:00 UTC** · `d16-b` · product
+**13:30 UTC** · `d16-b` · promo
 
-> Paying someone inside a chat means you never leave the conversation to paste an address, and no third app learns that the two of you transact. In SWARM Messenger the wallet pane sits beside the thread. Shielded by default.
+> SWARM Messenger: end-to-end encrypted chat between wallets, with payments inside the conversation. Sign in with your 24 words; no phone number, no account. Built from Signal's open code, on our own server, never Signal's. Desktop only, unsigned. We list what is missing.
+>
+> ↳ *first reply:* What it does and what it does not do yet: https://swarm.green/ecosystem/messenger
 
 
 ## Friday 23 October 2026
 
-**09:00 UTC** · `d17-a` · mining
+**07:30 UTC** · `d17-a` · story
 
-> Nine days until early access. The waiting list takes two things: an email address, so we can reach you, and the swm1 address you would mine to. Invites decide the order on 31 October; nothing else. It is free, and no coins are promised.  
-> https://swarm.green/waitlist
+> 1 December 2001: Argentina froze bank accounts. 250 pesos a week, then worth 250 dollars. The president resigned on 20 December. In 2002 dollar deposits became pesos at about 1.40 as the market passed 3. "Your dollars are safe in the bank" held until the bank was told to stop.
+>
+> ↳ *first reply:* Twenty years on, from Buenos Aires: https://www.batimes.com.ar/news/argentina/argentines-recall-nations-worst-ever-crisis-20-years-on.phtml
 
-**16:00 UTC** · `d17-b` · landscape
+**13:30 UTC** · `d17-b` · explain
 
-> Equihash 200,9 has specialised hardware. We say so rather than pretend otherwise: nothing in the rules keeps larger miners out, at either end. There is no promise that home computers stay competitive forever. Open rules have consequences. No coins are promised.
+> A mixer and a shielded pool differ. A mixer shuffles coins between users; the amounts, entries and exits still sit on the chain. A shielded pool never writes the amount or the parties; it writes a proof that the sums balance. Different maths, and in 2025 different courtrooms.
+>
+> ↳ *first reply:* The courtrooms: Tornado Cash delisted from US sanctions in March 2025 after a court said code is not property https://www.venable.com/insights/publications/2025/04/a-legal-whirlwind-settles-treasury-lifts-sanctions and the Samourai Wallet developers sentenced in November 2025 https://www.irs.gov/compliance/criminal-investigation/founders-of-samourai-wallet-cryptocurrency-mixing-service-sentenced-to-five-and-four-years-in-prison
 
 
 ## Saturday 24 October 2026
 
-**10:00 UTC** · `d18-a` · community
+**10:00 UTC** · `d18-a` · story
 
-> Thank you to the people who reported SmartScreen and Gatekeeper warnings on the unsigned builds. The checksum on the download page is your verification until vendor signing lands. On Linux: sha256sum the file and compare. On macOS: shasum -a 256.
+> 31 July 1932: Wörgl, Austria, printed its own money against the Depression. The notes lost 1 percent a month unless stamped, so people spent them. By its own account the town built roads and a bridge while the country stood still. On 1 September 1933 the central bank banned it.
+>
+> ↳ *first reply:* Two views of the same experiment: Bernard Lietaer's annotated account https://bernard-lietaer.org/wp-content/uploads/2022/07/2010-The-Worgl-Experiment-Austria-1932-1933-Lietaer-annotated.pdf and a sceptical one from the Mises Institute https://mises.org/library/free-money-miracle
 
 
 ## Sunday 25 October 2026
 
-**10:00 UTC** · `d19-a` · landscape
+**10:00 UTC** · `d19-a` · value
 
-> A transparent ledger is a surveillance system with a good reputation. It does not become private because you use a new address each time; chain analysis exists because it works. The only amount nobody can analyse is the one that was never written down.
+> Read any privacy policy in two minutes. Search the page for three words: "share", "partners", "retain". The sentences around them are the policy. Everything else is decoration. If "partners" appears and is never listed, assume it means anyone who pays.
+>
+> ↳ *first reply:* Someone has already done this for most big services: https://tosdr.org/
 
 
 ## Monday 26 October 2026
 
-**09:00 UTC** · `d20-a` · mining
+**07:30 UTC** · `d20-a` · story
 
-> Six days. On 31 October at 15:42 UTC the people on the waiting list get the node download, in leaderboard order during that day. On 1 November at 15:42 UTC everyone does. Same rules for everyone once it is open. No coins are promised.  
-> https://swarm.green/waitlist
+> East Germany's Stasi ran about 189,000 informants at its peak, in a country of 16 million: one watcher for every 57 people. It kept the smell of suspects in sealed jars, on cloth from stolen underwear, for the dogs. When the files were opened in 1990 there were 111 kilometres.
+>
+> ↳ *first reply:* The smell jars, with photographs: https://germanhistorydocs.org/en/a-new-germany-1990-2023/individual-odor-samples-preserved-by-the-stasi-1990s Informant counts vary by year; 189,000 is the usual peak figure.
 
-**16:00 UTC** · `d20-b` · facts
+**13:30 UTC** · `d20-b` · promo
 
-> Who controls the three project addresses: each is a 2-of-3 multisig whose key shares were generated offline at the launch key ceremony and are held under the published custody policy. It is custody of the project's share, not a vote: nothing can change the percentages.
+> SWARM mainnet has run since 2 October. Until 31 October, 15:42 UTC only the project's own machines mine; those blocks are in the explorer, split like every block. Then 24 hours for the waiting list; from 1 November, 15:42 UTC anyone can mine. No coins are promised.
+>
+> ↳ *first reply:* The closed start explained in full, with the numbers: https://swarm.green/network The waiting list is free: https://swarm.green/waitlist
 
 
 ## Tuesday 27 October 2026
 
-**09:00 UTC** · `d21-a` · product
+**07:30 UTC** · `d21-a` · explain
 
-> The wallet labels every address with its network and its kind, and refuses an address from the other network. Testnet addresses start with swarm1 and testnet coins have no value. Boring details are how people keep their money.
+> In 1883 Auguste Kerckhoffs wrote the rule cryptographers still follow: a system must stay secure even if everything about it except the key is public. Secrecy of the design is how you get a backdoor nobody can review. Code you cannot read is code you cannot check.
+>
+> ↳ *first reply:* "La cryptographie militaire", 1883, with the six principles: https://www.petitcolas.net/kerckhoffs/index.html
 
-**16:00 UTC** · `d21-b` · build
+**13:30 UTC** · `d21-b` · question
 
-> Running your own node: zebrad from privacy-zebra joins mainnet with the default configuration (Rust 1.96, see the toolchain file). The chain is young, so disk use is small today. Your node verifies; it never trusts.  
-> https://github.com/Swarmcoin/swarm/blob/main/doc/building.md
+> Name one thing you still pay for in cash, and why. Not a trick question. We are trying to understand which payments people instinctively keep off the record.
 
 
 ## Wednesday 28 October 2026
 
-**09:00 UTC** · `d22-a` · mining
+**07:30 UTC** · `d22-a` · value
 
-> Four days. Before mining opens: install SWARM Wallet, write the 24 words on paper, copy your swm1 address. That is the address you will mine to. Rewards are transparent coinbase outputs that mature after 100 blocks. No coins are promised.  
-> https://swarm.green/ecosystem/wallet
+> A separate browser profile for money, five minutes to set up: no extensions except the ones you need, bookmarks for the wallet and the exchange instead of search results, and never log in anywhere else from it. Most wallet thefts start with a search result that looked right.
 
-**16:00 UTC** · `d22-b` · facts · thread
+**13:30 UTC** · `d22-b` · story · thread
 
-> The three things we will never ask for, in five posts, because the scams arrive the day the node is published.
->> 1/ We will never ask for your recovery words. Not by email, not here, not anywhere. Anyone who does is not us.
->> 2/ We will never ask for a private key or a payment to join the waiting list, to mine, or to receive anything. The list is free. Mining is open to everyone from 1 November 15:42 UTC.
->> 3/ Official channels are exactly four: swarm.green, @swarm_coin, swarmofficial@atomicmail.io and github.com/Swarmcoin. Anything else claiming to be SWARM is not.
->> 4/ Only download from swarm.green, and compare the SHA-256 shown beside the file before you install. A build without a matching checksum is not ours.
->> 5/ If you see an account impersonating SWARM, report it to X and tell us. We would rather answer a hundred cautious questions than read one story about lost coins.
+> Five times a government switched off people's money, in democracies as well as dictatorships. None of them was long ago.
+>> 1/ 1933, United States: Executive Order 6102 required citizens to hand in their gold by 1 May at 20.67 dollars an ounce. In January 1934 the official price became 35 dollars. Owning gold was fully legal again on 31 December 1974.
+>> 2/ 2013, Cyprus: as a condition of the bailout, deposits above 100,000 euros at the Bank of Cyprus were partly converted into shares, about 47.5 percent of them. ATM limits lasted two years. A deposit is a loan to the bank; that year Europe said so out loud.
+>> 3/ 2015, Greece: banks closed on 28 June and cash withdrawals were capped at 60 euros a day. Controls were fully lifted on 1 September 2019. Four years of rationed access to your own salary, inside the euro.
+>> 4/ 2016, India: at 20:00 on 8 November the two largest notes, 86 percent of cash by value, were declared void at midnight. 99.3 percent came back to the banks. The people in the queues had never been the target; they paid anyway.
+>> 5/ 2023, Nigeria: redesigned notes with a swap deadline weeks before an election, and not enough new notes to go round. People slept outside banks. On 3 March 2023 the Supreme Court ruled the execution unconstitutional and kept the old notes legal.
+>> 6/ The pattern: the money in your account is a promise, and promises get renegotiated in a crisis. Money you hold yourself, that nobody else can see or stop, is a different kind of promise. Which of these did you live through?
+>
+> ↳ *first reply:* Sources: Federal Reserve History on 1933-34 https://www.federalreservehistory.org/essays/gold-reserve-act Cyprus https://www.globalbankingandfinance.com/bailing-in-depositors-lessons-from-cyprus Greece https://www.voanews.com/a/europe_greece-ends-crisis-era-capital-controls/6174987.html Nigeria https://www.africanews.com/2023/03/03/supreme-court-faults-president-buhari-on-naira-redesign-policy/
 
 
 ## Thursday 29 October 2026
 
-**09:00 UTC** · `d23-a` · landscape
+**07:30 UTC** · `d23-a` · quote
 
-> Zcash's development funding was renewed by community decision for limited periods. SWARM's 20% allocation does not end: over the life of the chain about 4.2 million SWM go to the three funds. That is the design, and we describe it that way. Compare the designs, not the slogans.
+> "No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence."  
+> Article 12, Universal Declaration of Human Rights, 10 December 1948. Correspondence meant letters then. It means messages now. The right did not change; the envelope did.
+>
+> ↳ *first reply:* The text, all thirty articles: https://www.ohchr.org/sites/default/files/UDHR/Documents/UDHR_Translations/eng.pdf
 
-**16:00 UTC** · `d23-b` · mining
+**13:30 UTC** · `d23-b` · promo
 
-> Three days. When SWARM Node is published it will carry its SHA-256 like every other download. It runs a full node and mines on your CPU; it reports its measured rate and the blocks it found. A mining guide goes up with it. No coins are promised.
+> SWARM Browser, Windows pre-release: Chromium 153 from ungoogled-chromium, Google's services removed, the SWARM wallet in the toolbar, keys kept outside the browser. Not in it yet: tracker blocking, phishing lists, macOS, Linux, signed builds. Better we list it than you find out.
+>
+> ↳ *first reply:* The full list of what is removed, what is on and what is missing: https://swarm.green/ecosystem/browser
 
 
 ## Friday 30 October 2026
 
-**09:00 UTC** · `d24-a` · community
+**07:30 UTC** · `d24-a` · story
 
-> The leaderboard counts the people who join with your invite link, each once, and only them. Ties go to whoever joined first. One entry per person. A higher place gets the node download earlier on 31 October, nothing more. No coins are promised.  
-> https://swarm.green/waitlist
+> Hong Kong, 2019: protesters queued to buy single MTR tickets with cash instead of tapping their Octopus cards, because a card's trip history could place them at a march. Others left coins for strangers. When a payment leaves a trail, people under pressure go back to cash.
+>
+> ↳ *first reply:* Hong Kong Free Press, September 2019: https://hongkongfp.com/2019/09/22/explainer-communist-partys-railway-hong-kongs-respected-mtr-fell-afoul-protesters/
 
-**16:00 UTC** · `d24-b` · facts
+**13:30 UTC** · `d24-b` · promo
 
-> Tomorrow at 15:42 UTC the closed start ends. For the record, here is what it produced: about 33,408 blocks, about 208,800 SWM, about 0.99% of the maximum supply, every block visible in the explorer with its 80/8/4/8 split.  
-> https://mainnet.explore.swarm.green
+> Tomorrow at 15:42 UTC early access opens for the waiting list, in leaderboard order; on 1 November at 15:42 UTC mining opens for everyone. To prepare: install the wallet, write down the 24 words, copy your swm1 address; your node will pay there. No coins are promised.
+>
+> ↳ *first reply:* The waiting list is free and asks for an email address and a swm1 address, nothing else: https://swarm.green/waitlist
 
 
 ## Saturday 31 October 2026
 
-**09:00 UTC** · `d25-a` · mining
+**10:00 UTC** · `d25-a` · story
 
-> Today. At 15:42 UTC the node download opens for the waiting list, in leaderboard order through the day. At 15:42 UTC tomorrow it opens for everyone. Check your email, check the SHA-256, write down your words. No coins are promised.
+> The first Bitcoin block, 3 January 2009, carries a headline: "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks." It proves the block was not made earlier. It also says why it was made. Money decided over people's heads, answered with money nobody decides.
+>
+> ↳ *first reply:* The front page itself: https://www.thetimes03jan2009.com/
 
-**15:42 UTC** · `d25-b` · mining
+**15:42 UTC** · `d25-b` · promo
 
-> 15:42 UTC. The project-only phase of the closed start is over. Early access for the waiting list begins now; the node download goes out in leaderboard order over the next 24 hours. Public mining opens 1 November 2026, 15:42 UTC. No coins are promised.  
+> 15:42 UTC. Early access for the waiting list is open; downloads go out in leaderboard order over 24 hours. Public mining opens 1 November, 15:42 UTC. Check the SHA-256 before you install and keep the 24 words off the mining machine. No coins are promised.  
 > https://swarm.green/waitlist
 
 
 ## Sunday 01 November 2026
 
-**09:00 UTC** · `d26-a` · mining
+**10:00 UTC** · `d26-a` · quote
 
-> In under seven hours SWARM mining opens to everyone. The node software appears at swarm.green/ecosystem at 15:42 UTC with its checksum and a mining guide. Equihash 200,9, CPU from the app, 100-block maturity. Same rules for everyone. No coins are promised.
+> "The root problem with conventional currency is all the trust that's required to make it work. The central bank must be trusted not to debase the currency, but the history of fiat currencies is full of breaches of that trust."  
+> Satoshi Nakamoto, 11 February 2009.
+>
+> ↳ *first reply:* The post, on the P2P Foundation forum: https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source
 
-**15:42 UTC** · `d26-b` · mining · image
+**15:42 UTC** · `d26-b` · promo · image
 
-> Public mining is open. From this moment anyone can run SWARM Node and mine. The bees that do the work earn the honey. 🐝 Download, verify the SHA-256, enter your swm1 address, start. No coins are promised; the rules are the same for everyone.  
+> Public mining is open. Anyone can run SWARM Node from this moment: download, compare the SHA-256, enter your swm1 address, start. It runs a full node and mines on your CPU. Same rules for everyone from here on. No coins are promised. 🐝  
 > https://swarm.green/ecosystem
 
 
 ## Monday 02 November 2026
 
-**09:00 UTC** · `d27-a` · mining
+**07:30 UTC** · `d27-a` · explain
 
-> First day of public mining. If your node is syncing: it verifies every block from genesis before it mines; that is the point. If it found a block: the reward matures after 100 blocks, about two hours. If something broke: tell us in swarm-node on GitHub. No coins are promised.
+> What a block explorer can see. On a transparent chain: every address, amount and time, forever, and how they link. On a shielded chain: that a valid transaction happened, its fee, its size, and a proof. The explorer is honest either way. The question is what was written down.
+>
+> ↳ *first reply:* See for yourself on SWARM mainnet: https://mainnet.explore.swarm.green
 
-**16:00 UTC** · `d27-b` · build
+**13:30 UTC** · `d27-b` · promo
 
-> How to tell your node is on the right chain: compare the genesis hash it reports with 01b76d8a…eff2 on the verify page, and compare your height with the explorer. A node that disagrees with both is on the wrong network, or on the testnet.  
-> https://swarm.green/verify
+> Started a node yesterday? It verifies every block from genesis before it mines; that is the point. To check the chain, compare its genesis hash with the verify page and its height with the explorer. Disagree with both and you are on another network. No coins are promised.
+>
+> ↳ *first reply:* The genesis hash and how to compare it: https://swarm.green/verify
 
 
 ## Tuesday 03 November 2026
 
-**09:00 UTC** · `d28-a` · community
+**07:30 UTC** · `d28-a` · story
 
-> To the pool operators asking about Equihash 200,9 and the coinbase format: the node is a Zebra fork with the standard RPC surface, the network magic is SWMN, and the funding-stream outputs are in every coinbase. Questions go to the privacy-zebra repository.
+> December 2010: within four days PayPal, Visa and MasterCard cut off donations to WikiLeaks. No court order, no charge. The organisation said 95 percent of its income vanished. Whatever you think of the target, a payment company had shown it could switch off anyone in a week.
+>
+> ↳ *first reply:* Forbes, 7 December 2010: https://www.forbes.com/sites/andygreenberg/2010/12/07/visa-mastercard-move-to-choke-wikileaks/ WikiLeaks' own account of the blockade: https://wikileaks.org/Banking-Blockade.html
 
-**16:00 UTC** · `d28-b` · product
+**13:30 UTC** · `d28-b` · question
 
-> A reminder that the wallet is one app and the miner is another on purpose. SWARM Node holds no spending keys; you give it a payout address and it pays there. Keep the 24 words where the miner is not. No coins are promised.
+> What would you need to see before you trusted a new privacy tool with real money? Open code, an independent review, a year of uptime, a name you already know? Honest answers help us decide what to publish first.
 
 
 ## Wednesday 04 November 2026
 
-**09:00 UTC** · `d29-a` · landscape
+**07:30 UTC** · `d29-a` · value
 
-> Tomorrow Zcash activates NU7 on its own mainnet. SWARM runs the rule set that was active on Zcash mainnet at the time of the fork; upstream changes come to SWARM only as announced network upgrades with an activation height. There is no SWARM upgrade scheduled today.
+> Five minutes: type your email into Have I Been Pwned. Most people find a breach they never heard of. Then two things: a different password for every site, kept in a password manager, and passkeys where offered. Reused passwords empty more wallets than wallet bugs do.
+>
+> ↳ *first reply:* https://haveibeenpwned.com/ (run by Troy Hunt since 2013; it stores nothing you type)
 
-**16:00 UTC** · `d29-b` · facts · thread
+**13:30 UTC** · `d29-b` · story · thread
 
-> What a transaction reveals, in five posts.
->> 1/ Shielded to shielded: the chain sees that a transaction exists, its fee and its size. The light-wallet server sees which encrypted outputs your wallet fetched, not the amounts or counterparties.
->> 2/ Transparent to transparent: everything, as in Bitcoin. Addresses, amounts, times, forever.
->> 3/ Mixed: the transparent side in full, the shielded side as in 1/. The wallet shows you which kind you are about to make.
->> 4/ None of this hides your IP address from the server or your ISP. For that you need your own node, or a network-level privacy tool. We say this every time because it is true every time.
->> 5/ The whole table is in doc/protocol.md: https://github.com/Swarmcoin/swarm/blob/main/doc/protocol.md
+> Private digital money was not invented in 2008. It took forty years and about a dozen people, most of whom you have never heard of. The relay, in order:
+>> 1/ 1976: Whitfield Diffie and Martin Hellman publish public-key cryptography. 1982: David Chaum describes blind signatures, so a bank can sign a coin without seeing it. Anonymous digital cash is now possible on paper.
+>> 2/ 1990: Chaum's DigiCash launches eCash. By 1998 it has about 5,000 users and 300 merchants, and goes bankrupt. The cryptography worked. The company needed banks, and the banks did not need it.
+>> 3/ 1993: Eric Hughes posts A Cypherpunk's Manifesto. 1997: Adam Back's Hashcash makes a computer prove it did work. 1998: Wei Dai's b-money and Nick Szabo's bit gold describe money with no company behind it. None of it runs yet.
+>> 4/ 2004: Hal Finney builds reusable proof of work. 31 October 2008: a paper by Satoshi Nakamoto cites Hashcash and b-money. 3 January 2009: the first block. 12 January 2009: the first transaction, to Finney.
+>> 5/ 2013 to 2016: the same idea with the amounts hidden. Zerocoin, then Zcash, whose parameters came from a 2016 ceremony designed so that even its makers could not cheat. The shielded pool exists.
+>> 6/ Nobody on this list got rich from it at the time. Several were investigated; one kept coding while paralysed. Every tool in this story was published before it was safe to publish. Which of these names did you not know?
+>
+> ↳ *first reply:* Two good long reads: Bitcoin Magazine on Chaum and eCash https://bitcoinmagazine.com/culture/genesis-files-how-david-chaums-ecash-spawned-cypherpunk-dream and Radiolab on the 2016 ceremony https://radiolab.org/podcast/ceremony/transcript
 
 
 ## Thursday 05 November 2026
 
-**09:00 UTC** · `d30-a` · community
+**07:30 UTC** · `d30-a` · quote
 
-> One month of @swarm_coin. What we published: a chain, a wallet on four platforms, a messenger, a browser pre-release, a node with a miner, and a list of what is still missing. What we did not publish: a price or a promise. Mined, not sold. Thank you for reading.
+> "If privacy is outlawed, only outlaws will have privacy."  
+> Phil Zimmermann, Why I Wrote PGP, 1991. He wrote it before the investigation, the book trick and the dropped case. He was describing the world he expected. It is roughly the one we got, except that the tools exist.
+>
+> ↳ *first reply:* The essay, as updated in 1999: https://www.philzimmermann.com/EN/essays/WhyIWrotePGP.html
 
-**16:00 UTC** · `d30-b` · build
+**13:30 UTC** · `d30-b` · explain
 
-> The roadmap uses three words strictly. Live means you can use it today. In development means the work has started and is not finished. Planned means it has not started: no date, no promise. Nothing moves up the list until it is true.  
-> https://swarm.green/roadmap
+> From 10 July 2027 the EU's anti-money-laundering regulation applies: cash payments to businesses capped at 10,000 euros, and crypto services may not offer anonymous accounts or handle anonymity-enhancing coins. It binds exchanges, not you. Self-custody is untouched.
+>
+> ↳ *first reply:* Regulation (EU) 2024/1624, search EUR-Lex for 32024R1624. A plain-language summary: https://techlawpolicy.com/2025/06/eu-vs-crypto-anonymity-what-you-need-to-know/
 
 
 ## Friday 06 November 2026
 
-**09:00 UTC** · `d31-a` · product
+**07:30 UTC** · `d31-a` · story
 
-> Next on the list, in order and only when finished and reviewed: signed macOS builds, the Android and iOS mainnet wallets, a second seed node in another failure domain, custody tooling for the three funds, an independent security review of the code as launched. Then SWARM Market.
+> Sweden nearly abolished cash: about 10 percent of shop purchases, says the Riksbank's 2025 report. Then the central bank asked parliament to make shops selling food, medicine and fuel accept it again. Not nostalgia: money that needs a server stops working when the server does.
+>
+> ↳ *first reply:* Riksbank, Payments Report 2025: https://www.riksbank.se/globalassets/media/rapporter/betalningsrapport/2025/engelsk/payments-report-2025.pdf
 
-**16:00 UTC** · `d31-b` · facts
+**13:30 UTC** · `d31-b` · promo
 
-> SWARM is private money. Shielded by default, transparent by choice, mined by anyone since 1 November 2026, open source from the node to the browser. Mined, not sold. Nobody sets a price or promises one.  
-> https://swarm.green
+> One month of this account. We published a chain, a wallet, a messenger, a browser pre-release, a node, and a list of what is missing. Not a price, not a promise. SWARM is private money: shielded by default, mined by anyone since 1 November. Mined, not sold. Thank you. 🐝
+>
+> ↳ *first reply:* https://swarm.green
 

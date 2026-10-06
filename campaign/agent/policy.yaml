@@ -63,6 +63,14 @@ allowed_link_hosts:
   - github.com/Swarmcoin
   - x.com/swarm_coin
 
+# The first reply under a story or explainer (`reply:` in the calendar) cites its source and may
+# link to any host EXCEPT these: never an exchange, a price page, a chat we do not run, a shortener.
+source_link_denied_regex:
+  - '(?i)(binance|coinbase|kraken|kucoin|mexc|gate\.io|bybit|okx|bitget|htx\.com|uniswap|dexscreener|dextools)'
+  - '(?i)(coingecko|coinmarketcap|coinpaprika|tradingview|livecoinwatch)'
+  - '(?i)(t\.me/|telegram\.|discord\.(gg|com)|bit\.ly|tinyurl|t\.co/)'
+  - '(?i)(basescan|etherscan|bscscan|solscan)'
+
 # Posts touching these topics must carry one of the disclaimers.
 # Word-boundary match: "mined" and "rewarded" do not trigger, "miner" and "rewards" do.
 disclaimer_triggers:

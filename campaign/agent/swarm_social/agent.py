@@ -69,7 +69,8 @@ class ReviewQueue:
         lines = ["| id | kind | to | text | why |", "|---|---|---|---|---|"]
         for i in pend:
             to = f"@{i['author']} ({i['target_post_id']})" if i["author"] else (i["target_post_id"] or "—")
-            lines.append(f"| `{i['id']}` | {i['kind']} | {to} | {i['text'].replace('|', '\\|').replace(chr(10), ' ')} | {i['reason']} |")
+            cell = i['text'].replace('|', '\|').replace(chr(10), ' ')   # Python 3.11: no backslash inside an f-string expression
+            lines.append(f"| `{i['id']}` | {i['kind']} | {to} | {cell} | {i['reason']} |")
         lines.append("")
         lines.append("Approve with `swarm-social approve <id> [<id>...]` or `swarm-social approve --all`; reject with `swarm-social reject <id>`.")
         return "\n".join(lines) + "\n"

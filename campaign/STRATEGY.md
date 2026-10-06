@@ -16,14 +16,31 @@ written so that it is still true the day after.
 
 ## The pillars (what every piece of content is about)
 
-1. **Facts.** The numbers, the split, the genesis hash, the closed start explained in full.
-2. **Product.** Wallet, Messenger, Browser, Node: what each does, and what each does not do yet.
-3. **Mining.** The countdown to 1 November, the waiting list, how to prepare, always with
-   "No coins are promised."
-4. **Landscape.** Why privacy by default matters in 2026: surveillance ledgers, the EU AMLR
-   from 10 July 2027, the five questions to ask any privacy coin.
-5. **Build.** Open source, upstream credit, verification, running your own node.
-6. **Community.** Questions, thanks, bug reports, the scams to expect.
+Owner rule, 6 October 2026: the account is not a billboard. At most one post in five may
+promote SWARM; the build refuses a calendar that breaks this, and two promotional posts
+never stand back to back. Everything else has to be worth reading on its own, for someone
+who will never install anything of ours. The pillars, in the order of their share:
+
+1. **Story ("why is").** People who fought for freedom and privacy, and what happened when
+   they lost: the crypto wars, the whistleblowers, the registries that were abused, the
+   money that was frozen or confiscated. Dates, names, documents. One lesson sentence.
+   The weekly Wednesday thread is a story. Sources in `research/freedom-and-privacy-stories-2026-10.md`.
+2. **Explain.** How a thing works, in plain words: a zero-knowledge proof, a double ratchet,
+   metadata, a hash, why 24 words are enough, what a block explorer can and cannot see.
+   SWARM appears only as the example when it is the honest example. Sources in
+   `research/privacy-explainers-*.md`.
+3. **Value.** Something a reader can do in five minutes: verify a download, write down a
+   phrase correctly, check a referrer setting, read a privacy policy, check a breach.
+4. **Question.** A real question we want answered, never "like if you agree". The best
+   reply is quoted the next day as its own post.
+5. **Quote.** A verified sentence from Hughes, Zimmermann, Brandeis, Finney, Snowden,
+   Satoshi, with its date and source in the first reply; never apocryphal lines.
+6. **Promo.** Wallet, Messenger, Browser, Node, the opening of mining, the exact-time posts
+   on 31 October and 1 November. Always with "No coins are promised." where mining is near.
+
+Why this mix: X's published ranking weights reward replies, quotes and copy-link shares
+far above likes, and link posts measure lowest of all formats; what earns those signals is
+material people answer, save and send to a friend (`research/x-content-craft-2026-10.md`).
 
 ## The channels, in the order we invest
 

@@ -85,9 +85,17 @@ These are the facts the whole campaign rests on. Use them verbatim or close to i
 - Figures in digits, as published: 6.25, 75 s, 1,680,000, 20,999,987.3152.
 - No more than one hashtag, usually none. `#privacy` or `#zcash` only when the post is
   about that.
-- Links at the end. One link per post.
-- Threads: only for the weekly "how it works" explainer. Four to six posts, each one a
-  complete sentence on its own.
+- Links go in the first reply under the post, not in the post itself (link posts measure
+  lowest; the post must stand without the link). `reply:` in the calendar carries it, and
+  the source of any quoted figure or story. Exception, marked `allow_link_in_post: true`:
+  the exact-time posts whose whole point is the download.
+- Threads: for the weekly story and for an explainer that needs it. Five to eight posts.
+  Post 1 is the hook with the payoff promised; posts 2 and 3 carry the strongest facts; the
+  last post recaps in one line and asks one question.
+- The first line names the subject and makes a specific claim. No warm-up, no "we are
+  thrilled", no "a thread 🧵".
+- Promotion is at most one post in five, never two in a row (owner rule, 6 October 2026).
+  History and explanations are the account; the product is the example.
 - Emoji: the bee 🐝 is allowed once per post at most, never in replies to serious
   questions. Nothing else.
 - UTC for every time. Dates written like 1 November 2026.

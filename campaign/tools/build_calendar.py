@@ -27,6 +27,11 @@ OUT_CSV = CAMPAIGN / "x" / "metricool-import.csv"
 OUT_MD = CAMPAIGN / "x" / "calendar.md"
 METRICOOL_TZ = "America/Santo_Domingo"   # the brand's timezone in Metricool; the CSV is written in it
 
+# Content pillars. Owner rule (2026-10-06): at most every fifth post may promote SWARM itself.
+PILLARS = {"story", "explain", "value", "question", "quote", "promo"}
+PROMO_PILLARS = {"promo"}
+MAX_PROMO_SHARE = 0.20
+
 
 def main(check_only: bool = False) -> int:
     policy = Policy.load(CAMPAIGN / "agent" / "policy.yaml")
@@ -44,17 +49,34 @@ def main(check_only: bool = False) -> int:
         if when.tzinfo is None:
             when = when.replace(tzinfo=timezone.utc)
         p["when"] = when.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
+        if p.get("pillar") not in PILLARS:
+            problems.append(f"{p['id']}: pillar '{p.get('pillar')}' is not one of {sorted(PILLARS)}")
         for v in policy.check_text(p["text"]):
             problems.append(f"{p['id']}: {v}")
         for i, t in enumerate(p.get("thread", []) or []):
             for v in policy.check_text(t, is_reply=True):
                 problems.append(f"{p['id']}[thread {i+1}]: {v}")
+        if p.get("reply"):
+            for v in policy.check_text(p["reply"], is_reply=True, source_links=True):
+                problems.append(f"{p['id']}[reply]: {v}")
+        if "http" in p["text"] and not p.get("allow_link_in_post"):
+            problems.append(f"{p['id']}: link in the post itself; move it to `reply:` (a link in the post costs reach) or set allow_link_in_post: true")
     posts.sort(key=lambda p: p["when"])
+    promo = [p for p in posts if p.get("pillar") in PROMO_PILLARS]
+    if posts and len(promo) / len(posts) > MAX_PROMO_SHARE:
+        problems.append(f"{len(promo)} of {len(posts)} posts are promotion ({len(promo)/len(posts):.0%}); the owner's cap is one in five")
+    # No two promotion posts back to back.
+    for a, b in zip(posts, posts[1:]):
+        if a.get("pillar") in PROMO_PILLARS and b.get("pillar") in PROMO_PILLARS:
+            problems.append(f"{a['id']} and {b['id']}: two promotion posts in a row")
     if problems:
         print("calendar refused:\n  " + "\n  ".join(problems))
         return 1
+    from collections import Counter
+    mix = Counter(p.get("pillar") for p in posts)
     print(f"{len(posts)} posts, {sum(len(p.get('thread') or []) for p in posts)} thread replies, "
-          f"{sum(1 for p in posts if 'http' in p['text'])} posts with a link; all pass the policy")
+          f"{sum(1 for p in posts if p.get('reply'))} with a link/source reply, {len(promo)} promotion ({len(promo)/len(posts):.0%}); all pass the policy")
+    print("mix: " + ", ".join(f"{k} {v}" for k, v in sorted(mix.items())))
     if check_only:
         return 0
 
@@ -67,11 +89,11 @@ def main(check_only: bool = False) -> int:
     tz = ZoneInfo(METRICOOL_TZ)
     with open(OUT_CSV, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        w.writerow(["Text", "Date", "Time", "Draft", "Twitter", "Picture Url 1", "Thread (not importable by CSV)", "Id", "Pillar"])
+        w.writerow(["Text", "Date", "Time", "Draft", "Twitter", "Picture Url 1", "Thread (not importable by CSV)", "First reply (link/source)", "Id", "Pillar"])
         for p in posts:
             local = datetime.fromisoformat(p["when"].replace("Z", "+00:00")).astimezone(tz)
             w.writerow([p["text"], local.strftime("%Y-%m-%d"), local.strftime("%H:%M"), "FALSE", "TRUE",
-                        (p.get("media") or [""])[0], " ||| ".join(p.get("thread") or []), p["id"], p.get("pillar", "")])
+                        (p.get("media") or [""])[0], " ||| ".join(p.get("thread") or []), p.get("reply", ""), p["id"], p.get("pillar", "")])
 
     lines = ["# X calendar, 7 October to 6 November 2026 (UTC)", "", "Built from `calendar.yaml`; edit that file, then run `python tools/build_calendar.py`.", ""]
     day = None
@@ -85,6 +107,9 @@ def main(check_only: bool = False) -> int:
         lines.append("> " + p["text"].replace("\n", "  \n> "))
         for t in p.get("thread") or []:
             lines.append(">> " + t)
+        if p.get("reply"):
+            lines.append(">")
+            lines.append("> ↳ *first reply:* " + p["reply"].replace(chr(10), " "))
         lines.append("")
     OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"wrote {OUT_JSON.name}, {OUT_CSV.name}, {OUT_MD.name}")

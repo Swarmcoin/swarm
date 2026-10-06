@@ -30,6 +30,8 @@ def run_scheduler(settings: Settings, policy: Policy, state: State, x: XClient, 
         problems = policy.check_text(post.text)
         for i, t in enumerate(post.thread):
             problems += [p for p in policy.check_text(t, is_reply=True)]
+        if post.reply:
+            problems += policy.check_text(post.reply, is_reply=True, source_links=True)
         if problems:
             # A calendar post that breaks policy is a bug in the calendar; never publish it silently.
             log.error("calendar post %s refused: %s", post.id, "; ".join(map(str, problems)))
@@ -46,7 +48,10 @@ def _publish(post: CalendarPost, state: State, x: XClient) -> None:
     last = root
     for t in post.thread:
         last = x.create_post(t, reply_to=last)
+    if post.reply:
+        # Links and sources go in the first reply: a link in the post itself costs reach.
+        x.create_post(post.reply, reply_to=last)
     state.data["posted_calendar_ids"].append(post.id)
     state.mark_post()
-    state.log("calendar_post", id=post.id, x_id=root, pillar=post.pillar, thread_len=len(post.thread))
+    state.log("calendar_post", id=post.id, x_id=root, pillar=post.pillar, thread_len=len(post.thread), has_reply=bool(post.reply))
     log.info("published %s as %s", post.id, root)

@@ -57,3 +57,12 @@ def test_do_not_engage():
     assert POLICY.may_engage_with("when will SWM list on Binance?", "someone")[0] is False
     assert POLICY.may_engage_with("free airdrop send 1 SWM get 2", "someone")[0] is False
     assert POLICY.may_engage_with("How does a shielded address differ from a transparent one?", "someone")[0] is True
+
+
+def test_source_reply_may_cite_archives_but_not_exchanges():
+    ok = POLICY.check_text("Source: https://www.eff.org/cases/bernstein-v-us-dept-justice", is_reply=True, source_links=True)
+    assert ok == []
+    bad = POLICY.check_text("Source: https://www.coingecko.com/en/coins/x", is_reply=True, source_links=True)
+    assert any(v.rule == "link_host" for v in bad)
+    # Without the source flag the same archive link is still refused.
+    assert any(v.rule == "link_host" for v in POLICY.check_text("https://www.eff.org/", is_reply=True))
