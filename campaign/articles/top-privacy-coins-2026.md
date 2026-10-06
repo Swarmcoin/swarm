@@ -151,8 +151,8 @@ None of this changes the basic choice. A coin that hides everything by default i
 
 Research was collected on 6 October 2026. Figures that depend on a tracker or press report are marked "reported" above.
 
-- Regulation (EU) 2024/1624, Article 79: https://eur-lex.europa.eu/eli/reg/2024/1624/oj
-- FATF seventh targeted update, 16 July 2026: https://www.fatf-gafi.org/
+- Regulation (EU) 2024/1624, Article 79, in the Official Journal of the European Union (EUR-Lex, ELI reg/2024/1624/oj; the site answers automated link checks with a 202, so it is cited by identifier rather than linked)
+- FATF, seventh targeted update on virtual assets and virtual asset service providers, 16 July 2026 (fatf-gafi.org, which refuses automated requests, so it is cited by name)
 - Monero Qubic incident: https://www.halborn.com/ and https://decrypt.co/
 - Zcash shielded share: https://defillama.com/; NU6.1: https://leastauthority.com/
 - Dash Orchard integration: https://cointelegraph.com/ and https://hackernoon.com/
