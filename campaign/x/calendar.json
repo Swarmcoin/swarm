@@ -1,0 +1,383 @@
+{
+  "built": "2026-10-06T10:04:21+00:00",
+  "source": "x/calendar.yaml",
+  "posts": [
+    {
+      "id": "d01-a",
+      "when": "2026-10-07T09:00:00Z",
+      "pillar": "facts",
+      "text": "SWARM is private money. A shielded payment keeps the sender, the receiver and the amount encrypted on the chain; the network still verifies it. Proof of work, 75-second blocks, 20,999,987 SWM at most. Mainnet has been live since 2 October 2026.\nhttps://swarm.green/what-is-swarm",
+      "media": [
+        "https://swarm.green/assets/og.png"
+      ]
+    },
+    {
+      "id": "d01-b",
+      "when": "2026-10-07T16:00:00Z",
+      "pillar": "facts",
+      "text": "How a shielded payment works, in five posts. 🐝",
+      "thread": [
+        "1/ Most digital money is surveillance money: every transfer is a public record of who paid whom, how much and when, forever.",
+        "2/ A shielded SWARM payment uses a zero-knowledge proof. The chain records that a valid payment happened. It does not record who paid, who received or how much.",
+        "3/ The wallet gives you a shielded address by default. It starts with swm1. A transparent address (s1) exists for the cases where visibility is wanted, for example an exchange deposit.",
+        "4/ Shielding protects what is written to the chain. It does not hide that you use SWARM from your network provider or from the light-wallet server. Run your own node when that matters.",
+        "5/ The cryptography is the Zcash protocol stack, unmodified. SWARM adds its own network, its economics and its apps. Details: https://swarm.green/what-is-swarm"
+      ]
+    },
+    {
+      "id": "d02-a",
+      "when": "2026-10-08T09:00:00Z",
+      "pillar": "facts",
+      "text": "The numbers, fixed in the genesis rules:\n6.25 SWM per block\na block every 75 seconds\nhalving every 1,680,000 blocks, about four years\n20,999,987.3152 SWM at most\n0 coins in the genesis block\nEvery SWM that exists has been mined."
+    },
+    {
+      "id": "d02-b",
+      "when": "2026-10-08T16:00:00Z",
+      "pillar": "product",
+      "text": "SWARM Wallet 0.1.0-mainnet.11 is out for Windows, macOS (Apple silicon and Intel) and Linux (.deb and AppImage). Shielded by default, 24-word recovery phrase, lock code. Every file carries its SHA-256; compare it before you install.\nhttps://swarm.green/ecosystem/wallet"
+    },
+    {
+      "id": "d03-a",
+      "when": "2026-10-09T09:00:00Z",
+      "pillar": "facts",
+      "text": "Where every block goes, for the whole life of the chain: 80% to the miner who found it, 8% Core Development, 4% Grants & Ecosystem, 8% Community & Development Reserve. Paid block by block to three published addresses. Not a premine, and not without allocation. Mined, not sold."
+    },
+    {
+      "id": "d03-b",
+      "when": "2026-10-09T16:00:00Z",
+      "pillar": "community",
+      "text": "Question for people who use privacy tools every day: what made you stop trusting a product that called itself private? We are collecting the answers for the things we have not shipped yet."
+    },
+    {
+      "id": "d04-a",
+      "when": "2026-10-10T09:00:00Z",
+      "pillar": "build",
+      "text": "You can check that you are on the real chain. SWARM mainnet's genesis block hash is 01b76d8a0f18c502b23ab6605e26296d189aa5770fc4a34155e5c7b250a0eff2. Height 0 in the explorer shows the same hash, the same header time and an empty coinbase.\nhttps://swarm.green/verify"
+    },
+    {
+      "id": "d04-b",
+      "when": "2026-10-10T16:00:00Z",
+      "pillar": "mining",
+      "text": "SWARM is in a closed start. Until 31 October 2026, 15:42 UTC only the project's own machines mine. Then 24 hours of early access for the waiting list, and from 1 November 2026, 15:42 UTC anyone can mine. No coins are promised.\nhttps://swarm.green/waitlist"
+    },
+    {
+      "id": "d05-a",
+      "when": "2026-10-11T10:00:00Z",
+      "pillar": "landscape",
+      "text": "Privacy is a choice you make per payment on SWARM: shielded payments are encrypted on the chain, transparent payments are public, and the wallet tells you which kind you are about to make before you confirm. We think that honesty belongs in the UI, not the footnotes."
+    },
+    {
+      "id": "d06-a",
+      "when": "2026-10-12T10:00:00Z",
+      "pillar": "product",
+      "text": "SWARM Messenger: end-to-end encrypted messages and calls between SWARM wallets, with payments inside the chat. Sign in with your 24 words; no phone number, no account. Runs on SWARM's own server, never on Signal's. Desktop only for now, unsigned.\nhttps://swarm.green/ecosystem/messenger"
+    },
+    {
+      "id": "d07-a",
+      "when": "2026-10-13T09:00:00Z",
+      "pillar": "build",
+      "text": "Everything is open source and every component says what it is built on: Zebra and Zaino for the node and indexer, zingolib for the wallet SDK, Signal's code for the messenger, ungoogled-chromium for the browser. Consensus and cryptography unmodified.\nhttps://github.com/Swarmcoin/swarm"
+    },
+    {
+      "id": "d07-b",
+      "when": "2026-10-13T16:00:00Z",
+      "pillar": "product",
+      "text": "Why the messenger signs you in with 24 words: your wallet is already an identity nobody issued to you. Your chat identity is separate from your spending key, relays see only what they need to deliver, and no message is ever written to the chain."
+    },
+    {
+      "id": "d08-a",
+      "when": "2026-10-14T09:00:00Z",
+      "pillar": "product",
+      "text": "SWARM Browser, Windows pre-release: Chromium 153 from the ungoogled-chromium code base, Google's services removed, the SWARM wallet in the toolbar. Not in it yet: tracker blocking, phishing lists, paying websites, macOS, Linux. We list what is missing.\nhttps://swarm.green/ecosystem/browser"
+    },
+    {
+      "id": "d08-b",
+      "when": "2026-10-14T16:00:00Z",
+      "pillar": "product",
+      "text": "What \"ungoogled\" means in SWARM Browser, in five posts.",
+      "thread": [
+        "1/ No Google API keys, no Safe Browsing lookups, no usage reports, no remote feature switches. Nothing phones home.",
+        "2/ Other sites are not told which page you came from. Client hints are not sent. WebRTC does not reveal your local network address. Link-tracking pings are off. Always use secure connections is on.",
+        "3/ DuckDuckGo is the default search engine, with suggestions off, so nothing is sent while you type. Change it in Settings if you want.",
+        "4/ The wallet lives in the toolbar, but the keys do not live in the browser: the wallet talks to a small wallet host installed beside it on your computer.",
+        "5/ Still missing: ad and tracker blocking, phishing protection (Safe Browsing is gone with the rest of Google), signed builds, auto-updates. Be careful with links near your wallet. https://swarm.green/ecosystem/browser"
+      ]
+    },
+    {
+      "id": "d09-a",
+      "when": "2026-10-15T09:00:00Z",
+      "pillar": "facts",
+      "text": "A SWARM address tells you what it is. swm1… is shielded and the wallet's default. s1… is transparent: anything sent there is public forever. s3… is a transparent script address; the three project funds use it. The wallet refuses an address from the other network."
+    },
+    {
+      "id": "d09-b",
+      "when": "2026-10-15T16:00:00Z",
+      "pillar": "community",
+      "text": "Found a bug? Open an issue in the repository of the app it belongs to. Found a security problem? Report it privately, never in a public issue: GitHub's private reporting, or swarmofficial@atomicmail.io with SECURITY in the subject.\nhttps://github.com/Swarmcoin/swarm/blob/main/SECURITY.md"
+    },
+    {
+      "id": "d10-a",
+      "when": "2026-10-16T09:00:00Z",
+      "pillar": "landscape",
+      "text": "SWARM is built on the Zcash protocol stack, the most reviewed shielded-payment system there is. We did not change the consensus rules or the cryptography, on purpose. Changes to either belong upstream, and our existence depends on the people who maintain it."
+    },
+    {
+      "id": "d10-b",
+      "when": "2026-10-16T16:00:00Z",
+      "pillar": "mining",
+      "text": "What public mining will look like on 1 November: install SWARM Node, enter the swm1 address from your wallet, start. It runs a full node and mines Equihash 200,9 on your CPU, reports its rate and the blocks it found. Rewards mature after 100 blocks. No coins are promised."
+    },
+    {
+      "id": "d11-a",
+      "when": "2026-10-17T10:00:00Z",
+      "pillar": "facts",
+      "text": "Honest statement of the current state: SWARM is experimental. No independent audit of the SWARM-specific changes has been published. Windows and macOS builds are not yet signed. The light-wallet server learns which encrypted notes your wallet asked for. Treat a claim as a claim."
+    },
+    {
+      "id": "d12-a",
+      "when": "2026-10-18T10:00:00Z",
+      "pillar": "community",
+      "text": "Weekend reading from the people whose work SWARM stands on: the Zcash protocol specification, the Zebra node documentation, Signal's protocol docs, the ungoogled-chromium feature list. If you only read one, read how a shielded transaction is validated without being revealed."
+    },
+    {
+      "id": "d13-a",
+      "when": "2026-10-19T09:00:00Z",
+      "pillar": "landscape",
+      "text": "In 2026 the privacy-coin question is no longer \"does it hide the amount\". It is: default or optional, what does the chain record, what does the server learn, who gets a share of every block, and has the exact code you run been reviewed. Ask all five of any project, ours included."
+    },
+    {
+      "id": "d13-b",
+      "when": "2026-10-19T16:00:00Z",
+      "pillar": "facts",
+      "text": "Our answers to the five questions: shielded by default, transparent by choice. The chain records that a valid payment happened. The light-wallet server learns which notes you fetched. 20% of every block goes to three published funds. No independent audit yet."
+    },
+    {
+      "id": "d14-a",
+      "when": "2026-10-20T09:00:00Z",
+      "pillar": "product",
+      "text": "The light-wallet model: your wallet never holds a copy of the chain. It asks lwd-main.swarm.green for the encrypted outputs and decrypts only what is yours. The server learns which notes you asked for, not the amounts or counterparties. Your own node removes even that."
+    },
+    {
+      "id": "d14-b",
+      "when": "2026-10-20T16:00:00Z",
+      "pillar": "community",
+      "text": "To everyone who has installed the wallet this week and written down the 24 words on paper: that is the whole security model, and you did it right. Nobody at SWARM can recover a phrase. The lock code protects the device, not the words."
+    },
+    {
+      "id": "d15-a",
+      "when": "2026-10-21T09:00:00Z",
+      "pillar": "landscape",
+      "text": "The EU's anti-money-laundering regulation bars banks and crypto service providers from keeping anonymous accounts, anonymity-enhancing coins included, from 10 July 2027. It does not touch self-custody or peer-to-peer use. Read what it says before someone summarises it for you."
+    },
+    {
+      "id": "d15-b",
+      "when": "2026-10-21T16:00:00Z",
+      "pillar": "facts",
+      "text": "The closed start, in five posts, because it deserves a straight explanation.",
+      "thread": [
+        "1/ Mainnet has been live since 2 October 2026, 15:42 UTC. Until 31 October 2026, 15:42 UTC only the project's own machines mine.",
+        "2/ In those 29 days about 33,408 blocks and about 208,800 SWM are produced, about 0.99% of the maximum supply. They are ordinary blocks: 80% to the project's mining wallet, 20% to the three funds, all visible in the explorer.",
+        "3/ Why: the infrastructure around the coin, liquidity pools included, needs coins before public mining begins. The aim is an orderly start. It is an aim, not a promise about a price.",
+        "4/ Then 24 hours of early access for the waiting list, from 31 October 15:42 UTC. From 1 November 2026, 15:42 UTC mining is open to everyone and the node software is published.",
+        "5/ Every coin, those included, has to be mined, and rewards mature after 100 blocks. No coins are promised. https://swarm.green/network"
+      ]
+    },
+    {
+      "id": "d16-a",
+      "when": "2026-10-22T09:00:00Z",
+      "pillar": "build",
+      "text": "The explorer shows every block, every transaction and, for each block, the four parts of the reward. Shielded amounts and counterparties are not visible there, by design. Search by height, block hash, transaction id or transparent address. Mined, not sold.\nhttps://mainnet.explore.swarm.green"
+    },
+    {
+      "id": "d16-b",
+      "when": "2026-10-22T16:00:00Z",
+      "pillar": "product",
+      "text": "Paying someone inside a chat means you never leave the conversation to paste an address, and no third app learns that the two of you transact. In SWARM Messenger the wallet pane sits beside the thread. Shielded by default."
+    },
+    {
+      "id": "d17-a",
+      "when": "2026-10-23T09:00:00Z",
+      "pillar": "mining",
+      "text": "Nine days until early access. The waiting list takes two things: an email address, so we can reach you, and the swm1 address you would mine to. Invites decide the order on 31 October; nothing else. It is free, and no coins are promised.\nhttps://swarm.green/waitlist"
+    },
+    {
+      "id": "d17-b",
+      "when": "2026-10-23T16:00:00Z",
+      "pillar": "landscape",
+      "text": "Equihash 200,9 has specialised hardware. We say so rather than pretend otherwise: nothing in the rules keeps larger miners out, at either end. There is no promise that home computers stay competitive forever. Open rules have consequences. No coins are promised."
+    },
+    {
+      "id": "d18-a",
+      "when": "2026-10-24T10:00:00Z",
+      "pillar": "community",
+      "text": "Thank you to the people who reported SmartScreen and Gatekeeper warnings on the unsigned builds. The checksum on the download page is your verification until vendor signing lands. On Linux: sha256sum the file and compare. On macOS: shasum -a 256."
+    },
+    {
+      "id": "d19-a",
+      "when": "2026-10-25T10:00:00Z",
+      "pillar": "landscape",
+      "text": "A transparent ledger is a surveillance system with a good reputation. It does not become private because you use a new address each time; chain analysis exists because it works. The only amount nobody can analyse is the one that was never written down."
+    },
+    {
+      "id": "d20-a",
+      "when": "2026-10-26T09:00:00Z",
+      "pillar": "mining",
+      "text": "Six days. On 31 October at 15:42 UTC the people on the waiting list get the node download, in leaderboard order during that day. On 1 November at 15:42 UTC everyone does. Same rules for everyone once it is open. No coins are promised.\nhttps://swarm.green/waitlist"
+    },
+    {
+      "id": "d20-b",
+      "when": "2026-10-26T16:00:00Z",
+      "pillar": "facts",
+      "text": "Who controls the three project addresses: each is a 2-of-3 multisig whose key shares were generated offline at the launch key ceremony and are held under the published custody policy. It is custody of the project's share, not a vote: nothing can change the percentages."
+    },
+    {
+      "id": "d21-a",
+      "when": "2026-10-27T09:00:00Z",
+      "pillar": "product",
+      "text": "The wallet labels every address with its network and its kind, and refuses an address from the other network. Testnet addresses start with swarm1 and testnet coins have no value. Boring details are how people keep their money."
+    },
+    {
+      "id": "d21-b",
+      "when": "2026-10-27T16:00:00Z",
+      "pillar": "build",
+      "text": "Running your own node: zebrad from privacy-zebra joins mainnet with the default configuration (Rust 1.96, see the toolchain file). The chain is young, so disk use is small today. Your node verifies; it never trusts.\nhttps://github.com/Swarmcoin/swarm/blob/main/doc/building.md"
+    },
+    {
+      "id": "d22-a",
+      "when": "2026-10-28T09:00:00Z",
+      "pillar": "mining",
+      "text": "Four days. Before mining opens: install SWARM Wallet, write the 24 words on paper, copy your swm1 address. That is the address you will mine to. Rewards are transparent coinbase outputs that mature after 100 blocks. No coins are promised.\nhttps://swarm.green/ecosystem/wallet"
+    },
+    {
+      "id": "d22-b",
+      "when": "2026-10-28T16:00:00Z",
+      "pillar": "facts",
+      "text": "The three things we will never ask for, in five posts, because the scams arrive the day the node is published.",
+      "thread": [
+        "1/ We will never ask for your recovery words. Not by email, not here, not anywhere. Anyone who does is not us.",
+        "2/ We will never ask for a private key or a payment to join the waiting list, to mine, or to receive anything. The list is free. Mining is open to everyone from 1 November 15:42 UTC.",
+        "3/ Official channels are exactly four: swarm.green, @swarm_coin, swarmofficial@atomicmail.io and github.com/Swarmcoin. Anything else claiming to be SWARM is not.",
+        "4/ Only download from swarm.green, and compare the SHA-256 shown beside the file before you install. A build without a matching checksum is not ours.",
+        "5/ If you see an account impersonating SWARM, report it to X and tell us. We would rather answer a hundred cautious questions than read one story about lost coins."
+      ]
+    },
+    {
+      "id": "d23-a",
+      "when": "2026-10-29T09:00:00Z",
+      "pillar": "landscape",
+      "text": "Zcash's development funding was renewed by community decision for limited periods. SWARM's 20% allocation does not end: over the life of the chain about 4.2 million SWM go to the three funds. That is the design, and we describe it that way. Compare the designs, not the slogans."
+    },
+    {
+      "id": "d23-b",
+      "when": "2026-10-29T16:00:00Z",
+      "pillar": "mining",
+      "text": "Three days. When SWARM Node is published it will carry its SHA-256 like every other download. It runs a full node and mines on your CPU; it reports its measured rate and the blocks it found. A mining guide goes up with it. No coins are promised."
+    },
+    {
+      "id": "d24-a",
+      "when": "2026-10-30T09:00:00Z",
+      "pillar": "community",
+      "text": "The leaderboard counts the people who join with your invite link, each once, and only them. Ties go to whoever joined first. One entry per person. A higher place gets the node download earlier on 31 October, nothing more. No coins are promised.\nhttps://swarm.green/waitlist"
+    },
+    {
+      "id": "d24-b",
+      "when": "2026-10-30T16:00:00Z",
+      "pillar": "facts",
+      "text": "Tomorrow at 15:42 UTC the closed start ends. For the record, here is what it produced: about 33,408 blocks, about 208,800 SWM, about 0.99% of the maximum supply, every block visible in the explorer with its 80/8/4/8 split.\nhttps://mainnet.explore.swarm.green"
+    },
+    {
+      "id": "d25-a",
+      "when": "2026-10-31T09:00:00Z",
+      "pillar": "mining",
+      "text": "Today. At 15:42 UTC the node download opens for the waiting list, in leaderboard order through the day. At 15:42 UTC tomorrow it opens for everyone. Check your email, check the SHA-256, write down your words. No coins are promised."
+    },
+    {
+      "id": "d25-b",
+      "when": "2026-10-31T15:42:00Z",
+      "pillar": "mining",
+      "text": "15:42 UTC. The project-only phase of the closed start is over. Early access for the waiting list begins now; the node download goes out in leaderboard order over the next 24 hours. Public mining opens 1 November 2026, 15:42 UTC. No coins are promised.\nhttps://swarm.green/waitlist"
+    },
+    {
+      "id": "d26-a",
+      "when": "2026-11-01T09:00:00Z",
+      "pillar": "mining",
+      "text": "In under seven hours SWARM mining opens to everyone. The node software appears at swarm.green/ecosystem at 15:42 UTC with its checksum and a mining guide. Equihash 200,9, CPU from the app, 100-block maturity. Same rules for everyone. No coins are promised."
+    },
+    {
+      "id": "d26-b",
+      "when": "2026-11-01T15:42:00Z",
+      "pillar": "mining",
+      "text": "Public mining is open. From this moment anyone can run SWARM Node and mine. The bees that do the work earn the honey. 🐝 Download, verify the SHA-256, enter your swm1 address, start. No coins are promised; the rules are the same for everyone.\nhttps://swarm.green/ecosystem",
+      "media": [
+        "https://swarm.green/assets/og.png"
+      ]
+    },
+    {
+      "id": "d27-a",
+      "when": "2026-11-02T09:00:00Z",
+      "pillar": "mining",
+      "text": "First day of public mining. If your node is syncing: it verifies every block from genesis before it mines; that is the point. If it found a block: the reward matures after 100 blocks, about two hours. If something broke: tell us in swarm-node on GitHub. No coins are promised."
+    },
+    {
+      "id": "d27-b",
+      "when": "2026-11-02T16:00:00Z",
+      "pillar": "build",
+      "text": "How to tell your node is on the right chain: compare the genesis hash it reports with 01b76d8a…eff2 on the verify page, and compare your height with the explorer. A node that disagrees with both is on the wrong network, or on the testnet.\nhttps://swarm.green/verify"
+    },
+    {
+      "id": "d28-a",
+      "when": "2026-11-03T09:00:00Z",
+      "pillar": "community",
+      "text": "To the pool operators asking about Equihash 200,9 and the coinbase format: the node is a Zebra fork with the standard RPC surface, the network magic is SWMN, and the funding-stream outputs are in every coinbase. Questions go to the privacy-zebra repository."
+    },
+    {
+      "id": "d28-b",
+      "when": "2026-11-03T16:00:00Z",
+      "pillar": "product",
+      "text": "A reminder that the wallet is one app and the miner is another on purpose. SWARM Node holds no spending keys; you give it a payout address and it pays there. Keep the 24 words where the miner is not. No coins are promised."
+    },
+    {
+      "id": "d29-a",
+      "when": "2026-11-04T09:00:00Z",
+      "pillar": "landscape",
+      "text": "Tomorrow Zcash activates NU7 on its own mainnet. SWARM runs the rule set that was active on Zcash mainnet at the time of the fork; upstream changes come to SWARM only as announced network upgrades with an activation height. There is no SWARM upgrade scheduled today."
+    },
+    {
+      "id": "d29-b",
+      "when": "2026-11-04T16:00:00Z",
+      "pillar": "facts",
+      "text": "What a transaction reveals, in five posts.",
+      "thread": [
+        "1/ Shielded to shielded: the chain sees that a transaction exists, its fee and its size. The light-wallet server sees which encrypted outputs your wallet fetched, not the amounts or counterparties.",
+        "2/ Transparent to transparent: everything, as in Bitcoin. Addresses, amounts, times, forever.",
+        "3/ Mixed: the transparent side in full, the shielded side as in 1/. The wallet shows you which kind you are about to make.",
+        "4/ None of this hides your IP address from the server or your ISP. For that you need your own node, or a network-level privacy tool. We say this every time because it is true every time.",
+        "5/ The whole table is in doc/protocol.md: https://github.com/Swarmcoin/swarm/blob/main/doc/protocol.md"
+      ]
+    },
+    {
+      "id": "d30-a",
+      "when": "2026-11-05T09:00:00Z",
+      "pillar": "community",
+      "text": "One month of @swarm_coin. What we published: a chain, a wallet on four platforms, a messenger, a browser pre-release, a node with a miner, and a list of what is still missing. What we did not publish: a price or a promise. Mined, not sold. Thank you for reading."
+    },
+    {
+      "id": "d30-b",
+      "when": "2026-11-05T16:00:00Z",
+      "pillar": "build",
+      "text": "The roadmap uses three words strictly. Live means you can use it today. In development means the work has started and is not finished. Planned means it has not started: no date, no promise. Nothing moves up the list until it is true.\nhttps://swarm.green/roadmap"
+    },
+    {
+      "id": "d31-a",
+      "when": "2026-11-06T09:00:00Z",
+      "pillar": "product",
+      "text": "Next on the list, in order and only when finished and reviewed: signed macOS builds, the Android and iOS mainnet wallets, a second seed node in another failure domain, custody tooling for the three funds, an independent security review of the code as launched. Then SWARM Market."
+    },
+    {
+      "id": "d31-b",
+      "when": "2026-11-06T16:00:00Z",
+      "pillar": "facts",
+      "text": "SWARM is private money. Shielded by default, transparent by choice, mined by anyone since 1 November 2026, open source from the node to the browser. Mined, not sold. Nobody sets a price or promises one.\nhttps://swarm.green"
+    }
+  ]
+}

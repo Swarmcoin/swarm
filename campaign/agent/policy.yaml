@@ -1,0 +1,133 @@
+# Guardrails for the @swarm_coin agent. Loaded by swarm_social/policy.py.
+# Every outgoing text passes check_text(); every action passes the budget.
+# VOICE.md explains the reasoning behind each rule.
+
+account: swarm_coin
+
+# Texts containing any of these (case-insensitive, word-boundary) are refused.
+banned_phrases:
+  - "to the moon"
+  - "moon"
+  - "pump"
+  - "buy now"
+  - "buy the dip"
+  - "undervalued"
+  - "risk-free"
+  - "100x"
+  - "10x"
+  - "price target"
+  - "market cap"
+  - "don't miss"
+  - "last chance"
+  - "limited time"
+  - "airdrop"
+  - "giveaway"
+  - "presale"
+  - "pre-sale"
+  - "ICO"
+  - "IDO"
+  - "listing soon"
+  - "wen listing"
+  - "untraceable"
+  - "anonymous coin"
+  - "100% private"
+  - "fully anonymous"
+  - "unhackable"
+  - "audited"
+  - "fair launch"
+  - "DM me"
+  - "DM us"
+  - "send me your seed"
+  - "revolutionary"
+  - "game-changing"
+  - "massive"
+  - "huge"
+  - "🚀"
+  - "💎"
+  - "📈"
+
+# A dollar/euro figure or a percent gain anywhere in a post is refused.
+banned_regex:
+  - '[$€£]\s?\d'
+  - '\d\s?(usd|eur|usdt|usdc)\b'
+  - '\b\d+(\.\d+)?\s?%\s?(gain|up|return|apy|apr|yield)'
+  - '\b\d{2,}x\b'
+  - '\bguaranteed\s+(returns?|profits?|gains?|income|price|yield)'
+
+# Only these hosts may appear in links.
+allowed_link_hosts:
+  - swarm.green
+  - mainnet.explore.swarm.green
+  - explore.swarm.green
+  - testnet.explore.swarm.green
+  - github.com/Swarmcoin
+  - x.com/swarm_coin
+
+# Posts touching these topics must carry one of the disclaimers.
+# Word-boundary match: "mined" and "rewarded" do not trigger, "miner" and "rewards" do.
+disclaimer_triggers:
+  - mining
+  - mine
+  - miner
+  - miners
+  - reward
+  - rewards
+  - waiting list
+  - waitlist
+  - get SWM
+  - earn
+  - earning
+disclaimers:
+  - "No coins are promised."
+  - "no coins are promised"
+  - "SWM has no guaranteed value"
+  - "can lose value"
+  - "Mined, not sold."
+  - "mined, not sold"
+
+max_post_chars: 280
+max_hashtags: 1
+
+# Per-UTC-day caps. The agent's tools refuse once a cap is reached.
+budget:
+  posts_per_day: 4          # original posts, scheduled ones included
+  replies_per_day: 12
+  likes_per_day: 20
+  follows_per_day: 0        # following is a human decision
+  reposts_per_day: 3
+  max_actions_per_run: 8    # one cron cycle
+  min_minutes_between_posts: 45
+  quiet_hours_utc: [1, 2, 3, 4, 5]   # no original posts in these hours
+
+# Never reply to the same account more than this many times per day.
+max_replies_per_account_per_day: 2
+# Never reply twice to the same post.
+reply_once_per_post: true
+# Never reply to posts older than this.
+max_reply_age_hours: 36
+
+# Conversations to stay out of entirely (regex on the other post's text).
+do_not_engage_regex:
+  - '(?i)\b(price|pump|dump|moon|listing|exchange|binance|coinbase|kucoin|mexc|gate\.io)\b'
+  - '(?i)\b(giveaway|airdrop|free\s+\w*coins?|send\s+\d)\b'
+  - '(?i)\b(scam|rug|ponzi|fraud)\b'
+  - '(?i)\b(election|president|trump|biden|putin|israel|gaza|ukraine|war)\b'
+  - '(?i)\b(lawsuit|sue|sec\b|regulator|illegal)\b'
+
+# Accounts we never reply to (handles without @).
+never_reply_handles: []
+
+# Accounts whose public posts the engagement loop may read and, when relevant, answer.
+# Tier 1: ecosystem we build on. Tier 2: privacy advocates and journalists. Tier 3: peers.
+# See ../x/engagement-targets.md for the reasoning. Lower-case handles without @.
+engagement_targets:
+  tier1: [zcash, electriccoinco, zcashfoundation, zingolabs, zooko, zcashcommunity, signalapp, ungoogled]
+  tier2: [naomibrockwell, techlore, privacyguides, torproject, eff, sethforprivacy, monerotalk, matt_odell, lopp]
+  tier3: [monero, firoorg, zano_project, pirate_chain, beamprivacy, grincoin, railgun_project, secretnetwork]
+
+# Search queries the engagement loop runs each cycle (X recent search syntax).
+search_queries:
+  - '"swarm_coin" OR "swarm.green" -is:retweet'
+  - '"SWARM Messenger" OR "SWARM Browser" OR "SWARM Wallet" -is:retweet'
+  - '("privacy coin" OR "shielded transaction" OR "zk-SNARK payments") -is:retweet lang:en'
+  - '(ungoogled-chromium wallet) OR ("private messenger" payments) -is:retweet lang:en'
