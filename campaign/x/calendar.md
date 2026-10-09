@@ -47,7 +47,7 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 >
 > ↳ *first reply:* Why 24 words are enough: each list of words encodes 256 bits of randomness (BIP-39) https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki
 
-**13:30 UTC** · `d08-b` · story · thread
+**13:30 UTC** · `d08-b` · story · thread · image
 
 > In 1993 the US government built a phone chip with a government key inside. It promised the key would only be used by the good guys. One researcher broke it in a year. The argument it settled is being had again in 2026.
 >> 1/ April 1993: the Clipper chip. NSA-designed encryption for phones, with every key held in escrow by the government. The algorithm, Skipjack, was classified. "Trust us" was the design.
@@ -56,7 +56,7 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 >> 4/ 2025: the EU's "chat control" proposal would have ordered messaging apps to scan encrypted messages. It was pulled from a vote in October 2025 after Germany joined a blocking minority. The Council settled on voluntary scanning in November. It will be back.
 >> 5/ The lesson has not changed in 33 years: a door that opens for one party opens for whoever finds the key. Which messaging app would you drop first if it added a scanner?
 >
-> ↳ *first reply:* Sources: EFF on Clipper https://www.eff.org/deeplinks/2015/04/clipper-chips-birthday-looking-back-22-years-key-escrow-failures and eucrim on the November 2025 Council position https://eucrim.eu/news/csa-regulation-council-position-reached/
+> ↳ *first reply:* Sources: EFF on Clipper https://www.eff.org/deeplinks/2015/04/clipper-chips-birthday-looking-back-22-years-key-escrow-failures and eucrim on the November 2025 Council position https://eucrim.eu/news/csa-regulation-council-position-reached/ Image: Travis Goodspeed, MYK-78 Clipper chip markings, via Wikimedia Commons, CC BY 2.0
 
 
 ## Thursday 15 October 2026
@@ -204,11 +204,11 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 ## Saturday 24 October 2026
 
-**10:00 UTC** · `d18-a` · story
+**10:00 UTC** · `d18-a` · story · image
 
 > 31 July 1932: Wörgl, Austria, printed its own money against the Depression. The notes lost 1 percent a month unless stamped, so people spent them. By its own account the town built roads and a bridge while the country stood still. On 1 September 1933 the central bank banned it.
 >
-> ↳ *first reply:* Two views of the same experiment: Bernard Lietaer's annotated account https://bernard-lietaer.org/wp-content/uploads/2022/07/2010-The-Worgl-Experiment-Austria-1932-1933-Lietaer-annotated.pdf and a sceptical one from the Mises Institute https://mises.org/library/free-money-miracle
+> ↳ *first reply:* Two views of the same experiment: Bernard Lietaer's annotated account https://bernard-lietaer.org/wp-content/uploads/2022/07/2010-The-Worgl-Experiment-Austria-1932-1933-Lietaer-annotated.pdf and a sceptical one from the Mises Institute https://mises.org/library/free-money-miracle Image: 1 Schilling Wörgl note (1932/33), via Wikimedia Commons, public domain
 
 **16:00 UTC** · `d02-b` · promo · image
 
@@ -234,11 +234,11 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 ## Monday 26 October 2026
 
-**07:30 UTC** · `d20-a` · story
+**07:30 UTC** · `d20-a` · story · image
 
 > East Germany's Stasi ran about 189,000 informants at its peak, in a country of 16 million: one watcher for every 57 people. It kept the smell of suspects in sealed jars, on cloth from stolen underwear, for the dogs. When the files were opened in 1990 there were 111 kilometres.
 >
-> ↳ *first reply:* The smell jars, with photographs: https://germanhistorydocs.org/en/a-new-germany-1990-2023/individual-odor-samples-preserved-by-the-stasi-1990s Informant counts vary by year; 189,000 is the usual peak figure.
+> ↳ *first reply:* The smell jars, with photographs: https://germanhistorydocs.org/en/a-new-germany-1990-2023/individual-odor-samples-preserved-by-the-stasi-1990s Informant counts vary by year; 189,000 is the usual peak figure. Image: Deutsches Spionagemuseum Berlin, Geruchskonserve MfS, via Wikimedia Commons, CC BY 4.0
 
 **13:30 UTC** · `d20-b` · promo
 

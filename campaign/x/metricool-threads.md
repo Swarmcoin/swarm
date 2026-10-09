@@ -28,6 +28,7 @@ Follow-up posts:
 First reply:
 
 Sources: EFF on Clipper https://www.eff.org/deeplinks/2015/04/clipper-chips-birthday-looking-back-22-years-key-escrow-failures and eucrim on the November 2025 Council position https://eucrim.eu/news/csa-regulation-council-position-reached/
+Image: Travis Goodspeed, MYK-78 Clipper chip markings, via Wikimedia Commons, CC BY 2.0
 
 ---
 
