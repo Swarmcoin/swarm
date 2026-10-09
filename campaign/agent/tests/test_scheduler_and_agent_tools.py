@@ -80,7 +80,7 @@ def test_agent_tools_review_mode_queues_everything(tmp_path):
 
 
 def test_agent_tools_auto_mode_publishes_mention_reply_only(tmp_path):
-    s = _settings(tmp_path, [], dry_run=True, approval="auto")
+    s = _settings(tmp_path, [], dry_run=True, approval="auto", x_ai_approval="test")
     state, queue = State(s.state_path), ReviewQueue(s.queue_path)
     found = Post(id="2002", text="Thinking about shielded payments lately", author_handle="bob", created_at=datetime.now(timezone.utc).isoformat())
     x = DryRunClient(seed_mentions=[_mention()], seed_search=[found])
@@ -97,13 +97,13 @@ def test_agent_tools_auto_mode_publishes_mention_reply_only(tmp_path):
     assert state.count("replies") == 1 and "1001" in state.data["replied_post_ids"]
     # second reply to the same post refused
     assert "refused" in t["reply_to_mention"].call({"post_id": "1001", "text": "Again"})
-    # like only on mentions
+    # like only on mentions, and never automated (X Automation Rules): queued even in auto mode
     assert "refused" in t["like_post"].call({"post_id": "2002"})
-    assert "liked" in t["like_post"].call({"post_id": "1001"})
+    assert "queued" in t["like_post"].call({"post_id": "1001"})
 
 
 def test_policy_blocks_agent_text(tmp_path):
-    s = _settings(tmp_path, [], dry_run=True, approval="auto")
+    s = _settings(tmp_path, [], dry_run=True, approval="auto", x_ai_approval="test")
     run = AgentRun(s, POLICY, State(s.state_path), DryRunClient(seed_mentions=[_mention()]), ReviewQueue(s.queue_path))
     t = _tools(run)
     t["get_new_mentions"].call({})
@@ -119,7 +119,7 @@ def test_do_not_engage_filters_mentions(tmp_path):
 
 
 def test_action_cap_per_run(tmp_path):
-    s = _settings(tmp_path, [], dry_run=True, approval="auto")
+    s = _settings(tmp_path, [], dry_run=True, approval="auto", x_ai_approval="test")
     state = State(s.state_path)
     mentions = [_mention(id_=str(3000 + i), author=f"user{i}") for i in range(12)]
     run = AgentRun(s, POLICY, state, DryRunClient(seed_mentions=mentions), ReviewQueue(s.queue_path))

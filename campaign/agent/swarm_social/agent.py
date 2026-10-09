@@ -69,7 +69,7 @@ class ReviewQueue:
         lines = ["| id | kind | to | text | why |", "|---|---|---|---|---|"]
         for i in pend:
             to = f"@{i['author']} ({i['target_post_id']})" if i["author"] else (i["target_post_id"] or "—")
-            cell = i['text'].replace('|', '\|').replace(chr(10), ' ')   # Python 3.11: no backslash inside an f-string expression
+            cell = i['text'].replace('|', '\\|').replace(chr(10), ' ')   # Python 3.11: no backslash inside an f-string expression
             lines.append(f"| `{i['id']}` | {i['kind']} | {to} | {cell} | {i['reason']} |")
         lines.append("")
         lines.append("Approve with `swarm-social approve <id> [<id>...]` or `swarm-social approve --all`; reject with `swarm-social reject <id>`.")
@@ -144,9 +144,18 @@ class AgentRun:
                 if newest.id.isdigit():
                     run.st.data["last_mention_id"] = newest.id
             keep, skipped = [], []
+            opted = run.st.data.setdefault("opt_out_handles", [])
             for p in posts:
+                handle = p.author_handle.lower().lstrip("@")
                 ok, why = run.p.may_engage_with(p.text, p.author_handle)
-                if p.id in run.st.data["replied_post_ids"]:
+                if handle in opted:
+                    ok, why = False, "opted out earlier; never answered again"
+                elif run.p.is_opt_out(p.text):
+                    # X Automation Rules: honour opt-out requests promptly. Recorded, never answered.
+                    opted.append(handle)
+                    run.st.log("opt_out", author=handle, post_id=p.id)
+                    ok, why = False, "asked us to stop: recorded as opt-out, never answered again"
+                elif p.id in run.st.data["replied_post_ids"]:
                     ok, why = False, "already answered"
                 elif p.age_hours() > run.p.max_reply_age_hours:
                     ok, why = False, f"older than {run.p.max_reply_age_hours} h"
@@ -233,24 +242,20 @@ class AgentRun:
 
         @beta_tool
         def like_post(post_id: str) -> str:
-            """Like a post that mentioned us, when it is friendly or useful. Only posts from get_new_mentions qualify;
-            likes are capped per day. Never like in bulk."""
+            """Suggest liking a friendly post that mentioned us. X forbids automated likes, so this only ever
+            puts the like into the human review queue, in every mode; a person clicks it. Only posts from
+            get_new_mentions qualify; suggestions are capped per day."""
             if post_id not in run.mentioned_us:
-                return "refused: only posts that mention us may be liked by the agent."
-            if post_id in run.st.data["liked_post_ids"]:
-                return "refused: already liked."
+                return "refused: only posts that mention us may be suggested for a like."
+            if post_id in run.st.data["liked_post_ids"] or any(i["kind"] == "like" and i["target_post_id"] == post_id for i in run.q.items):
+                return "refused: already liked or already queued."
             if run._budget_left()["likes"] <= 0:
                 return "refused: daily like cap reached."
             if (why := run._spend()):
                 return why
-            if run.s.approval == "auto":
-                run.x.like(post_id)
-                run.st.bump("likes")
-                run.st.data["liked_post_ids"].append(post_id)
-                run.st.log("like", post_id=post_id, dry_run=run.s.dry_run)
-                return "liked" + (" (dry run)" if run.s.dry_run else "")
             item = run.q.add("like", "", target_post_id=post_id, author=run.seen_posts[post_id].author_handle, reason="friendly mention", source="mention")
-            return f"queued for human review as item {item}."
+            run.st.log("proposed_like", item=item, post_id=post_id)
+            return f"queued for human review as item {item} (likes are never automated)."
 
         @beta_tool
         def publish_post(text: str, reason: str) -> str:
@@ -313,6 +318,8 @@ SYSTEM_TEMPLATE = """You are running the X account @swarm_coin for the SWARM (SW
 4. End with a short plain-text report for the team: what you answered, what you proposed, what you skipped and why, and anything in note_for_humans. No marketing language in the report.
 
 Never invent a number, a date or a feature. If the facts above do not contain the answer, say so in the reply ("we have not published that yet") rather than guess. Never discuss price or the SWM token on Base. Never argue. Never reply twice to the same person in one cycle.
+
+House rules the policy also enforces: name the network beside every address and link ("on Base", "on BNB Smart Chain", "on Solana", "SWARM mainnet"); the testnet is never mentioned; SWARM is "built on the Zcash stack" or "a friendly fork", never "a copy of Zcash"; no "anonymous", no audit claim; no multilevel or referral-level talk of any kind; downloads only from swarm.green, never a github.com release link; quote someone only verbatim with date and source, otherwise paraphrase without quotation marks. If a person asks us to stop, do not answer; the tools record the opt-out.
 """
 
 

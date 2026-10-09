@@ -44,6 +44,11 @@ def cmd_status(settings: Settings, policy: Policy, state: State, args) -> int:
     posts = load_calendar(settings.calendar_path)
     posted = set(state.data["posted_calendar_ids"])
     print(f"mode: {'DRY RUN' if settings.dry_run else 'LIVE'}; approval: {settings.approval}; scheduler: {'on' if settings.scheduler_enabled else 'off (Metricool)'}")
+    if settings.approval != "auto" and not settings.x_ai_approval:
+        print("auto mode is locked until SWARM_SOCIAL_X_AI_APPROVAL holds X's written approval reference")
+    opted = state.data.get("opt_out_handles", [])
+    if opted:
+        print(f"opted out (never answered again): {', '.join('@' + h for h in opted)}")
     print(f"calendar: {len(posts)} posts, {len(posted)} published, {len([p for p in posts if p.id not in posted])} remaining")
     t = state.today()
     print(f"today (UTC): posts {t['posts']}/{policy.cap('posts_per_day')}, replies {t['replies']}/{policy.cap('replies_per_day')}, likes {t['likes']}/{policy.cap('likes_per_day')}")
@@ -152,7 +157,8 @@ def _write_report(settings: Settings, state: State, queue: ReviewQueue, report: 
     lines = [
         f"# @swarm_coin agent — {datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC",
         "",
-        f"Mode: **{'dry run' if settings.dry_run else 'LIVE'}**, approval: **{settings.approval}**.",
+        f"Mode: **{'dry run' if settings.dry_run else 'LIVE'}**, approval: **{settings.approval}**"
+        + ("" if settings.approval == "auto" else " (auto mode locked until X's written approval is recorded in SWARM_SOCIAL_X_AI_APPROVAL)") + ".",
         f"Today: {t['posts']} posts, {t['replies']} replies, {t['likes']} likes.",
         "",
         "## Agent report", "", report or "_(no agent cycle in this run)_", "",
@@ -167,6 +173,9 @@ def _write_report(settings: Settings, state: State, queue: ReviewQueue, report: 
 
 def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
+    for stream in (sys.stdout, sys.stderr):   # Windows consoles default to cp1252; the reports carry UTF-8
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser(prog="swarm-social", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("status").set_defaults(fn=cmd_status)

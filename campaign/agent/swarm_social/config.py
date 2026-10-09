@@ -23,6 +23,11 @@ class Settings:
     # "auto" publishes directly; "review" writes every outgoing action to the review queue
     # and publishes nothing until `swarm-social approve` is run.
     approval: str = field(default_factory=lambda: os.getenv("SWARM_SOCIAL_APPROVAL", "review"))
+    # X Automation Rules (April 2026, II.B.3): "the deployment or operation of any AI reply bot requires
+    # prior written and explicit approval from X". Auto mode therefore needs the reference of that
+    # approval (date or ticket id, set by the owner as a repository variable); without it the agent
+    # stays in review mode whatever SWARM_SOCIAL_APPROVAL says.
+    x_ai_approval: str = field(default_factory=lambda: os.getenv("SWARM_SOCIAL_X_AI_APPROVAL", "").strip())
 
     # X API v2, OAuth 1.0a user context (read + write) for the @swarm_coin account.
     x_api_key: str = field(default_factory=lambda: os.getenv("X_API_KEY", ""))
@@ -53,5 +58,18 @@ class Settings:
         return all([self.x_api_key, self.x_api_secret, self.x_access_token, self.x_access_secret])
 
 
+    def effective_approval(self) -> tuple[str, str]:
+        """The approval mode the run actually uses, and why."""
+        if self.approval == "auto" and not self.x_ai_approval:
+            return "review", "SWARM_SOCIAL_APPROVAL=auto ignored: SWARM_SOCIAL_X_AI_APPROVAL is empty (X requires written approval for AI reply bots)"
+        return self.approval, "ok"
+
+
 def load_settings() -> Settings:
-    return Settings()
+    s = Settings()
+    mode, why = s.effective_approval()
+    if mode != s.approval:
+        import logging
+        logging.getLogger("swarm_social.config").warning(why)
+        s.approval = mode
+    return s

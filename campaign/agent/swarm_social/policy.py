@@ -42,6 +42,15 @@ class Policy:
         targets = data.get("engagement_targets", {})
         self.targets: dict[str, list[str]] = {k: [h.lower() for h in v] for k, v in targets.items()}
         self.search_queries: list[str] = data.get("search_queries", [])
+        # COMMON-RULES section 4 (2026-10-09): an address needs its network named beside it,
+        # github.com links are for code only, every mining call carries the ASIC sentence,
+        # and a person who asks us to stop is never answered again.
+        self.address_regex = [re.compile(r) for r in data.get("address_regex", [])]
+        self.network_names = [n.lower() for n in data.get("network_names", [])]
+        self.denied_link_regex = [re.compile(r) for r in data.get("denied_link_regex", [])]
+        self.mining_call_regex = [re.compile(r) for r in data.get("mining_call_regex", [])]
+        self.mining_call_sentence: str = (data.get("mining_call_sentence") or "").lower()
+        self.opt_out_regex = [re.compile(r) for r in data.get("opt_out_regex", [])]
 
     @classmethod
     def load(cls, path: Path) -> "Policy":
@@ -79,6 +88,9 @@ class Policy:
             url = url.rstrip(".,;:!?'\"")   # punctuation after a link is not part of it
             host = urlparse(url).netloc.lower()
             path = urlparse(url).path
+            if any(rx.search(url) for rx in self.denied_link_regex):
+                out.append(Violation("link_denied", f"{host}{path} is refused: downloads come from swarm.green and the testnet is never linked"))
+                continue
             if source_links:
                 if any(rx.search(url) for rx in self.source_link_denied):
                     out.append(Violation("link_host", f"source link to {host} is on the denied list"))
@@ -100,7 +112,28 @@ class Policy:
 
         if text.count("!") > 1:
             out.append(Violation("tone", "more than one exclamation mark"))
+
+        # An address or mint without its network named beside it ("on Base", "on Solana", ...).
+        if self.address_regex and any(rx.search(text) for rx in self.address_regex):
+            if not any(n in lowered for n in self.network_names):
+                out.append(Violation("network_missing", "a token address or mint appears without its network named beside it"))
+
+        if not is_reply:
+            out += self.check_mining_call(text)
         return out
+
+    def check_mining_call(self, text: str) -> list[Violation]:
+        """A text that calls people to mine must carry the ASIC sentence. For a calendar post pass the
+        post, its thread and its first reply joined, so the sentence may sit anywhere in the package."""
+        if not self.mining_call_regex or not self.mining_call_sentence:
+            return []
+        if any(rx.search(text) for rx in self.mining_call_regex) and self.mining_call_sentence not in text.lower():
+            return [Violation("mining_call", "a mining call must carry 'Please keep ASICs and rented hash power off the network.'")]
+        return []
+
+    def is_opt_out(self, other_text: str) -> bool:
+        """True when a post addressed to us asks us to stop replying."""
+        return any(rx.search(other_text) for rx in self.opt_out_regex)
 
     def may_engage_with(self, other_text: str, author_handle: str) -> tuple[bool, str]:
         if author_handle.lower().lstrip("@") in self.never_reply_handles:

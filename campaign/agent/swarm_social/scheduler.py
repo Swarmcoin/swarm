@@ -32,6 +32,9 @@ def run_scheduler(settings: Settings, policy: Policy, state: State, x: XClient, 
             problems += [p for p in policy.check_text(t, is_reply=True)]
         if post.reply:
             problems += policy.check_text(post.reply, is_reply=True, source_links=True)
+        # The ASIC sentence may sit anywhere in the package (post, thread, first reply).
+        problems = [p for p in problems if p.rule != "mining_call"]
+        problems += policy.check_mining_call(" ".join([post.text, *post.thread, post.reply]))
         if problems:
             # A calendar post that breaks policy is a bug in the calendar; never publish it silently.
             log.error("calendar post %s refused: %s", post.id, "; ".join(map(str, problems)))

@@ -45,6 +45,52 @@ banned_phrases:
   - "🚀"
   - "💎"
   - "📈"
+  # COMMON-RULES section 4 (2026-10-09): never "a copy of Zcash"; say "built on the Zcash stack" or "friendly fork".
+  - "copy of Zcash"
+  - "Zcash copy"
+  - "clone of Zcash"
+  - "Zcash clone"
+  # never claim anonymity (shielding hides what is written to the chain, nothing more); the words
+  # in a history story ("an anonymous letter", "anonymous accounts" in a regulation) stay allowed
+  - "anonymous payments"
+  - "anonymous payment"
+  - "anonymous transactions"
+  - "anonymous transaction"
+  - "anonymous money"
+  - "anonymous chain"
+  - "anonymous by default"
+  - "is anonymous"
+  - "are anonymous"
+  - "stay anonymous"
+  - "remain anonymous"
+  - "you are anonymous"
+  - "completely anonymous"
+  - "totally anonymous"
+  - "full anonymity"
+  - "total anonymity"
+  - "complete anonymity"
+  - "guarantees anonymity"
+  # no testnet wording in outward copy
+  - "testnet"
+  - "test net"
+  # NO MULTILEVEL in any marketing; the FUEL levels and the leg leader share never leave the house
+  - "multilevel"
+  - "multi-level"
+  - "MLM"
+  - "downline"
+  - "upline"
+  - "leg leader"
+  - "top leader bonus"
+  - "referral level"
+  - "referral levels"
+  # price venues are never named from a project channel
+  - "DexScreener"
+  - "CoinGecko"
+  - "CoinMarketCap"
+  - "GeckoTerminal"
+  - "Uniswap"
+  - "PancakeSwap"
+  - "Raydium"
 
 # A dollar/euro figure or a percent gain anywhere in a post is refused.
 banned_regex:
@@ -53,13 +99,55 @@ banned_regex:
   - '\b\d+(\.\d+)?\s?%\s?(gain|up|return|apy|apr|yield)'
   - '\b\d{2,}x\b'
   - '\bguaranteed\s+(returns?|profits?|gains?|income|price|yield)'
+  # a token price statement without a currency sign: "SWM trades at 4.15", "the token is worth 2.70 on Base",
+  # "the SWM price is now 3.88". A history story may still say "worth 250 dollars in 2001".
+  - '(?i)\b(swm|swarm|token|coin|pool|pair|chart|on base|on bsc|bnb smart chain|on solana)\b[^.!?\n]{0,40}?\b(trad(es|ed|ing)|priced?|worth|valued?)\s+(at|around|about|near|roughly|of)?\s*\d'
+  - '(?i)\b(trad(es|ed|ing)|priced?|worth|valued?)\s+(at|around|about|near|roughly|of)?\s*\d[^.!?\n]{0,40}?\b(swm|swarm|token|coin|on base|on bsc|bnb smart chain|on solana)\b'
+  - '(?i)\b(swm|swarm|token|coin)\b[^.!?\n]{0,30}?\b(price|value)\b[^.!?\n]{0,16}?\d'
+  # the retired Solana mint (replaced 2026-10-06 by 9Fyen71zwaRs3QfUCsyUooTAkHfNqzUE17xbXwZL6qiH)
+  - '5VXRk8ZDBrPvYrTnJCWSrK1SzaFkgqkXuY6P2VdYJjHJ'
+  - '5VXR\w{20,60}JjHJ'
+
+# A token address or mint must have its network named beside it (COMMON-RULES section 4:
+# "Name the network beside every number, address and link"). Base and BSC share
+# 0xf904C14d21bEF5b8a5345a666C77C9cc2A24043B; the live Solana mint is 9Fyen71z…L6qiH.
+address_regex:
+  - '0x[0-9a-fA-F]{40}'
+  - '\b[1-9A-HJ-NP-Za-km-z]{32,44}\b'
+network_names:
+  - "on Base"
+  - "Base network"
+  - "BNB Smart Chain"
+  - "on BSC"
+  - "on Solana"
+  - "Solana mint"
+  - "SWARM mainnet"
+  - "on mainnet"
+
+# Links refused even on an official host: github.com is for code only, downloads come from
+# swarm.green (owner rule 2026-09-28); the testnet explorer never appears in outward copy.
+denied_link_regex:
+  - '(?i)github\.com/[^\s]*/(releases|download)'
+  - '(?i)testnet\.explore\.swarm\.green'
+
+# Every mining call carries the ASIC sentence (COMMON-RULES section 4). Checked on original posts
+# and on a calendar post together with its thread and first reply, never on replies.
+mining_call_regex:
+  - '(?i)\b(public mining (is|has) open|mining (opens|is open|starts|has started|begins)|start mining|run (a )?(swarm )?node|mine swarm|mine with us|join (the )?(mining|miners)|anyone can (run|mine)|miners? (can|may) (start|join))'
+mining_call_sentence: "ASICs and rented hash power off the network"
+
+# A mention that asks us to stop is an opt-out (X Automation Rules: honour opt-outs promptly).
+# The handle is recorded in state and never answered again until a human removes it.
+opt_out_regex:
+  - '(?i)\b(stop|unsubscribe|opt[- ]?out|don.?t (reply|answer|respond|tag|mention)|do not (reply|answer|respond|tag|mention)|leave me alone|stop replying|no bot)\b'
 
 # Only these hosts may appear in links.
 allowed_link_hosts:
   - swarm.green
+  - wallet.swarm.green
+  - chat.swarm.green
   - mainnet.explore.swarm.green
   - explore.swarm.green
-  - testnet.explore.swarm.green
   - github.com/Swarmcoin
   - x.com/swarm_coin
 
@@ -100,7 +188,7 @@ max_hashtags: 1
 budget:
   posts_per_day: 4          # original posts, scheduled ones included
   replies_per_day: 12
-  likes_per_day: 20
+  likes_per_day: 5           # likes are only ever queued for a human; X forbids automated likes
   follows_per_day: 0        # following is a human decision
   reposts_per_day: 3
   max_actions_per_run: 8    # one cron cycle

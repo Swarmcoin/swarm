@@ -6,12 +6,18 @@
 #   X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_SECRET   OAuth 1.0a user context for @swarm_coin
 #   X_BEARER_TOKEN                                             optional, app-only reads
 #   ANTHROPIC_API_KEY                                          Claude, for the engagement cycle
-# Variables:
-#   SWARM_SOCIAL_LIVE        "1" to publish. Anything else = dry run (default).
-#   SWARM_SOCIAL_APPROVAL    "review" (default: everything but mention replies is queued) or "auto"
-#   SWARM_SOCIAL_SCHEDULER   "0" when Metricool publishes the calendar, so posts do not go out twice
-#   SWARM_SOCIAL_EFFORT      "medium" (default) | "low" | "high"
+# Variables (Settings → Secrets and variables → Actions → Variables), set in this order:
+#   SWARM_SOCIAL_LIVE           "1" to publish. Anything else = dry run (default). Stage 1: unset or "0".
+#   SWARM_SOCIAL_APPROVAL       "review" (default: every reply, like and post is queued for a human) or
+#                               "auto" (mention replies go out on their own). Stage 2: "review".
+#   SWARM_SOCIAL_X_AI_APPROVAL  reference (date or ticket) of X's written approval for an AI reply bot
+#                               (X Automation Rules, April 2026, II.B.3). Stage 3: without it "auto"
+#                               is ignored and the run stays in review mode.
+#   SWARM_SOCIAL_SCHEDULER      "0" when Metricool publishes the calendar, so posts do not go out twice
+#   SWARM_SOCIAL_EFFORT         "medium" (default) | "low" | "high"
 #
+# The cron only runs on the repository's default branch; until the pull request is merged use
+# "Run workflow" on the branch for a manual dry run. Owner steps: campaign/agent/OWNER-SETUP.md.
 # Approving queued items: Actions → "Social: X" → Run workflow → approve = "all" or "id1,id2".
 
 name: "Social: X"
@@ -51,6 +57,7 @@ jobs:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       SWARM_SOCIAL_LIVE: ${{ vars.SWARM_SOCIAL_LIVE }}
       SWARM_SOCIAL_APPROVAL: ${{ vars.SWARM_SOCIAL_APPROVAL || 'review' }}
+      SWARM_SOCIAL_X_AI_APPROVAL: ${{ vars.SWARM_SOCIAL_X_AI_APPROVAL }}
       SWARM_SOCIAL_SCHEDULER: ${{ vars.SWARM_SOCIAL_SCHEDULER || '1' }}
       SWARM_SOCIAL_EFFORT: ${{ vars.SWARM_SOCIAL_EFFORT || 'medium' }}
     steps:

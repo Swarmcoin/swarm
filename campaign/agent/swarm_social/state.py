@@ -25,6 +25,7 @@ class State:
             "liked_post_ids": [],
             "reposted_post_ids": [],
             "last_mention_id": None,
+            "opt_out_handles": [],   # people who asked us to stop; never answered again (X Automation Rules)
             "last_post_at": None,
             "daily": {},          # "YYYY-MM-DD": {"posts": n, "replies": n, "likes": n, "reposts": n, "replies_by_account": {}}
             "log": [],            # last 500 actions, newest last
