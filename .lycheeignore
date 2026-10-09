@@ -38,3 +38,6 @@ fatf-gafi\.org
 # Courts and archives cited as sources in the forum and Reddit texts (9 October 2026): the
 # Bundesverfassungsgericht resets automated connections. Checked by people when they post.
 bundesverfassungsgericht\.de
+# Wire services and outlets linked from the PR kit (campaign/pr, 9 October 2026): GlobeNewswire
+# answers automated requests with 403. People open those pages when they order or pitch.
+globenewswire\.com
