@@ -1,5 +1,5 @@
 {
-  "built": "2026-10-09T16:50:17+00:00",
+  "built": "2026-10-09T16:53:40+00:00",
   "source": "x/calendar.yaml",
   "posts": [
     {
@@ -27,6 +27,7 @@
     {
       "id": "d07-a",
       "when": "2026-10-13T07:30:00Z",
+      "notes": "Article link (Marketing Desk 2026-10-09, Tuesday 13 Oct): when Articles Medium and Dev.to sends the Dev.to URL, append to reply: \"Longer: our comparison of the privacy coins of 2026, who still hides what and how: [DEVTO-URL-1]\"",
       "pillar": "explain",
       "text": "A bank sees your payments. A transparent blockchain shows them to everyone, forever, and lets anyone link them. That is not a flaw in Bitcoin; it is the design. Chain-analysis firms exist because it works. The only amount nobody can analyse is the one that was never written down.",
       "reply": "How linking works, in plain words (the common-input-ownership heuristic and friends): https://en.bitcoin.it/wiki/Privacy"
@@ -145,6 +146,7 @@
     {
       "id": "d14-b",
       "when": "2026-10-20T13:30:00Z",
+      "notes": "Article link (Marketing Desk 2026-10-09, Tuesday 20 Oct): when the Dev.to URL arrives, append to reply: \"Longer: why every payment you make is a public record, and what a shielded payment changes: [DEVTO-URL-2]\"",
       "pillar": "explain",
       "text": "Five questions sort most privacy claims, for any coin or app:\n1. Default, or an option?\n2. What does the record contain?\n3. What does the server, or your ISP, still see?\n4. Who gets a share of every block, fee or sale?\n5. Has the exact code you run been reviewed, and by whom?"
     },
@@ -253,7 +255,7 @@
     {
       "id": "d21-a",
       "when": "2026-10-27T07:30:00Z",
-      "notes": "Launch-lint advisory \"secure\" judged 2026-10-09 (M1): kept, it is Kerckhoffs' rule as written in 1883.",
+      "notes": "Launch-lint advisory \"secure\" judged 2026-10-09 (M1): kept, it is Kerckhoffs' rule as written in 1883. Article link (Marketing Desk 2026-10-09, Tuesday 27 Oct): when the Dev.to URL arrives, append to reply: \"Longer: what we removed from the browser, what we switched on, and the wallet in the toolbar: [DEVTO-URL-3]\"",
       "pillar": "explain",
       "text": "In 1883 Auguste Kerckhoffs wrote the rule cryptographers still follow: a system must stay secure even if everything about it except the key is public. Secrecy of the design is how you get a backdoor nobody can review. Code you cannot read is code you cannot check.",
       "reply": "\"La cryptographie militaire\", 1883, with the six principles: https://www.petitcolas.net/kerckhoffs/index.html"
@@ -375,6 +377,7 @@
     {
       "id": "d28-b",
       "when": "2026-11-03T13:30:00Z",
+      "notes": "Article link (Marketing Desk 2026-10-09, Tuesday 3 Nov, only after owner item 316 is settled): when the Dev.to URL arrives, add as first reply: \"Longer: a messenger where the money is in the conversation, Signal's protocol, our server, no phone number: [DEVTO-URL-4]\"",
       "pillar": "question",
       "text": "What would you need to see before you trusted a new privacy tool with real money? Open code, an independent review, a year of uptime, a name you already know? Honest answers help us decide what to publish first."
     },
