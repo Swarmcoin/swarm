@@ -38,6 +38,10 @@ The script is run from `campaign/` as `DEVTO_API_KEY=... python tools/publish_de
 articles/<file>.md`. It creates a draft first; never run it with `--publish` without the
 owner's "go" for that article in chat.
 
+## Before publishing anything
+
+- On the publish day, and only then, add the UTM parameters from the vault's `marketing/utm.md` to links that point at swarm.green, wallet.swarm.green, chat.swarm.green or mainnet.explore.swarm.green in the copy pasted on each platform (utm_source=devto or medium, utm_medium=article, utm_campaign=explain-2026-10, or launch-2026-11 for the mining piece, utm_content=the article slug); never on github.com or third-party links; the drafts on this branch and the canonical URLs stay clean. The scheme is PROPOSED until Marketing Analytics Weekly says otherwise.
+
 After publishing, the link goes to the X session (first reply under a post, never a link post),
 the Reddit session (where self-posts are allowed) and the listings session (directory entries).
 Each article link goes into the first reply under the thematically closest X post on its

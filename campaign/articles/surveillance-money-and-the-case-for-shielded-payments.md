@@ -4,6 +4,7 @@ description: "How payment records became diaries, why transparent ledgers made i
 tags: [privacy, cryptocurrency, cryptography, swarm]
 canonical_url: https://swarm.green/
 published: false
+lint_judged: ["other-projects: Zcash, Zebra, Zaino and zingolib named as the stack attribution; Zcash's Founders' Reward as the historical reference for the permanent 20%"]
 ---
 
 # Surveillance money: why every payment you make is a public record, and what a shielded payment changes

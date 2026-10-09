@@ -4,6 +4,7 @@ description: "A comparison of the privacy coins and privacy platforms still runn
 tags: [privacy, cryptocurrency, zcash, monero]
 canonical_url: https://swarm.green/
 published: false
+lint_judged: ["privacy-claims: 'anonymity set' as the technical term and 'anonymity-enhancing coins' as the regulations' own term, in quotation marks with the EU AMLR, FATF and VARA as sources", "security-claims: 'audited' in question 5, the question whether code was audited", "exchange-hints: Binance named in a delisting of Monero reported as news", "retired-words rule: 'snapshot' in Secret Network's token migration reported as news with its date", "other-projects: Zcash, Monero and the other compared projects named as reported facts in the comparison"]
 ---
 
 *Disclosure: this article is published by the SWARM project, whose coin is one of the sixteen compared below. We describe every other project in the terms its own documentation uses, and hold SWARM to the same standard.*
