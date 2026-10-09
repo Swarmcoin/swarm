@@ -35,3 +35,6 @@ justice\.gov
 govinfo\.gov
 eur-lex\.europa\.eu
 fatf-gafi\.org
+# Courts and archives cited as sources in the forum and Reddit texts (9 October 2026): the
+# Bundesverfassungsgericht resets automated connections. Checked by people when they post.
+bundesverfassungsgericht\.de
