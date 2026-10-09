@@ -17,11 +17,11 @@ replies people were glad to read; a bad week is fifty they scrolled past.
 | Handle | Why | How we engage |
 | --- | --- | --- |
 | @zcash | The protocol SWARM runs | Amplify protocol news; answer questions about shielded tech when asked in their threads; never compare ZEC and SWM |
-| @ElectricCoinCo | Maintains the Zcash protocol; cool towards forks | Credit their work; never pitch; answer only direct questions |
+| @ElectricCoinCo | Maintains the Zcash protocol; cool towards forks | Credit their work; never pitch; answer only direct questions. Their page shows no posts to a logged-out browser (checked 9 Oct 2026); read logged in or via the API |
 | @ZcashFoundation | Maintains Zebra, the node we fork | Thank, credit, report upstream-relevant findings |
 | @ZingoLabs | zingolib and Zaino, our wallet SDK and indexer | Technical questions and credit; integration conversations in public |
 | @zooko | Endorsed the Ycash friendly fork in 2019 | Plain, respectful; answer if addressed |
-| @ZcashCommGrants, @ZecHub, @zashi_app, @ShieldedLabs | Zcash community infrastructure | Read; reply only with facts about the stack |
+| @ZcashCommGrants, @ZecHub, @zodl_app (formerly @zashi_app, moved February 2026), @ShieldedLabs | Zcash community infrastructure | Read; reply only with facts about the stack |
 | @signalapp | Protocol and code the messenger forks | Credit only; do not expect a reply |
 | @ungoogled (ungoogled-chromium) | Base of the browser | Credit; report findings upstream |
 
@@ -30,14 +30,14 @@ replies people were glad to read; a bad week is fifty they scrolled past.
 | Handle | Why | How we engage |
 | --- | --- | --- |
 | @naomibrockwell | Largest privacy-tech channel; has covered Zcash and Monero | Answer questions in her threads with facts; pitch the apps for review by email, not in replies |
-| @techlore | Privacy education; cautious on crypto | Facts only; the browser and messenger are the relevant topics |
+| @TechloreInc (not @techlore, which is an unrelated account dormant since 2014) | Privacy education; cautious on crypto | Facts only; the browser and messenger are the relevant topics |
 | @privacy_guides | Recommends Monero only; sceptical of new coins | Never pitch; answer factual questions; a user may suggest the apps on their forum |
 | @sethforprivacy, @optoutpod | Privacy-crypto podcast; Monero-aligned, fair | Engage on substance: default-vs-optional privacy, what servers learn; accept criticism |
 | @MoneroTalk, @DouglasTuman | Hosts non-Monero guests | Same; expect adversarial questions about a Zcash fork and answer them plainly |
 | @The_HatedOne_ | Privacy-maximalist channel | Facts when asked |
 | Mathew Di Salvo (DL News) | Writes the privacy-coin beat | Reply with facts and a source when he asks the ecosystem something; pitch by email |
-| @a_greenberg, @CamiRusso, @Blockworks_, @decryptmedia | Journalists and desks that cover privacy and altcoins | Reply only with a verifiable fact or a correction |
-| @torproject, @EFF | Movement, not partners | Credit their work; never tag them for attention |
+| @a_greenberg, @CamiRusso, @Blockworks (not @Blockworks_, which does not exist), @DecryptMedia | Journalists and desks that cover privacy and altcoins | Reply only with a verifiable fact or a correction |
+| @torproject (and EFF, which left X on 9 April 2026 and posts on Bluesky and Mastodon instead) | Movement, not partners | Credit their work; never tag them for attention |
 
 ## Tier 3: peer privacy projects (read twice a week; be generous)
 
@@ -69,3 +69,7 @@ The queries live in `agent/policy.yaml` under `search_queries`: mentions of swar
 swarm.green, the product names, and general conversations about shielded payments and
 privacy coins. Only the first two can lead to a direct reply (if the post mentions us); the
 rest produce proposals.
+
+## Handle checks
+
+Handles were last verified against the live public pages on 9 October 2026 (logged out, built-in browser). Verify a handle before the first reply to it; accounts move and die. Known: @zashi_app became @zodl_app; @techlore is not Techlore; @Blockworks_ never existed; @EFF stopped posting on X in April 2026. `x.com/search` needs a login, so the topic queries in `agent/policy.yaml` run only through the API.
