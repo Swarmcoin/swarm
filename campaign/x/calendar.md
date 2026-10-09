@@ -1,4 +1,4 @@
-# X calendar, 7 October to 6 November 2026 (UTC)
+# X calendar, 12 October to 11 November 2026 (UTC)
 
 Built from `calendar.yaml`; edit that file, then run `python tools/build_calendar.py`.
 
