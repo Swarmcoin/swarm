@@ -100,7 +100,7 @@ def main(check_only: bool = False) -> int:
             w.writerow([p["text"], local.strftime("%Y-%m-%d"), local.strftime("%H:%M"), "FALSE", "TRUE",
                         (p.get("media") or [""])[0], " ||| ".join(p.get("thread") or []), p.get("reply", ""), p["id"], p.get("pillar", "")])
 
-    lines = ["# X calendar, 7 October to 6 November 2026 (UTC)", "", "Built from `calendar.yaml`; edit that file, then run `python tools/build_calendar.py`.", ""]
+    lines = ["# X calendar, 12 October to 11 November 2026 (UTC)", "", "Built from `calendar.yaml`; edit that file, then run `python tools/build_calendar.py`.", ""]
     day = None
     for p in posts:
         d = p["when"][:10]

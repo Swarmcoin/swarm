@@ -220,8 +220,8 @@ never_reply_handles: []
 # See ../x/engagement-targets.md for the reasoning. Lower-case handles without @.
 engagement_targets:
   tier1: [zcash, electriccoinco, zcashfoundation, zingolabs, zooko, zcashcommunity, signalapp, ungoogled]
-  # 2026-10-09: eff removed (EFF left X on 9 April 2026); techlore removed until the channel's real handle is verified
-  tier2: [naomibrockwell, privacyguides, torproject, sethforprivacy, monerotalk, matt_odell, lopp]
+  # 2026-10-09 (X Engagement Daily verified): eff removed (EFF left X on 9 April 2026); Techlore's handle is techloreinc
+  tier2: [naomibrockwell, techloreinc, privacyguides, torproject, sethforprivacy, monerotalk, matt_odell, lopp]
   tier3: [monero, firoorg, zano_project, pirate_chain, beamprivacy, grincoin, railgun_project, secretnetwork]
 
 # Search queries the engagement loop runs each cycle (X recent search syntax).
