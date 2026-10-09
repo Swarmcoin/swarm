@@ -40,7 +40,7 @@ computer connects to the network. The project lists what is missing on every dow
 every 75 seconds, 6.25 SWM per block, halving every 1,680,000 blocks, at most 20,999,987.3152
 SWM. The supply follows the same shape as Bitcoin's, and for the same reason: money whose
 supply anyone can compute in advance and nobody can change. The genesis block holds no spendable
-coins; there was no premine, no sale, no presale and no token offering. Every block pays 80% to
+coins; there was no premine, no sale, no VC round and no token offering. Every block pays 80% to
 the miner who found it and 20% to three published project addresses for the whole life of the
 chain: 8% Core Development, 4% Grants & Ecosystem, 8% Community & Development Reserve. The split
 is fixed in the genesis rules, visible in every block, and cannot be changed. The project calls
