@@ -16,22 +16,29 @@ Medium's cryptocurrency policy: the account's verified email must be on the proj
 content, or the account is treated as spam. Each article already carries a one-line disclosure
 that it is published by the project.
 
-## Schedule
+## Publishing plan
 
-| Date | Article | Dev.to | Medium | Paragraph | Others |
-| --- | --- | --- | --- | --- | --- |
-| 8 Oct | `surveillance-money-and-the-case-for-shielded-payments.md` | publish | import, submit to The Capital | post | Publish0x |
-| 10 Oct | `top-privacy-coins-2026.md` | publish | import, submit to Coinmonks | post | HackerNoon submission, InLeo |
-| 15 Oct | `a-browser-that-does-not-phone-home.md` | publish | import, submit to Level Up Coding | post | share in r/degoogle on 21 Oct |
-| 22 Oct | `a-messenger-where-the-money-is-in-the-conversation.md` | publish | import | post | Publish0x |
+One article a week, on Tuesdays, published on Dev.to at 09:00 UTC.
 
-Each publication day gets one X post from the agent or the calendar linking to the Dev.to
-URL (the calendar has a slot free at 16:00 UTC on 11, 18 and 25 October for exactly this).
+| Week | Date | Article | Day plan |
+| --- | --- | --- | --- |
+| 1 | Tuesday 13 October 2026 | `top-privacy-coins-2026.md` | Dev.to draft by script in the morning, read back by the session, owner "go" in chat, then `--publish`; the same day the person named in owner item 318 pastes it into Medium ("Import a story" from the Dev.to URL keeps the canonical link) and submits it to Coinmonks; Paragraph optional |
+| 2 | Tuesday 20 October 2026 | `surveillance-money-and-the-case-for-shielded-payments.md` | Same; Medium submission to The Capital |
+| 3 | Tuesday 27 October 2026 | `a-browser-that-does-not-phone-home.md` | Same; Medium submission to Level Up Coding; r/degoogle share by the Reddit session where the subreddit's rules allow |
+| 4 | Tuesday 3 November 2026 | `a-messenger-where-the-money-is-in-the-conversation.md` | Same; only after owner item 316 is settled and the markers in the article are deleted |
 
-## Before publishing anything
+Week 1 is the first Tuesday after the owner's Dev.to key is in `D:/privacy/scripts/campaign/.env`
+as `DEVTO_API_KEY` (gitignored; never committed, never printed). If it arrives later, all four
+dates slide by whole weeks in the same order.
 
-- Fill in `canonical_url` in the front matter with the Dev.to URL after the first publish.
-- Reconcile the two open questions noted in `../articles/README.md` (messenger calls and
-  groups; the version numbers on the messenger page) with the product team.
-- Run `python tools/check_prose.py articles/*.md` to confirm the policy's banned phrases
-  are absent.
+Canonical URL: the Dev.to post, or swarm.green if the website session publishes a copy there
+first.
+
+The script is run from `campaign/` as `DEVTO_API_KEY=... python tools/publish_devto.py
+articles/<file>.md`. It creates a draft first; never run it with `--publish` without the
+owner's "go" for that article in chat.
+
+After publishing, the link goes to the X session (first reply under a post, never a link post),
+the Reddit session (where self-posts are allowed) and the listings session (directory entries).
+Each article link goes into the first reply under the thematically closest X post on its
+Tuesday; the X session picks the post. No new X posts are added for links.
