@@ -131,9 +131,11 @@ denied_link_regex:
   - '(?i)testnet\.explore\.swarm\.green'
 
 # Every mining call carries the ASIC sentence (COMMON-RULES section 4). Checked on original posts
-# and on a calendar post together with its thread and first reply, never on replies.
+# and on a calendar post together with its thread and first reply, never on replies. A call is an
+# invitation to mine now or an announcement that mining is open; a countdown ("17 days until
+# anyone can run a SWARM node") is not.
 mining_call_regex:
-  - '(?i)\b(public mining (is|has) open|mining (opens|is open|starts|has started|begins)|start mining|run (a )?(swarm )?node|mine swarm|mine with us|join (the )?(mining|miners)|anyone can (run|mine)|miners? (can|may) (start|join))'
+  - '(?i)\b(public mining (is|has) open|mining (opens|is open|starts|has started|begins) (today|now|from this moment|on \d)|start mining|mine swarm|mine with us|join (the )?(mining|miners)|anyone can mine swarm|miners? (can|may) (start|join))'
 mining_call_sentence: "ASICs and rented hash power off the network"
 
 # A mention that asks us to stop is an opt-out (X Automation Rules: honour opt-outs promptly).
@@ -218,7 +220,8 @@ never_reply_handles: []
 # See ../x/engagement-targets.md for the reasoning. Lower-case handles without @.
 engagement_targets:
   tier1: [zcash, electriccoinco, zcashfoundation, zingolabs, zooko, zcashcommunity, signalapp, ungoogled]
-  tier2: [naomibrockwell, techlore, privacyguides, torproject, eff, sethforprivacy, monerotalk, matt_odell, lopp]
+  # 2026-10-09: eff removed (EFF left X on 9 April 2026); techlore removed until the channel's real handle is verified
+  tier2: [naomibrockwell, privacyguides, torproject, sethforprivacy, monerotalk, matt_odell, lopp]
   tier3: [monero, firoorg, zano_project, pirate_chain, beamprivacy, grincoin, railgun_project, secretnetwork]
 
 # Search queries the engagement loop runs each cycle (X recent search syntax).

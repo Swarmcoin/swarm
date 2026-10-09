@@ -51,7 +51,12 @@ def main(check_only: bool = False) -> int:
         p["when"] = when.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
         if p.get("pillar") not in PILLARS:
             problems.append(f"{p['id']}: pillar '{p.get('pillar')}' is not one of {sorted(PILLARS)}")
+        # The ASIC sentence on a mining call may sit anywhere in the package (post, thread, first
+        # reply), as the scheduler checks it; the root alone is checked for everything else.
         for v in policy.check_text(p["text"]):
+            if v.rule != "mining_call":
+                problems.append(f"{p['id']}: {v}")
+        for v in policy.check_mining_call(" ".join([p["text"], *(p.get("thread") or []), p.get("reply") or ""])):
             problems.append(f"{p['id']}: {v}")
         for i, t in enumerate(p.get("thread", []) or []):
             for v in policy.check_text(t, is_reply=True):

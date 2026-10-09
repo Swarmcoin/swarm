@@ -192,3 +192,24 @@ def test_auto_mode_locked_without_x_written_approval(monkeypatch):
     assert load_settings().approval == "review"
     monkeypatch.setenv("SWARM_SOCIAL_X_AI_APPROVAL", "X ticket 2026-11-01")
     assert load_settings().approval == "auto"
+
+
+# ----- one review queue for the agent's proposals and the human reply sheet
+
+def test_enqueue_shares_the_queue_and_refuses_duplicates(tmp_path, capsys):
+    from swarm_social import cli
+    s = _settings(tmp_path)
+    state = State(s.state_path)
+    args = type("A", (), {"post": "https://x.com/cryptocurious/status/1976000000000000101?s=20", "text": "Shielded: the chain only sees a proof that the payment is valid.",
+                          "author": "@cryptocurious", "reason": "answers a question", "source": "sheet"})
+    assert cli.cmd_enqueue(s, POLICY, state, args) == 0
+    assert cli.cmd_enqueue(s, POLICY, State(s.state_path), args) == 1          # same post twice: refused
+    assert "already" in capsys.readouterr().out
+    # the agent cannot propose a reply to a post the sheet already holds
+    x = DryRunClient(seed_search=[Post(id="1976000000000000101", text="Still don't get shielded", author_handle="cryptocurious", created_at=datetime.now(timezone.utc).isoformat())])
+    run = AgentRun(s, POLICY, State(s.state_path), x, ReviewQueue(s.queue_path))
+    tools = {t.name: t for t in run.tools()}
+    tools["search_recent"].call({"query_index": 2})
+    assert "already" in tools["propose_reply"].call({"post_id": "1976000000000000101", "text": "Hello there.", "reason": "x"})
+    bad = type("A", (), {"post": "1976000000000000102", "text": "SWM trades at 4.15 on Base", "author": "a", "reason": "r", "source": "sheet"})
+    assert cli.cmd_enqueue(s, POLICY, State(s.state_path), bad) == 1

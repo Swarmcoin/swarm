@@ -8,6 +8,7 @@
   approve ID...     publish approved queue items (or --all)
   reject ID...      drop queue items
   check "text"      policy-check a text
+  enqueue POST "t"  put a human-drafted reply (the daily reply sheet) into the same review queue
   report            write state/last-run.md for the GitHub step summary
 
 Nothing is sent unless SWARM_SOCIAL_LIVE=1 and X credentials are present.
@@ -122,6 +123,30 @@ def cmd_approve(settings: Settings, policy: Policy, state: State, args) -> int:
     return 0
 
 
+def cmd_enqueue(settings: Settings, policy: Policy, state: State, args) -> int:
+    """Put a human-drafted reply into the same review queue the agent uses, so the daily reply sheet and
+    the agent's proposals are one list and no post is answered twice. Refused when the post is already
+    answered or queued, or when the text breaks the policy."""
+    post_id = args.post.rstrip("/").split("/")[-1].split("?")[0]   # accepts a post id or its x.com URL
+    if not post_id.isdigit():
+        print(f"refused: '{args.post}' is not a post id or x.com status URL")
+        return 1
+    queue = ReviewQueue(settings.queue_path)
+    if post_id in state.data["replied_post_ids"] or any(i["target_post_id"] == post_id for i in queue.items):
+        print(f"refused: post {post_id} is already answered or already in the queue")
+        return 1
+    problems = policy.check_text(args.text, is_reply=True)
+    if problems:
+        print("refused by policy: " + "; ".join(map(str, problems)))
+        return 1
+    item = queue.add("reply", args.text, target_post_id=post_id, author=args.author.lstrip("@"), reason=args.reason, source=args.source)
+    queue.save()
+    state.log("enqueued", item=item, to=post_id, author=args.author, source=args.source)
+    state.save()
+    print(f"queued as item {item}; approve with `swarm-social approve {item}`")
+    return 0
+
+
 def cmd_reject(settings: Settings, policy: Policy, state: State, args) -> int:
     queue = ReviewQueue(settings.queue_path)
     ids = set(args.ids)
@@ -187,6 +212,10 @@ def main(argv: list[str] | None = None) -> int:
     a = sub.add_parser("approve"); a.add_argument("ids", nargs="*"); a.add_argument("--all", action="store_true"); a.set_defaults(fn=cmd_approve)
     r = sub.add_parser("reject"); r.add_argument("ids", nargs="*"); r.add_argument("--all", action="store_true"); r.set_defaults(fn=cmd_reject)
     c = sub.add_parser("check"); c.add_argument("text"); c.add_argument("--reply", action="store_true"); c.set_defaults(fn=cmd_check)
+    e = sub.add_parser("enqueue", help="put a human-drafted reply into the review queue (the daily reply sheet)")
+    e.add_argument("post", help="post id or x.com status URL"); e.add_argument("text")
+    e.add_argument("--author", default="", help="handle of the post's author"); e.add_argument("--reason", default="reply sheet")
+    e.add_argument("--source", default="sheet"); e.set_defaults(fn=cmd_enqueue)
     args = ap.parse_args(argv)
 
     settings = load_settings()
