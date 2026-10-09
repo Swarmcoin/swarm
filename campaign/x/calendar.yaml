@@ -1,11 +1,15 @@
-# The 30-day X calendar for @swarm_coin, 7 October to 6 November 2026.
+# The 30-day X calendar for @swarm_coin, written for 7 October to 6 November 2026 and re-dated on 9 October 2026:
+# the account starts on Monday 12 October 2026 (default: the next weekday after the owner's approval, item 317);
+# the eight posts dated before that moved into new slots (see the comments above them) and the calendar now runs to
+# Wednesday 11 November 2026. The two exact-time posts (31 October and 1 November, 15:42 UTC) did not move.
 # Human-editable. Build calendar.json, calendar.md and the Metricool CSV with:  python tools/build_calendar.py
 # Every post is checked against agent/policy.yaml at build time. Times are UTC.
 #
 # Pillars (STRATEGY.md): story | explain | value | question | quote | promo
 # Owner rule, 6 October 2026: promotion at most one post in five, never two in a row. The build refuses otherwise.
 # Rhythm: weekdays 07:30 UTC (Europe morning, Asia evening) and 13:30 UTC (New York morning, Berlin afternoon);
-# one post at 10:00 UTC on Saturdays and Sundays; the two exact-time posts at 15:42 UTC on 31 October and 1 November.
+# one post at 10:00 UTC on Saturdays and Sundays, plus a second weekend post at 16:00 UTC (New York noon, Berlin
+# evening) where a moved post landed; the two exact-time posts at 15:42 UTC on 31 October and 1 November.
 # Wednesday 13:30 is the story thread. Links and sources go in `reply:` (the first reply under the post), never in
 # the post itself, except the two exact-time posts marked allow_link_in_post.
 # Sources for every story: research/freedom-and-privacy-stories-2026-10.md (seed ids in `notes:`).
@@ -14,8 +18,9 @@ timezone: UTC
 posts:
 
   # ---------------------------------------------------------------- week 1: why privacy, and who we are
+  # moved 2026-10-09 from Wed 7 Oct 07:30 (slot passed unposted) to a second Saturday post
   - id: d01-a
-    when: 2026-10-07T07:30:00Z
+    when: 2026-10-17T16:00:00Z
     pillar: quote
     text: |-
       "Privacy is not secrecy. A private matter is something one doesn't want the whole world to know, but a secret matter is something one doesn't want anybody to know."
@@ -24,8 +29,9 @@ posts:
       The whole manifesto is 700 words and worth the five minutes: https://www.activism.net/cypherpunk/manifesto.html
     notes: seed A6
 
+  # moved 2026-10-09 from Wed 7 Oct 13:30 (slot passed unposted); threads stay on Wednesdays, next free Wednesday 13:30
   - id: d01-b
-    when: 2026-10-07T13:30:00Z
+    when: 2026-11-11T13:30:00Z
     pillar: story
     text: |-
       On 27 March 1943 a sculptor and a painter dressed as policemen walked into the Amsterdam population registry and set it on fire. They were trying to destroy a database. Here is why it mattered.
@@ -44,8 +50,9 @@ posts:
       Sources: Anne Frank House https://www.annefrank.org/en/timeline/128/the-resistance-attacks-the-population-register-of-amsterdam/ and the Dutch Resistance Museum https://www.verzetsmuseum.org/en/kennisbank/armed-resistance-1
     notes: seed C1. Image for post 1 if a licensed one is found (Verzetsmuseum has portraits of Arondeus; check the licence).
 
+  # moved 2026-10-09 from Thu 8 Oct 07:30 (slot passed unposted) to a second Sunday post
   - id: d02-a
-    when: 2026-10-08T07:30:00Z
+    when: 2026-10-18T16:00:00Z
     pillar: explain
     text: |-
       How do you prove you know a secret without saying it? A 1989 paper used a cave: a ring with a locked door at the back. You walk in. I shout which side to come out of. Come out right 20 times in a row and you know the password. I never heard it. That is a zero-knowledge proof.
@@ -53,17 +60,19 @@ posts:
       The paper: Quisquater, Guillou and others, "How to Explain Zero-Knowledge Protocols to Your Children", CRYPTO 1989 https://doi.org/10.1007/0-387-34805-0_60
       A shielded payment works the same way: the chain checks the proof and never sees the amount.
 
+  # moved 2026-10-09 from Thu 8 Oct 13:30 (slot passed unposted) to a second Saturday post; wording no longer says 'this morning'
   - id: d02-b
-    when: 2026-10-08T13:30:00Z
+    when: 2026-10-24T16:00:00Z
     pillar: promo
     text: |-
-      SWARM is private money. A shielded payment keeps the sender, the receiver and the amount encrypted on the chain, and the network still verifies it, with a proof like this morning's cave. Proof of work, open source, no premine. This account is mostly about why that matters.
+      SWARM is private money. A shielded payment keeps the sender, the receiver and the amount encrypted on the chain, and the network still verifies it, with a proof like the cave we described last Sunday. Proof of work, open source, no premine. This account is about why that matters.
     reply: |-
       What it is, in one page: https://swarm.green/what-is-swarm
     media: [https://swarm.green/assets/og.png]
 
+  # moved 2026-10-09 from Fri 9 Oct 07:30 (slot passed unposted) to a second Sunday post
   - id: d03-a
-    when: 2026-10-09T07:30:00Z
+    when: 2026-10-25T16:00:00Z
     pillar: story
     text: |-
       8 November 2016, 20:00: India announced that its 500 and 1,000 rupee notes, 86 percent of cash by value, would be void at midnight. Queues lasted weeks; reports counted over 80 deaths. The central bank found 99.3 percent came back. The black money was not there.
@@ -71,14 +80,16 @@ posts:
       The 99.3 percent figure is from the Reserve Bank of India's 2017-18 annual report: https://m.thewire.in/article/banking/rbi-says-99-3-of-scrapped-money-returned-to-the-banking-system
     notes: seed D6
 
+  # moved 2026-10-09 from Fri 9 Oct 13:30 (slot passed unposted) to the Saturday after the campaign month
   - id: d03-b
-    when: 2026-10-09T13:30:00Z
+    when: 2026-11-07T10:00:00Z
     pillar: question
     text: |-
       A question for people who use privacy tools every day: what made you stop trusting a product that called itself private? Not the brand, the moment. We are collecting the answers for the things we have not built yet.
 
+  # moved 2026-10-09 from Sat 10 Oct 10:00 (before the Monday 12 Oct start) to the Sunday after the campaign month
   - id: d04-a
-    when: 2026-10-10T10:00:00Z
+    when: 2026-11-08T10:00:00Z
     pillar: quote
     text: |-
       "The right to be let alone, the most comprehensive of rights and the right most valued by civilized men."
@@ -87,8 +98,9 @@ posts:
       Olmstead v. United States (1928) and the dissent, explained by the National Constitution Center: https://constitutioncenter.org/blog/olmstead-case-was-a-watershed-for-supreme-court
     notes: seed E2
 
+  # moved 2026-10-09 from Sun 11 Oct 10:00 (before the Monday 12 Oct start) to the morning of the moved Amsterdam thread
   - id: d05-a
-    when: 2026-10-11T10:00:00Z
+    when: 2026-11-11T07:30:00Z
     pillar: explain
     text: |-
       What does a year of your bank statement reveal? Where you sleep, who you sleep with, your doctor, your church, your politics, your drinking. In the US you have no constitutional privacy interest in it; the Supreme Court decided that in 1976. The bank's records are the bank's.

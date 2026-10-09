@@ -1,77 +1,7 @@
 {
-  "built": "2026-10-06T12:01:20+00:00",
+  "built": "2026-10-09T16:36:15+00:00",
   "source": "x/calendar.yaml",
   "posts": [
-    {
-      "id": "d01-a",
-      "when": "2026-10-07T07:30:00Z",
-      "pillar": "quote",
-      "text": "\"Privacy is not secrecy. A private matter is something one doesn't want the whole world to know, but a secret matter is something one doesn't want anybody to know.\"\nEric Hughes, A Cypherpunk's Manifesto, 9 March 1993. Still the clearest line on the subject.",
-      "reply": "The whole manifesto is 700 words and worth the five minutes: https://www.activism.net/cypherpunk/manifesto.html",
-      "notes": "seed A6"
-    },
-    {
-      "id": "d01-b",
-      "when": "2026-10-07T13:30:00Z",
-      "pillar": "story",
-      "text": "On 27 March 1943 a sculptor and a painter dressed as policemen walked into the Amsterdam population registry and set it on fire. They were trying to destroy a database. Here is why it mattered.",
-      "thread": [
-        "1/ The Dutch registry was excellent. It recorded every resident's address and religion. When Germany occupied the Netherlands in 1940, the occupiers did not need to find the Jews. The cards had already done it.",
-        "2/ Gerrit van der Veen, a sculptor, and Willem Arondeus, a painter, led a resistance group that drugged the guards, drenched the card files and set explosives. About 15 percent of the records burned. The rest survived.",
-        "3/ Twelve of the attackers, Arondeus among them, were executed on 1 July 1943. Van der Veen was shot in 1944. Arondeus' last message asked that people be told that homosexuals were not cowards.",
-        "4/ A well-kept database became a kill list. Nobody who built it meant that. That is the point: the harm of a record is decided by whoever holds it later, not by whoever created it.",
-        "5/ That is why we care about what gets written down at all. The safest record is the one that was never made. Which records about you exist today that you would not want in the wrong hands in ten years?"
-      ],
-      "reply": "Sources: Anne Frank House https://www.annefrank.org/en/timeline/128/the-resistance-attacks-the-population-register-of-amsterdam/ and the Dutch Resistance Museum https://www.verzetsmuseum.org/en/kennisbank/armed-resistance-1",
-      "notes": "seed C1. Image for post 1 if a licensed one is found (Verzetsmuseum has portraits of Arondeus; check the licence)."
-    },
-    {
-      "id": "d02-a",
-      "when": "2026-10-08T07:30:00Z",
-      "pillar": "explain",
-      "text": "How do you prove you know a secret without saying it? A 1989 paper used a cave: a ring with a locked door at the back. You walk in. I shout which side to come out of. Come out right 20 times in a row and you know the password. I never heard it. That is a zero-knowledge proof.",
-      "reply": "The paper: Quisquater, Guillou and others, \"How to Explain Zero-Knowledge Protocols to Your Children\", CRYPTO 1989 https://doi.org/10.1007/0-387-34805-0_60\nA shielded payment works the same way: the chain checks the proof and never sees the amount."
-    },
-    {
-      "id": "d02-b",
-      "when": "2026-10-08T13:30:00Z",
-      "pillar": "promo",
-      "text": "SWARM is private money. A shielded payment keeps the sender, the receiver and the amount encrypted on the chain, and the network still verifies it, with a proof like this morning's cave. Proof of work, open source, no premine. This account is mostly about why that matters.",
-      "reply": "What it is, in one page: https://swarm.green/what-is-swarm",
-      "media": [
-        "https://swarm.green/assets/og.png"
-      ]
-    },
-    {
-      "id": "d03-a",
-      "when": "2026-10-09T07:30:00Z",
-      "pillar": "story",
-      "text": "8 November 2016, 20:00: India announced that its 500 and 1,000 rupee notes, 86 percent of cash by value, would be void at midnight. Queues lasted weeks; reports counted over 80 deaths. The central bank found 99.3 percent came back. The black money was not there.",
-      "reply": "The 99.3 percent figure is from the Reserve Bank of India's 2017-18 annual report: https://m.thewire.in/article/banking/rbi-says-99-3-of-scrapped-money-returned-to-the-banking-system",
-      "notes": "seed D6"
-    },
-    {
-      "id": "d03-b",
-      "when": "2026-10-09T13:30:00Z",
-      "pillar": "question",
-      "text": "A question for people who use privacy tools every day: what made you stop trusting a product that called itself private? Not the brand, the moment. We are collecting the answers for the things we have not built yet."
-    },
-    {
-      "id": "d04-a",
-      "when": "2026-10-10T10:00:00Z",
-      "pillar": "quote",
-      "text": "\"The right to be let alone, the most comprehensive of rights and the right most valued by civilized men.\"\nJustice Louis Brandeis, dissenting, 4 June 1928, in a case about wiretaps. He lost 5 to 4. The Supreme Court adopted his view in 1967. Being right took 39 years.",
-      "reply": "Olmstead v. United States (1928) and the dissent, explained by the National Constitution Center: https://constitutioncenter.org/blog/olmstead-case-was-a-watershed-for-supreme-court",
-      "notes": "seed E2"
-    },
-    {
-      "id": "d05-a",
-      "when": "2026-10-11T10:00:00Z",
-      "pillar": "explain",
-      "text": "What does a year of your bank statement reveal? Where you sleep, who you sleep with, your doctor, your church, your politics, your drinking. In the US you have no constitutional privacy interest in it; the Supreme Court decided that in 1976. The bank's records are the bank's.",
-      "reply": "United States v. Miller, 425 U.S. 435 (1976): https://supreme.justia.com/cases/federal/us/425/435/ The 1970 Bank Secrecy Act that started it was upheld in 1974.",
-      "notes": "seed D2"
-    },
     {
       "id": "d06-a",
       "when": "2026-10-12T07:30:00Z",
@@ -160,12 +90,27 @@
       "notes": "seed A9. Never imply he was Satoshi."
     },
     {
+      "id": "d01-a",
+      "when": "2026-10-17T16:00:00Z",
+      "pillar": "quote",
+      "text": "\"Privacy is not secrecy. A private matter is something one doesn't want the whole world to know, but a secret matter is something one doesn't want anybody to know.\"\nEric Hughes, A Cypherpunk's Manifesto, 9 March 1993. Still the clearest line on the subject.",
+      "reply": "The whole manifesto is 700 words and worth the five minutes: https://www.activism.net/cypherpunk/manifesto.html",
+      "notes": "seed A6"
+    },
+    {
       "id": "d12-a",
       "when": "2026-10-18T10:00:00Z",
       "pillar": "story",
       "text": "25 July 2025: the UK began requiring ID or a face scan to view parts of the internet. Proton VPN reported sign-ups up 1,400 percent within hours. Half of the UK App Store's top ten free apps were VPNs. People route around a checkpoint faster than a law can be written.",
       "reply": "ITV News, 28 July 2025: https://www.itv.com/news/2025-07-28/vpn-downloads-spike-as-uk-introduces-age-checks-for-adult-online-content The percentages are the VPN companies' own.",
       "notes": "seed F4"
+    },
+    {
+      "id": "d02-a",
+      "when": "2026-10-18T16:00:00Z",
+      "pillar": "explain",
+      "text": "How do you prove you know a secret without saying it? A 1989 paper used a cave: a ring with a locked door at the back. You walk in. I shout which side to come out of. Come out right 20 times in a row and you know the password. I never heard it. That is a zero-knowledge proof.",
+      "reply": "The paper: Quisquater, Guillou and others, \"How to Explain Zero-Knowledge Protocols to Your Children\", CRYPTO 1989 https://doi.org/10.1007/0-387-34805-0_60\nA shielded payment works the same way: the chain checks the proof and never sees the amount."
     },
     {
       "id": "d13-a",
@@ -257,11 +202,29 @@
       "notes": "seed D13. The economic effect is disputed; the dates and the ban are not."
     },
     {
+      "id": "d02-b",
+      "when": "2026-10-24T16:00:00Z",
+      "pillar": "promo",
+      "text": "SWARM is private money. A shielded payment keeps the sender, the receiver and the amount encrypted on the chain, and the network still verifies it, with a proof like the cave we described last Sunday. Proof of work, open source, no premine. This account is about why that matters.",
+      "reply": "What it is, in one page: https://swarm.green/what-is-swarm",
+      "media": [
+        "https://swarm.green/assets/og.png"
+      ]
+    },
+    {
       "id": "d19-a",
       "when": "2026-10-25T10:00:00Z",
       "pillar": "value",
       "text": "Read any privacy policy in two minutes. Search the page for three words: \"share\", \"partners\", \"retain\". The sentences around them are the policy. Everything else is decoration. If \"partners\" appears and is never listed, assume it means anyone who pays.",
       "reply": "Someone has already done this for most big services: https://tosdr.org/"
+    },
+    {
+      "id": "d03-a",
+      "when": "2026-10-25T16:00:00Z",
+      "pillar": "story",
+      "text": "8 November 2016, 20:00: India announced that its 500 and 1,000 rupee notes, 86 percent of cash by value, would be void at midnight. Queues lasted weeks; reports counted over 80 deaths. The central bank found 99.3 percent came back. The black money was not there.",
+      "reply": "The 99.3 percent figure is from the Reserve Bank of India's 2017-18 annual report: https://m.thewire.in/article/banking/rbi-says-99-3-of-scrapped-money-returned-to-the-banking-system",
+      "notes": "seed D6"
     },
     {
       "id": "d20-a",
@@ -456,6 +419,43 @@
       "pillar": "promo",
       "text": "One month of this account. We published a chain, a wallet, a messenger, a browser pre-release, a node, and a list of what is missing. Not a price, not a promise. SWARM is private money: shielded by default, mined by anyone since 1 November. Mined, not sold. Thank you. 🐝",
       "reply": "https://swarm.green"
+    },
+    {
+      "id": "d03-b",
+      "when": "2026-11-07T10:00:00Z",
+      "pillar": "question",
+      "text": "A question for people who use privacy tools every day: what made you stop trusting a product that called itself private? Not the brand, the moment. We are collecting the answers for the things we have not built yet."
+    },
+    {
+      "id": "d04-a",
+      "when": "2026-11-08T10:00:00Z",
+      "pillar": "quote",
+      "text": "\"The right to be let alone, the most comprehensive of rights and the right most valued by civilized men.\"\nJustice Louis Brandeis, dissenting, 4 June 1928, in a case about wiretaps. He lost 5 to 4. The Supreme Court adopted his view in 1967. Being right took 39 years.",
+      "reply": "Olmstead v. United States (1928) and the dissent, explained by the National Constitution Center: https://constitutioncenter.org/blog/olmstead-case-was-a-watershed-for-supreme-court",
+      "notes": "seed E2"
+    },
+    {
+      "id": "d05-a",
+      "when": "2026-11-11T07:30:00Z",
+      "pillar": "explain",
+      "text": "What does a year of your bank statement reveal? Where you sleep, who you sleep with, your doctor, your church, your politics, your drinking. In the US you have no constitutional privacy interest in it; the Supreme Court decided that in 1976. The bank's records are the bank's.",
+      "reply": "United States v. Miller, 425 U.S. 435 (1976): https://supreme.justia.com/cases/federal/us/425/435/ The 1970 Bank Secrecy Act that started it was upheld in 1974.",
+      "notes": "seed D2"
+    },
+    {
+      "id": "d01-b",
+      "when": "2026-11-11T13:30:00Z",
+      "pillar": "story",
+      "text": "On 27 March 1943 a sculptor and a painter dressed as policemen walked into the Amsterdam population registry and set it on fire. They were trying to destroy a database. Here is why it mattered.",
+      "thread": [
+        "1/ The Dutch registry was excellent. It recorded every resident's address and religion. When Germany occupied the Netherlands in 1940, the occupiers did not need to find the Jews. The cards had already done it.",
+        "2/ Gerrit van der Veen, a sculptor, and Willem Arondeus, a painter, led a resistance group that drugged the guards, drenched the card files and set explosives. About 15 percent of the records burned. The rest survived.",
+        "3/ Twelve of the attackers, Arondeus among them, were executed on 1 July 1943. Van der Veen was shot in 1944. Arondeus' last message asked that people be told that homosexuals were not cowards.",
+        "4/ A well-kept database became a kill list. Nobody who built it meant that. That is the point: the harm of a record is decided by whoever holds it later, not by whoever created it.",
+        "5/ That is why we care about what gets written down at all. The safest record is the one that was never made. Which records about you exist today that you would not want in the wrong hands in ten years?"
+      ],
+      "reply": "Sources: Anne Frank House https://www.annefrank.org/en/timeline/128/the-resistance-attacks-the-population-register-of-amsterdam/ and the Dutch Resistance Museum https://www.verzetsmuseum.org/en/kennisbank/armed-resistance-1",
+      "notes": "seed C1. Image for post 1 if a licensed one is found (Verzetsmuseum has portraits of Arondeus; check the licence)."
     }
   ]
 }
