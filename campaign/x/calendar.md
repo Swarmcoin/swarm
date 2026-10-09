@@ -19,6 +19,12 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 > Windows: Get-FileHash file  
 > Compare it with the download page. One character different means a different file. Do not install it.
 
+**16:00 UTC** · `c-t21` · promo
+
+> In 20 days, on 1 November at 15:42 UTC, anyone can mine SWARM. No sale, no VC round. 80 percent of every block to the miner who found it, 20 percent to three published project addresses. Until 31 October only the project's own machines mine. No coins are promised.
+>
+> ↳ *first reply:* Please keep ASICs and rented hash power off the network. The closed start with its dates and amounts, stated in full: https://swarm.green/network Height on SWARM mainnet when this went out: [read on the day] https://mainnet.explore.swarm.green
+
 
 ## Tuesday 13 October 2026
 
@@ -64,9 +70,9 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 **13:30 UTC** · `d09-b` · promo
 
-> SWARM Wallet for Windows, macOS and Linux: shielded by default, a 24-word phrase, a lock code. Every address is labelled with what it is, and the wallet refuses one from the wrong network. Unsigned for now; compare the SHA-256 before you install. Open source, based on Zingo.
+> SWARM Wallet for Windows, macOS and Linux: shielded by default, a 24-word phrase, a lock code. Every address is labelled with what it is, and the wallet refuses one from the wrong network. Unsigned for now; compare the SHA-256 before you install. Open source.
 >
-> ↳ *first reply:* Downloads with checksums: https://swarm.green/ecosystem/wallet
+> ↳ *first reply:* Downloads with checksums: https://swarm.green/ecosystem/wallet 17 days until anyone can run a SWARM node: 1 November, 15:42 UTC. No coins are promised.
 
 
 ## Friday 16 October 2026
@@ -178,7 +184,7 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 > SWARM Messenger: end-to-end encrypted chat between wallets, with payments inside the conversation. Sign in with your 24 words; no phone number, no account. Built from Signal's open code, on our own server, never Signal's. Desktop only, unsigned. We list what is missing.
 >
-> ↳ *first reply:* What it does and what it does not do yet: https://swarm.green/ecosystem/messenger
+> ↳ *first reply:* What it does and what it does not do yet: https://swarm.green/ecosystem/messenger 10 days until anyone can run a SWARM node: 1 November, 15:42 UTC. No coins are promised.
 
 
 ## Friday 23 October 2026
@@ -206,7 +212,7 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 **16:00 UTC** · `d02-b` · promo · image
 
-> SWARM is private money. A shielded payment keeps the sender, the receiver and the amount encrypted on the chain, and the network still verifies it, with a proof like the cave we described last Sunday. Proof of work, open source, no premine. This account is about why that matters.
+> SWARM is private money. A shielded payment keeps the sender, the receiver and the amount encrypted on the chain, and the network still verifies it, with a proof like the cave we described last Sunday. Proof of work, open source. This account is mostly about why that matters.
 >
 > ↳ *first reply:* What it is, in one page: https://swarm.green/what-is-swarm
 
@@ -238,7 +244,7 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 > SWARM mainnet has run since 2 October. Until 31 October, 15:42 UTC only the project's own machines mine; those blocks are in the explorer, split like every block. Then 24 hours for the waiting list; from 1 November, 15:42 UTC anyone can mine. No coins are promised.
 >
-> ↳ *first reply:* The closed start explained in full, with the numbers: https://swarm.green/network The waiting list is free: https://swarm.green/waitlist
+> ↳ *first reply:* Please keep ASICs and rented hash power off the network. The closed start explained in full, with the numbers: https://swarm.green/network The waiting list is free: https://swarm.green/waitlist 6 days until anyone can run a SWARM node: 1 November, 15:42 UTC. No coins are promised.
 
 
 ## Tuesday 27 October 2026
@@ -286,7 +292,7 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 > SWARM Browser, Windows pre-release: Chromium 153 from ungoogled-chromium, Google's services removed, the SWARM wallet in the toolbar, keys kept outside the browser. Not in it yet: tracker blocking, phishing lists, macOS, Linux, signed builds. Better we list it than you find out.
 >
-> ↳ *first reply:* The full list of what is removed, what is on and what is missing: https://swarm.green/ecosystem/browser
+> ↳ *first reply:* The full list of what is removed, what is on and what is missing: https://swarm.green/ecosystem/browser 3 days until anyone can run a SWARM node: 1 November, 15:42 UTC. No coins are promised.
 
 
 ## Friday 30 October 2026
@@ -299,9 +305,9 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 **13:30 UTC** · `d24-b` · promo
 
-> Tomorrow at 15:42 UTC early access opens for the waiting list, in leaderboard order; on 1 November at 15:42 UTC mining opens for everyone. To prepare: install the wallet, write down the 24 words, copy your swm1 address; your node will pay there. No coins are promised.
+> Tomorrow at 15:42 UTC the waiting list gets access, in leaderboard order; on 1 November at 15:42 UTC mining opens for everyone. To prepare: install the wallet, write down the 24 words, copy your swm1 address; your node will pay there. No coins are promised.
 >
-> ↳ *first reply:* The waiting list is free and asks for an email address and a swm1 address, nothing else: https://swarm.green/waitlist
+> ↳ *first reply:* Please keep ASICs and rented hash power off the network. The waiting list is free and asks for an email address and a swm1 address, nothing else: https://swarm.green/waitlist 2 days until anyone can run a SWARM node: 1 November, 15:42 UTC. No coins are promised.
 
 
 ## Saturday 31 October 2026
@@ -314,8 +320,10 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 **15:42 UTC** · `d25-b` · promo
 
-> 15:42 UTC. Early access for the waiting list is open; downloads go out in leaderboard order over 24 hours. Public mining opens 1 November, 15:42 UTC. Check the SHA-256 before you install and keep the 24 words off the mining machine. No coins are promised.  
+> 15:42 UTC. Access for the waiting list is open; downloads go out in leaderboard order over 24 hours. Public mining opens 1 November, 15:42 UTC. Check the SHA-256 before you install and keep the 24 words off the mining machine. No coins are promised.  
 > https://swarm.green/waitlist
+>
+> ↳ *first reply:* Please keep ASICs and rented hash power off the network. Downloads with their SHA-256 checksums, as they go out: https://swarm.green/ecosystem
 
 
 ## Sunday 01 November 2026
@@ -331,6 +339,8 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 > Public mining is open. Anyone can run SWARM Node from this moment: download, compare the SHA-256, enter your swm1 address, start. It runs a full node and mines on your CPU. Same rules for everyone from here on. No coins are promised. 🐝  
 > https://swarm.green/ecosystem
+>
+> ↳ *first reply:* Please keep ASICs and rented hash power off the network. SWARM Node with its SHA-256 checksum and the setup steps: https://swarm.green/ecosystem/node
 
 
 ## Monday 02 November 2026
@@ -345,7 +355,7 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 > Started a node yesterday? It verifies every block from genesis before it mines; that is the point. To check the chain, compare its genesis hash with the verify page and its height with the explorer. Disagree with both and you are on another network. No coins are promised.
 >
-> ↳ *first reply:* The genesis hash and how to compare it: https://swarm.green/verify
+> ↳ *first reply:* Please keep ASICs and rented hash power off the network. The genesis hash and how to compare it: https://swarm.green/verify
 
 
 ## Tuesday 03 November 2026
@@ -408,7 +418,7 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 **13:30 UTC** · `d31-b` · promo
 
-> One month of this account. We published a chain, a wallet, a messenger, a browser pre-release, a node, and a list of what is missing. Not a price, not a promise. SWARM is private money: shielded by default, mined by anyone since 1 November. Mined, not sold. Thank you. 🐝
+> One month of this account. We published a chain, a wallet, a messenger, a browser pre-release, a node, and a list of what is missing. Nobody promises you a price. SWARM is private money: shielded by default, mined by anyone since 1 November. Mined, not sold. Thank you. 🐝
 >
 > ↳ *first reply:* https://swarm.green
 
