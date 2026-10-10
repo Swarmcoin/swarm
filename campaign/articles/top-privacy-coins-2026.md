@@ -120,7 +120,7 @@ Official sites: [horizen.io](https://www.horizen.io/), [scrt.network](https://sc
 
 ## SWARM
 
-SWARM is a Zcash-stack coin; SWARM mainnet has been live since 2 October 2026, 15:42 UTC. It runs the Zcash protocol as implemented by the Zebra node: consensus rules, Equihash 200,9 and the ceremony parameters are unmodified, and its shielded pool, called Ironwood, keeps sender, receiver and amount encrypted on chain; SWARM adds its network, its economics and its apps. Shielding is optional; SWARM Wallet defaults to a shielded address and labels every payment before sending.
+SWARM is a Zcash-stack coin; SWARM mainnet has been live since 2 October 2026, 15:42 UTC. It runs the Zcash protocol as implemented by the Zebra node: consensus rules and Equihash 200,9 are unmodified, and its shielded pool, called Ironwood, keeps sender, receiver and amount encrypted on chain; SWARM adds its network, its economics and its apps. Shielding is optional; SWARM Wallet defaults to a shielded address and labels every payment before sending.
 
 Economics differ: 75-second blocks pay 6.25 SWM, halving every 1,680,000 blocks, for a cap of 20,999,987.3152 SWM. The genesis block holds no coins. Every block pays 80% to the miner and 20% to three published multisig addresses: 8% Core Development, 4% Grants & Ecosystem, 8% Community & Development Reserve. Unlike Zcash's Founders' Reward, the allocation never ends, and SWARM says so.
 

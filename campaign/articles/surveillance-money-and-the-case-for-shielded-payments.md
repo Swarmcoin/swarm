@@ -47,7 +47,7 @@ The tool that makes that possible is a zero-knowledge proof. The classic picture
 
 ### A shielded payment, exactly
 
-SWARM is private money. A shielded payment keeps the sender, the receiver and the amount encrypted on the chain. The network still checks that the coins exist, have not been spent before, were the sender's to spend, and that no value was created; it checks all of that with a zero-knowledge proof. For a shielded-to-shielded payment the chain records that a transaction exists, its fee and its size. An optional memo travels encrypted, readable only by the recipient.
+SWARM is private money. A shielded payment keeps the sender, the receiver and the amount encrypted on the chain. The network still checks that the coins exist, have not been spent before, were the sender's to spend, and that no value was created; it checks all of that with a zero-knowledge proof. The shielded pool in use follows the Orchard design, which does not depend on trusted-setup ceremony parameters. For a shielded-to-shielded payment the chain records that a transaction exists, its fee and its size. An optional memo travels encrypted, readable only by the recipient.
 
 SWARM Wallet gives you a shielded address, `swm1…` on SWARM mainnet, by default and tells you which kind of payment you are about to make. Transparent addresses, `s1…` and `s3…`, exist where visibility is wanted, such as an exchange deposit. Anything sent transparently is public forever.
 
@@ -57,7 +57,7 @@ Shielding protects what is written to the chain, and we say so first. Your netwo
 
 ### Built on the Zcash protocol stack, unmodified
 
-We did not write the cryptography, and we did not change it. SWARM runs the Zcash protocol as implemented by Zebra, the full node built by the Zcash Foundation: the shielded pool, called Ironwood and built on the Orchard protocol design, in which sender, receiver and amount are encrypted on chain, and the public proving parameters from the Zcash ceremonies. The indexer and wallet libraries are built on Zaino and zingolib from Zingo Labs. What SWARM defines is its own network: the name `SwarmMainnet`, the genesis block, the address prefixes, the emission schedule and the allocation. The protocol page at github.com/Swarmcoin lists each item as inherited or defined.
+We did not write the cryptography, and we did not change it. SWARM runs the Zcash protocol as implemented by Zebra, the full node built by the Zcash Foundation: the shielded pool, called Ironwood and built on the Orchard protocol design, in which sender, receiver and amount are encrypted on chain. The indexer and wallet libraries are built on Zaino and zingolib from Zingo Labs. What SWARM defines is its own network: the name `SwarmMainnet`, the genesis block, the address prefixes, the emission schedule and the allocation. The protocol page at github.com/Swarmcoin lists each item as inherited or defined.
 
 ### Proof of work and the 80 / 8 / 4 / 8 split
 
