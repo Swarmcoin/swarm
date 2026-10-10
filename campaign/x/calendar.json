@@ -1,0 +1,485 @@
+{
+  "built": "2026-10-09T16:58:08+00:00",
+  "source": "x/calendar.yaml",
+  "posts": [
+    {
+      "id": "d06-a",
+      "when": "2026-10-12T07:30:00Z",
+      "pillar": "story",
+      "text": "In 1993 the US government began investigating Phil Zimmermann because his encryption program had left the country. Strong cryptography was legally a munition. In 1995 MIT Press printed the source code as a book. Books could be exported. The case was dropped in 1996.",
+      "reply": "Zimmermann's own note on the day the case was dropped, 11 January 1996: https://www.mit.edu/~prz/EN/news/PRZ_case_dropped.html",
+      "notes": "seed A1"
+    },
+    {
+      "id": "d06-b",
+      "when": "2026-10-12T13:30:00Z",
+      "pillar": "value",
+      "text": "Thirty seconds that protect your money. Before you install a wallet, check its SHA-256:\nLinux: sha256sum file\nmacOS: shasum -a 256 file\nWindows: Get-FileHash file\nCompare it with the download page. One character different means a different file. Do not install it."
+    },
+    {
+      "id": "c-t21",
+      "when": "2026-10-12T16:00:00Z",
+      "pillar": "promo",
+      "text": "In 20 days, on 1 November at 15:42 UTC, anyone can mine SWARM. No sale, no VC round. 80 percent of every block to the miner who found it, 20 percent to three published project addresses. Until 31 October only the project's own machines mine. No coins are promised.",
+      "reply": "Please keep ASICs and rented hash power off the network. The closed start with its dates and amounts, stated in full: https://swarm.green/network Height on SWARM mainnet when this went out: [read on the day] https://mainnet.explore.swarm.green",
+      "notes": "Countdown opener (launch campaign T-21), merged by Marketing Desk 2026-10-09; the daily T-n posts go to the community home and the site overlay, not to X."
+    },
+    {
+      "id": "d07-a",
+      "when": "2026-10-13T07:30:00Z",
+      "notes": "Article link (Marketing Desk 2026-10-09, Tuesday 13 Oct): when Articles Medium and Dev.to sends the Dev.to URL, append to reply: \"Longer: our comparison of the privacy coins of 2026, who still hides what and how: [DEVTO-URL-1]\"",
+      "pillar": "explain",
+      "text": "A bank sees your payments. A transparent blockchain shows them to everyone, forever, and lets anyone link them. That is not a flaw in Bitcoin; it is the design. Chain-analysis firms exist because it works. The only amount nobody can analyse is the one that was never written down.",
+      "reply": "How linking works, in plain words (the common-input-ownership heuristic and friends): https://en.bitcoin.it/wiki/Privacy"
+    },
+    {
+      "id": "d07-b",
+      "when": "2026-10-13T13:30:00Z",
+      "pillar": "question",
+      "text": "If a stranger could read one year of your card statements, what would they know about you that you have never told anyone? Not asking for the answer. Asking whether there is one."
+    },
+    {
+      "id": "d08-a",
+      "when": "2026-10-14T07:30:00Z",
+      "pillar": "value",
+      "text": "Your 24 words are the wallet. Not the app, not the phone. Write them on paper, twice, and keep the copies apart. Never a photo: phone photos go to cloud backups, and backups get read. Never a text file. Anyone with the words has the money; nobody without them can recover it.",
+      "reply": "Why 24 words are enough: each list of words encodes 256 bits of randomness (BIP-39) https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
+    },
+    {
+      "id": "d08-b",
+      "when": "2026-10-14T13:30:00Z",
+      "pillar": "story",
+      "text": "In 1993 the US government built a phone chip with a government key inside. It promised the key would only be used by the good guys. One researcher broke it in a year. The argument it settled is being had again in 2026.",
+      "thread": [
+        "1/ April 1993: the Clipper chip. NSA-designed encryption for phones, with every key held in escrow by the government. The algorithm, Skipjack, was classified. \"Trust us\" was the design.",
+        "2/ 1994: Matt Blaze at AT&T Bell Labs showed the escrow field had a 16-bit checksum. Brute-force it and you keep the encryption while the government's copy of the key stops working. The backdoor was the weakest part.",
+        "3/ Industry and civil-liberties groups refused it. By 1996 the programme was dead. Nobody has since built a key escrow that only the intended party can use, because mathematics does not know who the good guys are.",
+        "4/ 2025: the EU's \"chat control\" proposal would have ordered messaging apps to scan encrypted messages. It was pulled from a vote in October 2025 after Germany joined a blocking minority. The Council settled on voluntary scanning in November. It will be back.",
+        "5/ The lesson has not changed in 33 years: a door that opens for one party opens for whoever finds the key. Which messaging app would you drop first if it added a scanner?"
+      ],
+      "media": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/MYK-78_Clipper_chip_markings.jpg/1920px-MYK-78_Clipper_chip_markings.jpg"
+      ],
+      "reply": "Sources: EFF on Clipper https://www.eff.org/deeplinks/2015/04/clipper-chips-birthday-looking-back-22-years-key-escrow-failures and eucrim on the November 2025 Council position https://eucrim.eu/news/csa-regulation-council-position-reached/\nImage: Travis Goodspeed, MYK-78 Clipper chip markings, via Wikimedia Commons, CC BY 2.0",
+      "notes": "seeds A3 and F3. Image for post 1 - the Clipper chip photo at the Crypto Museum is a good candidate; check the licence. Image cleared by Video and Creative 2026-10-09 (CC BY 2.0; crop allowed, no restyling)."
+    },
+    {
+      "id": "d09-a",
+      "when": "2026-10-15T07:30:00Z",
+      "pillar": "quote",
+      "text": "\"Watch someone long enough, and you'll find something to arrest, or just blackmail, with.\"\nBruce Schneier, 18 May 2006. The question was never whether you have something to hide. It is whether someone with power over you wants to find it.",
+      "reply": "The essay, \"The Eternal Value of Privacy\": https://www.schneier.com/essays/archives/2006/05/the_eternal_value_of.html",
+      "notes": "seed E9"
+    },
+    {
+      "id": "d09-b",
+      "when": "2026-10-15T13:30:00Z",
+      "pillar": "promo",
+      "text": "SWARM Wallet for Windows, macOS and Linux: shielded by default, a 24-word phrase, a lock code. Every address is labelled with what it is, and the wallet refuses one from the wrong network. Unsigned for now; compare the SHA-256 before you install. Open source.",
+      "reply": "Downloads with checksums: https://swarm.green/ecosystem/wallet\n17 days until anyone can run a SWARM node: 1 November, 15:42 UTC. No coins are promised."
+    },
+    {
+      "id": "d10-a",
+      "when": "2026-10-16T07:30:00Z",
+      "pillar": "story",
+      "text": "14 February 2022: Canada invoked the Emergencies Act and banks froze about 280 accounts with no court order. In January 2024 a federal judge ruled the orders unreasonable and a Charter breach. In January 2026 the appeal court agreed. The money was frozen when it mattered.",
+      "reply": "The 2024 ruling https://www.cbc.ca/news/politics/emergencies-act-federal-court-1.7091891 and the 2026 appeal https://www.cbc.ca/news/politics/convoy-protest-emergencies-act-appeal-9.7046769 A 2023 public inquiry had found the invocation justified; the courts disagreed on the financial orders.",
+      "notes": "seed D4. Politically charged; the reply names the inquiry on purpose. Do not endorse the protest in replies."
+    },
+    {
+      "id": "d10-b",
+      "when": "2026-10-16T13:30:00Z",
+      "pillar": "explain",
+      "text": "\"We kill people based on metadata.\" Michael Hayden, former NSA and CIA director, 2014. Metadata is who, when, how often, from where. In 2016 Stanford researchers used phone logs alone to infer illnesses and gun ownership. Encryption protects the words. Metadata is the rest.",
+      "reply": "The Stanford study (Mayer, Mutchler, Mitchell, PNAS 2016): https://www.pnas.org/doi/10.1073/pnas.1508081113 Hayden's remark, Johns Hopkins, April 2014: https://www.nybooks.com/online/2014/05/10/we-kill-people-based-metadata/"
+    },
+    {
+      "id": "d11-a",
+      "when": "2026-10-17T10:00:00Z",
+      "pillar": "story",
+      "text": "\"Running bitcoin.\" Hal Finney posted those two words on 11 January 2009. The next day he received the first Bitcoin transaction. Diagnosed with ALS that year, he kept writing code until he could only move his eyes. He died in 2014. The tools you use were built by people.",
+      "reply": "His own account, \"Bitcoin and Me\", written in 2013: https://bitcointalk.org/index.php?topic=155054.0",
+      "notes": "seed A9. Never imply he was Satoshi."
+    },
+    {
+      "id": "d01-a",
+      "when": "2026-10-17T16:00:00Z",
+      "pillar": "quote",
+      "text": "\"Privacy is not secrecy. A private matter is something one doesn't want the whole world to know, but a secret matter is something one doesn't want anybody to know.\"\nEric Hughes, A Cypherpunk's Manifesto, 9 March 1993. Still the clearest line on the subject.",
+      "reply": "The whole manifesto is 700 words and worth the five minutes: https://www.activism.net/cypherpunk/manifesto.html",
+      "notes": "seed A6"
+    },
+    {
+      "id": "d12-a",
+      "when": "2026-10-18T10:00:00Z",
+      "pillar": "story",
+      "text": "25 July 2025: the UK began requiring ID or a face scan to view parts of the internet. Proton VPN reported sign-ups up 1,400 percent within hours. Half of the UK App Store's top ten free apps were VPNs. People route around a checkpoint faster than a law can be written.",
+      "reply": "ITV News, 28 July 2025: https://www.itv.com/news/2025-07-28/vpn-downloads-spike-as-uk-introduces-age-checks-for-adult-online-content The percentages are the VPN companies' own.",
+      "notes": "seed F4"
+    },
+    {
+      "id": "d02-a",
+      "when": "2026-10-18T16:00:00Z",
+      "pillar": "explain",
+      "text": "How do you prove you know a secret without saying it? A 1989 paper used a cave: a ring with a locked door at the back. You walk in. I shout which side to come out of. Come out right 20 times in a row and you know the password. I never heard it. That is a zero-knowledge proof.",
+      "reply": "The paper: Quisquater, Guillou and others, \"How to Explain Zero-Knowledge Protocols to Your Children\", CRYPTO 1989 https://doi.org/10.1007/0-387-34805-0_60\nA shielded payment works the same way: the chain checks the proof and never sees the amount."
+    },
+    {
+      "id": "d13-a",
+      "when": "2026-10-19T07:30:00Z",
+      "pillar": "story",
+      "text": "In 1983 West Germans boycotted their own census. On 15 December 1983 the Constitutional Court struck down parts of it and wrote a new right into law: informational self-determination. Its reasoning: people who cannot know who knows what about them stop exercising their freedoms.",
+      "reply": "The court's English summary of the census judgment: https://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/EN/1983/12/rs19831215_1bvr020983en.html",
+      "notes": "seed C5"
+    },
+    {
+      "id": "d13-b",
+      "when": "2026-10-19T13:30:00Z",
+      "pillar": "explain",
+      "text": "Why privacy by default beats privacy as an option: a private payment hides in a crowd. If privacy is optional, the crowd is small and using it marks you out. If it is the default, the crowd is everyone. The maths is the same; the number of people inside it is the difference."
+    },
+    {
+      "id": "d14-a",
+      "when": "2026-10-20T07:30:00Z",
+      "pillar": "story",
+      "text": "July 1977: a letter signed \"J. A. Meyer\" warned the IEEE that publishing cryptography research might break export law. Meyer worked at the NSA. Martin Hellman presented his students' papers himself, so only he risked prosecution. They were published. You use them daily.",
+      "reply": "Stanford Magazine, \"Keeping Secrets\": https://stanfordmag.org/contents/keeping-secrets Whether the agency ordered the letter is disputed; its director later called it a personal initiative.",
+      "notes": "seed A4"
+    },
+    {
+      "id": "d14-b",
+      "when": "2026-10-20T13:30:00Z",
+      "notes": "Article link (Marketing Desk 2026-10-09, Tuesday 20 Oct): when the Dev.to URL arrives, append to reply: \"Longer: why every payment you make is a public record, and what a shielded payment changes: [DEVTO-URL-2]\"",
+      "pillar": "explain",
+      "text": "Five questions sort most privacy claims, for any coin or app:\n1. Default, or an option?\n2. What does the record contain?\n3. What does the server, or your ISP, still see?\n4. Who gets a share of every block, fee or sale?\n5. Has the exact code you run been reviewed, and by whom?"
+    },
+    {
+      "id": "d15-a",
+      "when": "2026-10-21T07:30:00Z",
+      "pillar": "value",
+      "text": "Five-minute check: open a browser-leak test page in your usual browser. Look for three things: the referrer it sends, your local IP address via WebRTC, and the fingerprint it builds from your fonts and canvas. Most people find all three. Each one is a setting, not a fate.",
+      "reply": "Two test pages that explain what they find: https://coveryourtracks.eff.org/ and https://browserleaks.com/"
+    },
+    {
+      "id": "d15-b",
+      "when": "2026-10-21T13:30:00Z",
+      "pillar": "story",
+      "text": "On 8 March 1971, while America watched Ali fight Frazier, eight people broke into an FBI office in Media, Pennsylvania and took every file. What they found changed the law on surveillance. A story about the people who looked.",
+      "thread": [
+        "1/ They called themselves the Citizens' Commission to Investigate the FBI and mailed the documents to journalists. Betty Medsger at the Washington Post published. The FBI never caught them; seven came forward to her in 2014.",
+        "2/ The files revealed COINTELPRO: a secret programme against civil-rights, anti-war and Black organisations. Infiltration, forged letters, pressure on employers. The targets were citizens, not spies.",
+        "3/ 1975: the Senate's Church Committee read 110,000 documents and heard 800 witnesses. It confirmed the FBI had bugged Martin Luther King Jr. and sent him an anonymous letter urging him to kill himself. The NSA had read Americans' telegrams for decades.",
+        "4/ The result was the Foreign Intelligence Surveillance Act of 1978: a court between the state and the wiretap. Not perfect. Better than nothing, which is what existed before.",
+        "5/ \"Nothing to hide\" assumes the watcher agrees with you about what counts as dangerous. King had nothing to hide. Which of your lawful beliefs would a future watcher dislike?"
+      ],
+      "reply": "Sources: the Church Committee's reports https://www.senate.gov/about/resources/pdf/church-committee-full-citations.pdf and PBS on the Media burglary https://www.pbs.org/newshour/show/unlikely-group-changed-face-fbi-retold-burglary",
+      "notes": "seeds B2 and B3. It was a crime; the thread says so by implication. Do not frame as a how-to in replies. Launch-lint advisory \"anonymous\" judged 2026-10-09 (M1): kept, it is the historical fact (the FBI letter to King)."
+    },
+    {
+      "id": "d16-a",
+      "when": "2026-10-22T07:30:00Z",
+      "pillar": "quote",
+      "text": "In 2014 Glenn Greenwald answered \"I have nothing to hide\" with an offer: email him the passwords to all your accounts, so he could read what he liked and publish what he found interesting. Not one person has taken him up on it. Everyone has a door they lock.",
+      "reply": "The talk, \"Why privacy matters\", TEDGlobal 2014: https://www.ted.com/talks/glenn_greenwald_why_privacy_matters",
+      "notes": "seed E7. Cite the argument, not the person."
+    },
+    {
+      "id": "d16-b",
+      "when": "2026-10-22T13:30:00Z",
+      "pillar": "promo",
+      "text": "SWARM Messenger: end-to-end encrypted chat between wallets, with payments inside the conversation. Sign in with your 24 words; no phone number, no account. Built from Signal's open code, on our own server, never Signal's. Desktop only, unsigned. We list what is missing.",
+      "reply": "What it does and what it does not do yet: https://swarm.green/ecosystem/messenger\n10 days until anyone can run a SWARM node: 1 November, 15:42 UTC. No coins are promised."
+    },
+    {
+      "id": "d17-a",
+      "when": "2026-10-23T07:30:00Z",
+      "pillar": "story",
+      "text": "1 December 2001: Argentina froze bank accounts. 250 pesos a week, then worth 250 dollars. The president resigned on 20 December. In 2002 dollar deposits became pesos at about 1.40 as the market passed 3. \"Your dollars are safe in the bank\" held until the bank was told to stop.",
+      "reply": "Twenty years on, from Buenos Aires: https://www.batimes.com.ar/news/argentina/argentines-recall-nations-worst-ever-crisis-20-years-on.phtml",
+      "notes": "seed D9"
+    },
+    {
+      "id": "d17-b",
+      "when": "2026-10-23T13:30:00Z",
+      "pillar": "explain",
+      "text": "A mixer and a shielded pool differ. A mixer shuffles coins between users; the amounts, entries and exits still sit on the chain. A shielded pool never writes the amount or the parties; it writes a proof that the sums balance. Different maths, and in 2025 different courtrooms.",
+      "reply": "The courtrooms: Tornado Cash delisted from US sanctions in March 2025 after a court said code is not property https://www.venable.com/insights/publications/2025/04/a-legal-whirlwind-settles-treasury-lifts-sanctions and the Samourai Wallet developers sentenced in November 2025 https://www.irs.gov/compliance/criminal-investigation/founders-of-samourai-wallet-cryptocurrency-mixing-service-sentenced-to-five-and-four-years-in-prison",
+      "notes": "seeds F7 and F9. Live legal matters; re-check status on the day."
+    },
+    {
+      "id": "d18-a",
+      "when": "2026-10-24T10:00:00Z",
+      "pillar": "story",
+      "text": "31 July 1932: Wörgl, Austria, printed its own money against the Depression. The notes lost 1 percent a month unless stamped, so people spent them. By its own account the town built roads and a bridge while the country stood still. On 1 September 1933 the central bank banned it.",
+      "media": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/87/Freigeld1.jpg"
+      ],
+      "reply": "Two views of the same experiment: Bernard Lietaer's annotated account https://bernard-lietaer.org/wp-content/uploads/2022/07/2010-The-Worgl-Experiment-Austria-1932-1933-Lietaer-annotated.pdf and a sceptical one from the Mises Institute https://mises.org/library/free-money-miracle\nImage: 1 Schilling Wörgl note (1932/33), via Wikimedia Commons, public domain",
+      "notes": "seed D13. The economic effect is disputed; the dates and the ban are not. Image cleared by Video and Creative 2026-10-09 (public domain, PD-AustrianGov; EU status safe, US status arguable, low risk: owner's call at review)."
+    },
+    {
+      "id": "d02-b",
+      "when": "2026-10-24T16:00:00Z",
+      "pillar": "promo",
+      "text": "SWARM is private money. A shielded payment keeps the sender, the receiver and the amount encrypted on the chain, and the network still verifies it, with a proof like the cave we described last Sunday. Proof of work, open source. This account is mostly about why that matters.",
+      "reply": "What it is, in one page: https://swarm.green/what-is-swarm",
+      "media": [
+        "https://swarm.green/assets/og.png"
+      ]
+    },
+    {
+      "id": "d19-a",
+      "when": "2026-10-25T10:00:00Z",
+      "notes": "Launch-lint advisory \"partners\" judged 2026-10-09 (M1): kept, the word is the point of the tip.",
+      "pillar": "value",
+      "text": "Read any privacy policy in two minutes. Search the page for three words: \"share\", \"partners\", \"retain\". The sentences around them are the policy. Everything else is decoration. If \"partners\" appears and is never listed, assume it means anyone who pays.",
+      "reply": "Someone has already done this for most big services: https://tosdr.org/"
+    },
+    {
+      "id": "d03-a",
+      "when": "2026-10-25T16:00:00Z",
+      "pillar": "story",
+      "text": "8 November 2016, 20:00: India announced that its 500 and 1,000 rupee notes, 86 percent of cash by value, would be void at midnight. Queues lasted weeks; reports counted over 80 deaths. The central bank found 99.3 percent came back. The black money was not there.",
+      "reply": "The 99.3 percent figure is from the Reserve Bank of India's 2017-18 annual report: https://m.thewire.in/article/banking/rbi-says-99-3-of-scrapped-money-returned-to-the-banking-system",
+      "notes": "seed D6"
+    },
+    {
+      "id": "d20-a",
+      "when": "2026-10-26T07:30:00Z",
+      "pillar": "story",
+      "text": "East Germany's Stasi ran about 189,000 informants at its peak, in a country of 16 million: one watcher for every 57 people. It kept the smell of suspects in sealed jars, on cloth from stolen underwear, for the dogs. When the files were opened in 1990 there were 111 kilometres.",
+      "media": [
+        "https://upload.wikimedia.org/wikipedia/commons/f/f6/Geruchskonserve_MfS_Deutsches_Spionagemuseum_Berlin.jpg"
+      ],
+      "reply": "The smell jars, with photographs: https://germanhistorydocs.org/en/a-new-germany-1990-2023/individual-odor-samples-preserved-by-the-stasi-1990s Informant counts vary by year; 189,000 is the usual peak figure.\nImage: Deutsches Spionagemuseum Berlin, Geruchskonserve MfS, via Wikimedia Commons, CC BY 4.0",
+      "notes": "seed B5 Image cleared by Video and Creative 2026-10-09 (CC BY 4.0, uploaded by the museum)."
+    },
+    {
+      "id": "d20-b",
+      "when": "2026-10-26T13:30:00Z",
+      "pillar": "promo",
+      "text": "SWARM mainnet has run since 2 October. Until 31 October, 15:42 UTC only the project's own machines mine; those blocks are in the explorer, split like every block. Then 24 hours for the waiting list; from 1 November, 15:42 UTC anyone can mine. No coins are promised.",
+      "reply": "Please keep ASICs and rented hash power off the network. The closed start explained in full, with the numbers: https://swarm.green/network The waiting list is free: https://swarm.green/waitlist\n6 days until anyone can run a SWARM node: 1 November, 15:42 UTC. No coins are promised."
+    },
+    {
+      "id": "d21-a",
+      "when": "2026-10-27T07:30:00Z",
+      "notes": "Launch-lint advisory \"secure\" judged 2026-10-09 (M1): kept, it is Kerckhoffs' rule as written in 1883. Article link (Marketing Desk 2026-10-09, Tuesday 27 Oct): when the Dev.to URL arrives, append to reply: \"Longer: what we removed from the browser, what we switched on, and the wallet in the toolbar: [DEVTO-URL-3]\"",
+      "pillar": "explain",
+      "text": "In 1883 Auguste Kerckhoffs wrote the rule cryptographers still follow: a system must stay secure even if everything about it except the key is public. Secrecy of the design is how you get a backdoor nobody can review. Code you cannot read is code you cannot check.",
+      "reply": "\"La cryptographie militaire\", 1883, with the six principles: https://www.petitcolas.net/kerckhoffs/index.html"
+    },
+    {
+      "id": "d21-b",
+      "when": "2026-10-27T13:30:00Z",
+      "pillar": "question",
+      "text": "Name one thing you still pay for in cash, and why. Not a trick question. We are trying to understand which payments people instinctively keep off the record."
+    },
+    {
+      "id": "d22-a",
+      "when": "2026-10-28T07:30:00Z",
+      "pillar": "value",
+      "text": "A separate browser profile for money, five minutes to set up: no extensions except the ones you need, bookmarks for the wallet and the exchange instead of search results, and never log in anywhere else from it. Most wallet thefts start with a search result that looked right."
+    },
+    {
+      "id": "d22-b",
+      "when": "2026-10-28T13:30:00Z",
+      "pillar": "story",
+      "text": "Five times a government switched off people's money, in democracies as well as dictatorships. None of them was long ago.",
+      "thread": [
+        "1/ 1933, United States: Executive Order 6102 required citizens to hand in their gold by 1 May at 20.67 dollars an ounce. In January 1934 the official price became 35 dollars. Owning gold was fully legal again on 31 December 1974.",
+        "2/ 2013, Cyprus: as a condition of the bailout, deposits above 100,000 euros at the Bank of Cyprus were partly converted into shares, about 47.5 percent of them. ATM limits lasted two years. A deposit is a loan to the bank; that year Europe said so out loud.",
+        "3/ 2015, Greece: banks closed on 28 June and cash withdrawals were capped at 60 euros a day. Controls were fully lifted on 1 September 2019. Four years of rationed access to your own salary, inside the euro.",
+        "4/ 2016, India: at 20:00 on 8 November the two largest notes, 86 percent of cash by value, were declared void at midnight. 99.3 percent came back to the banks. The people in the queues had never been the target; they paid anyway.",
+        "5/ 2023, Nigeria: redesigned notes with a swap deadline weeks before an election, and not enough new notes to go round. People slept outside banks. On 3 March 2023 the Supreme Court ruled the execution unconstitutional and kept the old notes legal.",
+        "6/ The pattern: the money in your account is a promise, and promises get renegotiated in a crisis. Money you hold yourself, that nobody else can see or stop, is a different kind of promise. Which of these did you live through?"
+      ],
+      "reply": "Sources: Federal Reserve History on 1933-34 https://www.federalreservehistory.org/essays/gold-reserve-act Cyprus https://www.globalbankingandfinance.com/bailing-in-depositors-lessons-from-cyprus Greece https://www.voanews.com/a/europe_greece-ends-crisis-era-capital-controls/6174987.html Nigeria https://www.africanews.com/2023/03/03/supreme-court-faults-president-buhari-on-naira-redesign-policy/",
+      "notes": "seeds D1, D7, D8, D6, D11. India's source is in d03-a. Launch-lint advisory \"price\" judged 2026-10-09 (M1): kept, the 1934 official gold price is a historical fact, not SWM."
+    },
+    {
+      "id": "d23-a",
+      "when": "2026-10-29T07:30:00Z",
+      "pillar": "quote",
+      "text": "\"No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence.\"\nArticle 12, Universal Declaration of Human Rights, 10 December 1948. Correspondence meant letters then. It means messages now. The right did not change; the envelope did.",
+      "reply": "The text, all thirty articles: https://www.ohchr.org/sites/default/files/UDHR/Documents/UDHR_Translations/eng.pdf",
+      "notes": "seed E6"
+    },
+    {
+      "id": "d23-b",
+      "when": "2026-10-29T13:30:00Z",
+      "pillar": "promo",
+      "text": "SWARM Browser, Windows pre-release: Chromium 153 from ungoogled-chromium, Google's services removed, the SWARM wallet in the toolbar, keys kept outside the browser. Not in it yet: tracker blocking, phishing lists, macOS, Linux, signed builds. Better we list it than you find out.",
+      "reply": "The full list of what is removed, what is on and what is missing: https://swarm.green/ecosystem/browser\n3 days until anyone can run a SWARM node: 1 November, 15:42 UTC. No coins are promised."
+    },
+    {
+      "id": "d24-a",
+      "when": "2026-10-30T07:30:00Z",
+      "pillar": "story",
+      "text": "Hong Kong, 2019: protesters queued to buy single MTR tickets with cash instead of tapping their Octopus cards, because a card's trip history could place them at a march. Others left coins for strangers. When a payment leaves a trail, people under pressure go back to cash.",
+      "reply": "Hong Kong Free Press, September 2019: https://hongkongfp.com/2019/09/22/explainer-communist-partys-railway-hong-kongs-respected-mtr-fell-afoul-protesters/",
+      "notes": "seed D5. Keep to the payment behaviour in replies."
+    },
+    {
+      "id": "d24-b",
+      "when": "2026-10-30T13:30:00Z",
+      "pillar": "promo",
+      "text": "Tomorrow at 15:42 UTC the waiting list gets access, in leaderboard order; on 1 November at 15:42 UTC mining opens for everyone. To prepare: install the wallet, write down the 24 words, copy your swm1 address; your node will pay there. No coins are promised.",
+      "reply": "Please keep ASICs and rented hash power off the network. The waiting list is free and asks for an email address and a swm1 address, nothing else: https://swarm.green/waitlist\n2 days until anyone can run a SWARM node: 1 November, 15:42 UTC. No coins are promised."
+    },
+    {
+      "id": "d25-a",
+      "when": "2026-10-31T10:00:00Z",
+      "pillar": "story",
+      "text": "The first Bitcoin block, 3 January 2009, carries a headline: \"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks.\" It proves the block was not made earlier. It also says why it was made. Money decided over people's heads, answered with money nobody decides.",
+      "reply": "The front page itself: https://www.thetimes03jan2009.com/",
+      "notes": "seed A8 Image 2026-10-09: no free licence for the Times page (Times Newspapers copyright; the Commons CC BY-SA copy must not be used). Use our own card D:/privacy/privacy/marketing/creative/thread-images/04-genesis-coinbase.png (1600x900, CC0) uploaded by hand in the Metricool planner, or hosted on swarm.green after the owner's go (Website Campaign Pages)."
+    },
+    {
+      "id": "d25-b",
+      "when": "2026-10-31T15:42:00Z",
+      "pillar": "promo",
+      "allow_link_in_post": true,
+      "text": "15:42 UTC. Access for the waiting list is open; downloads go out in leaderboard order over 24 hours. Public mining opens 1 November, 15:42 UTC. Check the SHA-256 before you install and keep the 24 words off the mining machine. No coins are promised.\nhttps://swarm.green/waitlist",
+      "reply": "Please keep ASICs and rented hash power off the network. Downloads with their SHA-256 checksums, as they go out: https://swarm.green/ecosystem"
+    },
+    {
+      "id": "d26-a",
+      "when": "2026-11-01T10:00:00Z",
+      "pillar": "quote",
+      "text": "\"The root problem with conventional currency is all the trust that's required to make it work. The central bank must be trusted not to debase the currency, but the history of fiat currencies is full of breaches of that trust.\"\nSatoshi Nakamoto, 11 February 2009.",
+      "reply": "The post, on the P2P Foundation forum: https://p2pfoundation.ning.com/forum/topics/bitcoin-open-source"
+    },
+    {
+      "id": "d26-b",
+      "when": "2026-11-01T15:42:00Z",
+      "pillar": "promo",
+      "allow_link_in_post": true,
+      "text": "Public mining is open. Anyone can run SWARM Node from this moment: download, compare the SHA-256, enter your swm1 address, start. It runs a full node and mines on your CPU. Same rules for everyone from here on. No coins are promised. 🐝\nhttps://swarm.green/ecosystem",
+      "reply": "Please keep ASICs and rented hash power off the network. SWARM Node with its SHA-256 checksum and the setup steps: https://swarm.green/ecosystem/node",
+      "media": [
+        "https://swarm.green/assets/og.png"
+      ]
+    },
+    {
+      "id": "d27-a",
+      "when": "2026-11-02T07:30:00Z",
+      "pillar": "explain",
+      "text": "What a block explorer can see. On a transparent chain: every address, amount and time, forever, and how they link. On a shielded chain: that a valid transaction happened, its fee, its size, and a proof. The explorer is honest either way. The question is what was written down.",
+      "reply": "See for yourself on SWARM mainnet: https://mainnet.explore.swarm.green"
+    },
+    {
+      "id": "d27-b",
+      "when": "2026-11-02T13:30:00Z",
+      "pillar": "promo",
+      "text": "Started a node yesterday? It verifies every block from genesis before it mines; that is the point. To check the chain, compare its genesis hash with the verify page and its height with the explorer. Disagree with both and you are on another network. No coins are promised.",
+      "reply": "Please keep ASICs and rented hash power off the network. The genesis hash and how to compare it: https://swarm.green/verify"
+    },
+    {
+      "id": "d28-a",
+      "when": "2026-11-03T07:30:00Z",
+      "pillar": "story",
+      "text": "December 2010: within four days PayPal, Visa and MasterCard cut off donations to WikiLeaks. No court order, no charge. The organisation said 95 percent of its income vanished. Whatever you think of the target, a payment company had shown it could switch off anyone in a week.",
+      "reply": "Forbes, 7 December 2010: https://www.forbes.com/sites/andygreenberg/2010/12/07/visa-mastercard-move-to-choke-wikileaks/ WikiLeaks' own account of the blockade: https://wikileaks.org/Banking-Blockade.html",
+      "notes": "seed D12. Polarising subject; the post takes no view of WikiLeaks."
+    },
+    {
+      "id": "d28-b",
+      "when": "2026-11-03T13:30:00Z",
+      "notes": "Article link (Marketing Desk 2026-10-09, Tuesday 3 Nov, only after owner item 316 is settled): when the Dev.to URL arrives, add as first reply: \"Longer: a messenger where the money is in the conversation, Signal's protocol, our server, no phone number: [DEVTO-URL-4]\"",
+      "pillar": "question",
+      "text": "What would you need to see before you trusted a new privacy tool with real money? Open code, an independent review, a year of uptime, a name you already know? Honest answers help us decide what to publish first."
+    },
+    {
+      "id": "d29-a",
+      "when": "2026-11-04T07:30:00Z",
+      "pillar": "value",
+      "text": "Five minutes: type your email into Have I Been Pwned. Most people find a breach they never heard of. Then two things: a different password for every site, kept in a password manager, and passkeys where offered. Reused passwords empty more wallets than wallet bugs do.",
+      "reply": "https://haveibeenpwned.com/ (run by Troy Hunt since 2013; it stores nothing you type)"
+    },
+    {
+      "id": "d29-b",
+      "when": "2026-11-04T13:30:00Z",
+      "pillar": "story",
+      "text": "Private digital money was not invented in 2008. It took forty years and about a dozen people, most of whom you have never heard of. The relay, in order:",
+      "thread": [
+        "1/ 1976: Whitfield Diffie and Martin Hellman publish public-key cryptography. 1982: David Chaum describes blind signatures, so a bank can sign a coin without seeing it. Anonymous digital cash is now possible on paper.",
+        "2/ 1990: Chaum's DigiCash launches eCash. By 1998 it has about 5,000 users and 300 merchants, and goes bankrupt. The cryptography worked. The company needed banks, and the banks did not need it.",
+        "3/ 1993: Eric Hughes posts A Cypherpunk's Manifesto. 1997: Adam Back's Hashcash makes a computer prove it did work. 1998: Wei Dai's b-money and Nick Szabo's bit gold describe money with no company behind it. None of it runs yet.",
+        "4/ 2004: Hal Finney builds reusable proof of work. 31 October 2008: a paper by Satoshi Nakamoto cites Hashcash and b-money. 3 January 2009: the first block. 12 January 2009: the first transaction, to Finney.",
+        "5/ 2013 to 2016: the same idea with the amounts hidden. Zerocoin, then Zcash, whose parameters came from a 2016 ceremony designed so that even its makers could not cheat. The shielded pool exists.",
+        "6/ Nobody on this list got rich from it at the time. Several were investigated; one kept coding while paralysed. Every tool in this story was published before it was safe to publish. Which of these names did you not know?"
+      ],
+      "reply": "Two good long reads: Bitcoin Magazine on Chaum and eCash https://bitcoinmagazine.com/culture/genesis-files-how-david-chaums-ecash-spawned-cypherpunk-dream and Radiolab on the 2016 ceremony https://radiolab.org/podcast/ceremony/transcript",
+      "notes": "seeds A4, A5, A6, A7, A9, A10. SWARM runs the Zcash protocol stack; the thread does not say so on purpose. Say it in replies if asked. Launch-lint advisory \"anonymous\" and \"Zcash\" 2026-10-09 (M1): left as is; the Zcash sentence waits for the owner's word (desk message 2026-10-09)."
+    },
+    {
+      "id": "d30-a",
+      "when": "2026-11-05T07:30:00Z",
+      "pillar": "quote",
+      "text": "\"If privacy is outlawed, only outlaws will have privacy.\"\nPhil Zimmermann, Why I Wrote PGP, 1991. He wrote it before the investigation, the book trick and the dropped case. He was describing the world he expected. It is roughly the one we got, except that the tools exist.",
+      "reply": "The essay, as updated in 1999: https://www.philzimmermann.com/EN/essays/WhyIWrotePGP.html",
+      "notes": "seed A1"
+    },
+    {
+      "id": "d30-b",
+      "when": "2026-11-05T13:30:00Z",
+      "pillar": "explain",
+      "text": "From 10 July 2027 the EU's anti-money-laundering regulation applies: cash payments to businesses capped at 10,000 euros, and crypto services may not offer anonymous accounts or handle anonymity-enhancing coins. It binds exchanges, not you. Self-custody is untouched.",
+      "reply": "Regulation (EU) 2024/1624, search EUR-Lex for 32024R1624. A plain-language summary: https://techlawpolicy.com/2025/06/eu-vs-crypto-anonymity-what-you-need-to-know/",
+      "notes": "seed F2. Never say \"the EU bans privacy coins\"; it bans them from licensed providers. Launch-lint advisory \"anonymous\" judged 2026-10-09 (M1): kept, \"anonymous accounts\" is the regulation's own term."
+    },
+    {
+      "id": "d31-a",
+      "when": "2026-11-06T07:30:00Z",
+      "pillar": "story",
+      "text": "Sweden nearly abolished cash: about 10 percent of shop purchases, says the Riksbank's 2025 report. Then the central bank asked parliament to make shops selling food, medicine and fuel accept it again. Not nostalgia: money that needs a server stops working when the server does.",
+      "reply": "Riksbank, Payments Report 2025: https://www.riksbank.se/globalassets/media/rapporter/betalningsrapport/2025/engelsk/payments-report-2025.pdf",
+      "notes": "seed F1"
+    },
+    {
+      "id": "d31-b",
+      "when": "2026-11-06T13:30:00Z",
+      "pillar": "promo",
+      "text": "One month of this account. We published a chain, a wallet, a messenger, a browser pre-release, a node, and a list of what is missing. Nobody promises you a price. SWARM is private money: shielded by default, mined by anyone since 1 November. Mined, not sold. Thank you. 🐝",
+      "reply": "https://swarm.green"
+    },
+    {
+      "id": "d03-b",
+      "when": "2026-11-07T10:00:00Z",
+      "pillar": "question",
+      "text": "A question for people who use privacy tools every day: what made you stop trusting a product that called itself private? Not the brand, the moment. We are collecting the answers for the things we have not built yet."
+    },
+    {
+      "id": "d04-a",
+      "when": "2026-11-08T10:00:00Z",
+      "pillar": "quote",
+      "text": "\"The right to be let alone, the most comprehensive of rights and the right most valued by civilized men.\"\nJustice Louis Brandeis, dissenting, 4 June 1928, in a case about wiretaps. He lost 5 to 4. The Supreme Court adopted his view in 1967. Being right took 39 years.",
+      "reply": "Olmstead v. United States (1928) and the dissent, explained by the National Constitution Center: https://constitutioncenter.org/blog/olmstead-case-was-a-watershed-for-supreme-court",
+      "notes": "seed E2"
+    },
+    {
+      "id": "d05-a",
+      "when": "2026-11-11T07:30:00Z",
+      "pillar": "explain",
+      "text": "What does a year of your bank statement reveal? Where you sleep, who you sleep with, your doctor, your church, your politics, your drinking. In the US you have no constitutional privacy interest in it; the Supreme Court decided that in 1976. The bank's records are the bank's.",
+      "reply": "United States v. Miller, 425 U.S. 435 (1976): https://supreme.justia.com/cases/federal/us/425/435/ The 1970 Bank Secrecy Act that started it was upheld in 1974.",
+      "notes": "seed D2"
+    },
+    {
+      "id": "d01-b",
+      "when": "2026-11-11T13:30:00Z",
+      "pillar": "story",
+      "text": "On 27 March 1943 a sculptor and a painter dressed as policemen walked into the Amsterdam population registry and set it on fire. They were trying to destroy a database. Here is why it mattered.",
+      "thread": [
+        "1/ The Dutch registry was excellent. It recorded every resident's address and religion. When Germany occupied the Netherlands in 1940, the occupiers did not need to find the Jews. The cards had already done it.",
+        "2/ Gerrit van der Veen, a sculptor, and Willem Arondeus, a painter, led a resistance group that drugged the guards, drenched the card files and set explosives. About 15 percent of the records burned. The rest survived.",
+        "3/ Twelve of the attackers, Arondeus among them, were executed on 1 July 1943. Van der Veen was shot in 1944. Arondeus' last message asked that people be told that homosexuals were not cowards.",
+        "4/ A well-kept database became a kill list. Nobody who built it meant that. That is the point: the harm of a record is decided by whoever holds it later, not by whoever created it.",
+        "5/ That is why we care about what gets written down at all. The safest record is the one that was never made. Which records about you exist today that you would not want in the wrong hands in ten years?"
+      ],
+      "reply": "Sources: Anne Frank House https://www.annefrank.org/en/timeline/128/the-resistance-attacks-the-population-register-of-amsterdam/ and the Dutch Resistance Museum https://www.verzetsmuseum.org/en/kennisbank/armed-resistance-1",
+      "notes": "seed C1. Image for post 1 if a licensed one is found (Verzetsmuseum has portraits of Arondeus; check the licence). Image 2026-10-09: no portrait photo cleared (USHMM 21533/21534 licence conflict, rejected). Options from Video and Creative: own text card 01-arondeus-card.png (CC0, local only) or Arondeus' own c. 1929 drawing (Rijksmuseum RP-T-1930-90, public domain, file 01b; alt text must say it is his artwork). Default: the thread runs without a picture."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+# Links the "Markdown links resolve" job (.github/workflows/docs.yml) does not check.
+# One regex per line; lychee reads this file from the repository root.
+#
+# The third-party sites cited in campaign/articles/top-privacy-coins-2026.md (other projects'
+# home pages and the news outlets behind its sources) answer automated requests inconsistently:
+# the same URL returns 200 on one run and 202 or 403 on the next. Like x.com and swarm.green
+# in the workflow's own excludes, they are checked by people, when the article is published.
+z\.cash
+getmonero\.org
+dash\.org
+firo\.org
+litecoin\.org
+decred\.org
+grin\.mw
+beam\.mw
+piratechain\.com
+horizen\.io
+oasisprotocol\.org
+railgun\.org
+zano\.org
+scrt\.network
+aztec\.network
+cointelegraph\.com
+thedefiant\.io
+halborn\.com
+decrypt\.co
+defillama\.com
+leastauthority\.com
+hackernoon\.com
+theblock\.co
+coingeek\.com
+blockworks\.co
+elliptic\.co
+justice\.gov
+govinfo\.gov
+eur-lex\.europa\.eu
+fatf-gafi\.org
+# Courts and archives cited as sources in the forum and Reddit texts (9 October 2026): the
+# Bundesverfassungsgericht resets automated connections. Checked by people when they post.
+bundesverfassungsgericht\.de
+# Wire services and outlets linked from the PR kit (campaign/pr, 9 October 2026): GlobeNewswire
+# answers automated requests with 403. People open those pages when they order or pitch.
+globenewswire\.com

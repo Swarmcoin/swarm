@@ -1,0 +1,16 @@
+{
+  "recorded": "2026-10-09, hand-written in the shape the X API v2 mentions and recent-search endpoints return after x_client._to_posts(); used by test_dry_run_fixture.py and by `python tests/rehearse.py` for a local dry-run cycle without any credentials.",
+  "mentions": [
+    {"id": "1976000000000000001", "author_handle": "privacyfan", "author_id": "11", "text": "@swarm_coin what exactly does a shielded payment hide? the amount too?"},
+    {"id": "1976000000000000002", "author_handle": "gpuminer_eu", "author_id": "12", "text": "@swarm_coin when can I start mining and with what hardware?"},
+    {"id": "1976000000000000003", "author_handle": "degen_trader", "author_id": "13", "text": "@swarm_coin wen Binance listing? what's the price target?"},
+    {"id": "1976000000000000004", "author_handle": "sec_researcher", "author_id": "14", "text": "@swarm_coin I think I found a bug in the wallet's address parser, where do I report it?"},
+    {"id": "1976000000000000005", "author_handle": "tired_user", "author_id": "15", "text": "@swarm_coin please stop replying to me"},
+    {"id": "1976000000000000006", "author_handle": "zcash_builder", "author_id": "16", "text": "@swarm_coin nice to see another Zebra-based chain. Which Zebra version are you on?"}
+  ],
+  "search": [
+    {"id": "1976000000000000101", "author_handle": "cryptocurious", "author_id": "21", "text": "Still don't get the difference between a transparent and a shielded transaction. Anyone?"},
+    {"id": "1976000000000000102", "author_handle": "monero_maxi", "author_id": "22", "text": "Optional privacy is no privacy. Change my mind."},
+    {"id": "1976000000000000103", "author_handle": "newsbot", "author_id": "23", "text": "Privacy coin pumps 40% after exchange listing rumour"}
+  ]
+}
