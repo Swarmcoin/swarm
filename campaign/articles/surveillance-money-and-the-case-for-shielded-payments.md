@@ -57,7 +57,7 @@ Shielding protects what is written to the chain, and we say so first. Your netwo
 
 ### Built on the Zcash protocol stack, unmodified
 
-We did not write the cryptography, and we did not change it. SWARM runs the Zcash protocol as implemented by Zebra, the full node built by the Zcash Foundation: the Sapling and Orchard pools, the v5 transaction format, the public proving parameters from the Zcash ceremonies. The indexer and wallet libraries are forks of Zaino and zingolib from Zingo Labs. What SWARM defines is its own network: the name `SwarmMainnet`, the genesis block, the address prefixes, the emission schedule and the allocation. The protocol page at github.com/Swarmcoin lists each item as inherited or defined.
+We did not write the cryptography, and we did not change it. SWARM runs the Zcash protocol as implemented by Zebra, the full node built by the Zcash Foundation: the shielded pool, called Ironwood and built on the Orchard protocol design, in which sender, receiver and amount are encrypted on chain, and the public proving parameters from the Zcash ceremonies. The indexer and wallet libraries are built on Zaino and zingolib from Zingo Labs. What SWARM defines is its own network: the name `SwarmMainnet`, the genesis block, the address prefixes, the emission schedule and the allocation. The protocol page at github.com/Swarmcoin lists each item as inherited or defined.
 
 ### Proof of work and the 80 / 8 / 4 / 8 split
 

@@ -4,7 +4,7 @@ description: "A comparison of the privacy coins and privacy platforms still runn
 tags: [privacy, cryptocurrency, zcash, monero]
 canonical_url: https://swarm.green/
 published: false
-lint_judged: ["privacy-claims: 'anonymity set' as the technical term and 'anonymity-enhancing coins' as the regulations' own term, in quotation marks with the EU AMLR, FATF and VARA as sources", "security-claims: 'audited' in question 5, the question whether code was audited", "exchange-hints: Binance named in a delisting of Monero reported as news", "retired-words rule: 'snapshot' in Secret Network's token migration reported as news with its date", "other-projects: Zcash, Monero and the other compared projects named as reported facts in the comparison"]
+lint_judged: ["privacy-claims: 'anonymity set' as the technical term and 'anonymity-enhancing coins' as the regulations' own term, in quotation marks with the EU AMLR, FATF and VARA as sources", "security-claims: 'audited' in question 5, the question whether code was audited", "retired-words rule: 'snapshot' in Secret Network's token migration reported as news with its date", "other-projects: Zcash, Monero and the other compared projects named as reported facts in the comparison"]
 ---
 
 *Disclosure: this article is published by the SWARM project, whose coin is one of the sixteen compared below. We describe every other project in the terms its own documentation uses, and hold SWARM to the same standard.*
@@ -35,7 +35,7 @@ The projects that remain split along one line: is privacy mandatory or optional?
 
 ## What changed in 2025 and 2026
 
-Three things changed in 2025 and 2026. Institutional attention went to Zcash: a Grayscale ETF filing, a listed company reportedly holding about 1.8% of supply, a Foundry mining pool. Zcash's Orchard shielded pool became a shared library: Dash shipped it, Pirate Chain is testing it, SWARM inherits it unmodified. And the regulatory calendar acquired a date: from 10 July 2027, EU exchanges may not serve "anonymity-enhancing coins".
+Three things changed in 2025 and 2026. Institutional attention went to Zcash: a Grayscale ETF filing, a listed company reportedly holding about 1.8% of supply, a Foundry mining pool. Zcash's Orchard shielded pool became a shared library: Dash shipped it, Pirate Chain is testing it, and SWARM's shielded pool, called Ironwood, is built on its design. And the regulatory calendar acquired a date: from 10 July 2027, EU exchanges may not serve "anonymity-enhancing coins".
 
 ## The field at a glance
 
@@ -56,7 +56,7 @@ Three things changed in 2025 and 2026. Institutional attention went to Zcash: a 
 | Aztec | zk-rollup, Noir | Per contract | Decentralised sequencers | AZTEC token; community sale 2026 | L2 going live |
 | Railgun | Shielded balances as Ethereum contracts | Opt-in | Host chain | RAIL governance token | Alive |
 | Oasis | Sapphire confidential EVM (TEE) | Per contract | PoS | 10B cap; large insider allocation | Sapphire 1.0 |
-| SWARM | Zcash stack (Sapling, Orchard), unmodified | Optional; wallet defaults to shielded | PoW Equihash 200,9 (ASIC) | 20,999,987.3152 cap; no premine; 20% of each block to 3 funds, permanently | Mainnet since 2 October 2026; closed start until 1 November 2026 |
+| SWARM | Zcash stack, shielded pool Ironwood (Orchard design) | Optional; wallet defaults to shielded | PoW Equihash 200,9 (ASIC) | 20,999,987.3152 cap; no premine; 20% of each block to 3 funds, permanently | Mainnet since 2 October 2026; closed start until 1 November 2026 |
 
 Figures marked "reported" come from third-party trackers read on 6 October 2026 and will have moved.
 
@@ -66,7 +66,7 @@ Monero remains the reference implementation of the mandatory model. Every output
 
 Its weaknesses are the known ones. Rings are a decoy scheme, and decoy selection has been the target of statistical heuristics for years. The planned fix, FCMP++, replaces the 16-member ring with a membership proof over the whole output set; a stressnet forked on 5 October 2026 and there is no mainnet date. Transactions are large compared with zk-SNARK designs. And in August 2025 the Qubic pool reportedly claimed a majority of hashrate and produced a 6-block reorganisation, a reminder that CPU-friendly mining is not automatically distributed mining.
 
-The other cost of the mandatory model is market access. Monero has been removed from Binance, OKX and Kraken's EU service, and it is the coin regulators mean by "anonymity-enhancing".
+The other cost of the mandatory model is market access. Monero has been removed from several regulated exchanges, and it is the coin regulators mean by "anonymity-enhancing".
 
 Official site: [getmonero.org](https://www.getmonero.org/).
 
@@ -120,7 +120,7 @@ Official sites: [horizen.io](https://www.horizen.io/), [scrt.network](https://sc
 
 ## SWARM
 
-SWARM is a Zcash-stack coin; SWARM mainnet has been live since 2 October 2026, 15:42 UTC. It runs the Zcash protocol as implemented by the Zebra node: consensus rules, the Sapling and Orchard pools, Equihash 200,9 and the ceremony parameters are unmodified; SWARM adds its network, its economics and its apps. Shielding is optional; SWARM Wallet defaults to a shielded address and labels every payment before sending.
+SWARM is a Zcash-stack coin; SWARM mainnet has been live since 2 October 2026, 15:42 UTC. It runs the Zcash protocol as implemented by the Zebra node: consensus rules, Equihash 200,9 and the ceremony parameters are unmodified, and its shielded pool, called Ironwood, keeps sender, receiver and amount encrypted on chain; SWARM adds its network, its economics and its apps. Shielding is optional; SWARM Wallet defaults to a shielded address and labels every payment before sending.
 
 Economics differ: 75-second blocks pay 6.25 SWM, halving every 1,680,000 blocks, for a cap of 20,999,987.3152 SWM. The genesis block holds no coins. Every block pays 80% to the miner and 20% to three published multisig addresses: 8% Core Development, 4% Grants & Ecosystem, 8% Community & Development Reserve. Unlike Zcash's Founders' Reward, the allocation never ends, and SWARM says so.
 
@@ -142,7 +142,7 @@ Five questions sort most claims.
 
 **4. Who gets a share of the issuance?** Monero, Grin, Pirate Chain and Litecoin pay nothing to a team; Zcash, Dash, Firo, Decred, Beam, Zano and SWARM all carry a founder, treasury or development allocation. None is disqualifying, but the figure belongs on the front page, with the addresses.
 
-**5. Has this specific code been audited?** "Built on audited cryptography" describes the upstream, not the fork. Firo's 2026 hard fork shows that even reviewed schemes break. Ask for the report, its date and its scope.
+**5. Has this specific code been audited?** "Built on audited cryptography" describes the upstream, not the project built on it. Firo's 2026 hard fork shows that even reviewed schemes break. Ask for the report, its date and its scope.
 
 ## The regulatory picture
 
