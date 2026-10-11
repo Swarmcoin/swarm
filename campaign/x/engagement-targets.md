@@ -51,7 +51,7 @@ replies people were glad to read; a bad week is fifty they scrolled past.
 | Who | Why | How |
 | --- | --- | --- |
 | @MiningPoolStats | The index miners read; add SWARM through their new-coin contact | Human task, see `../forums/README.md` |
-| @2MinersPool, @f2pool_official, @LuxorTechnology, @WoolyPooly, @herominers, @K1Pool | Equihash pools | Answer their technical questions in public; point to privacy-zebra and swarm-node |
+| @pool2miners (not @2MinersPool, a 404; handle from 2miners.com), @f2pool (not @f2pool_official, a 404), @LuxorTechnology, @WoolyPooly, @herominers, @K1Pool | Equihash pools | Answer their technical questions in public; point to privacy-zebra and swarm-node |
 | r/gpumining, r/CryptoMining | Miner communities | Expect "ASIC or GPU?" at once: Equihash 200,9, ASICs exist, nothing keeps anyone out |
 
 ## What we do not do
@@ -72,4 +72,8 @@ rest produce proposals.
 
 ## Handle checks
 
-Handles were last verified against the live public pages on 9 October 2026 (logged out, built-in browser). Verify a handle before the first reply to it; accounts move and die. Known: @zashi_app became @zodl_app; @techlore is not Techlore; @Blockworks_ never existed; @EFF stopped posting on X in April 2026. `x.com/search` needs a login, so the topic queries in `agent/policy.yaml` run only through the API.
+Handles were last verified against the live public pages on 9 October 2026 (logged out, built-in browser). Verify a handle before the first reply to it; accounts move and die. Known: @zashi_app became @zodl_app; @techlore is not Techlore; @Blockworks_ never existed; @EFF stopped posting on X in April 2026. `x.com/search` needs a login, so the topic queries in `agent/policy.yaml` run only through the API. 11 October 2026: @2MinersPool and @f2pool_official were 404s and are replaced by @pool2miners and @f2pool (read from the pools' own sites).
+
+## Who drafts for whom (since 11 October 2026)
+
+Desk decision D-2026-10-11-MKT-DESK-10: a daily cloud routine drafts replies to the owner board's 60 Grow-list accounts; the X Engagement Daily sheet covers mentions of @swarm_coin, topic conversations (once the API exists) and accounts not on that list; the reply agent suppresses proposals to the 60 while the routine runs. One post, one draft.
