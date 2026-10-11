@@ -128,3 +128,20 @@ def test_action_cap_per_run(tmp_path):
     results = [t["reply_to_mention"].call({"post_id": str(3000 + i), "text": "Shielded hides sender, receiver and amount."}) for i in range(12)]
     assert sum("published" in r for r in results) == POLICY.cap("max_actions_per_run")
     assert any("action cap" in r for r in results)
+
+
+def test_scheduler_is_off_unless_explicitly_enabled(tmp_path, monkeypatch):
+    """Owner decision D-2026-10-11-OWNER-X-1: Metricool publishes the calendar. A missing variable
+    means off, exactly as the workflow and OWNER-SETUP.md read it; only "1" turns the scheduler on."""
+    monkeypatch.delenv("SWARM_SOCIAL_SCHEDULER", raising=False)
+    assert Settings().scheduler_enabled is False
+    monkeypatch.setenv("SWARM_SOCIAL_SCHEDULER", "0")
+    assert Settings().scheduler_enabled is False
+    monkeypatch.setenv("SWARM_SOCIAL_SCHEDULER", "1")
+    assert Settings().scheduler_enabled is True
+    # and with it off, a due calendar post is not published
+    monkeypatch.setenv("SWARM_SOCIAL_SCHEDULER", "0")
+    when = (datetime.now(timezone.utc) - timedelta(minutes=5)).isoformat()
+    s = _settings(tmp_path, [{"id": "due", "when": when, "text": "SWARM is private money. https://swarm.green"}], dry_run=True)
+    x = DryRunClient()
+    assert run_scheduler(s, POLICY, State(s.state_path), x) == [] and x.written == []

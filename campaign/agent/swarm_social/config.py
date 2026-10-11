@@ -50,9 +50,10 @@ class Settings:
     facts_url: str = "https://swarm.green/llms-full.txt"
     status_url: str = "https://swarm.green/data/status.json"
 
-    # When Metricool publishes the calendar, the scheduler here must stay off,
-    # otherwise every scheduled post goes out twice.
-    scheduler_enabled: bool = field(default_factory=lambda: _truthy(os.getenv("SWARM_SOCIAL_SCHEDULER"), True))
+    # Metricool publishes the calendar (owner decision D-2026-10-11-OWNER-X-1), so the scheduler
+    # here is OFF unless SWARM_SOCIAL_SCHEDULER=1 is set explicitly; a missing variable means off,
+    # the same reading the workflow and OWNER-SETUP.md give it. Otherwise every post goes out twice.
+    scheduler_enabled: bool = field(default_factory=lambda: _truthy(os.getenv("SWARM_SOCIAL_SCHEDULER"), False))
 
     def x_credentials_present(self) -> bool:
         return all([self.x_api_key, self.x_api_secret, self.x_access_token, self.x_access_secret])
