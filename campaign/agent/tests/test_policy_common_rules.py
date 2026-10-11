@@ -131,6 +131,7 @@ def test_scheduler_accepts_asic_sentence_anywhere_in_the_package(tmp_path):
     cal_path.write_text(json.dumps(cal))
     s = Settings(calendar_path=cal_path, state_path=tmp_path / "state.json", queue_path=tmp_path / "q.json", policy_path=ROOT / "policy.yaml")
     s.dry_run = True
+    s.scheduler_enabled = True   # off by default since 11 October 2026; this test exercises the scheduler itself
     state = State(s.state_path)
     assert run_scheduler(s, POLICY, state, DryRunClient()) == ["call-ok"]
     refused = [e for e in state.data["log"] if e["action"] == "refused_calendar_post"]

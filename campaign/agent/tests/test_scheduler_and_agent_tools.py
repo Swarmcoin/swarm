@@ -43,7 +43,7 @@ def test_scheduler_publishes_thread_and_refuses_policy_breaks(tmp_path):
         {"id": "ok", "when": when, "text": "SWARM is private money.", "thread": ["Shielded by default.", "Transparent when you choose."], "reply": "Details: https://swarm.green"},
         {"id": "bad", "when": when, "text": "SWM to the moon 🚀"},
     ]
-    s = _settings(tmp_path, cal, dry_run=True)
+    s = _settings(tmp_path, cal, dry_run=True, scheduler_enabled=True)   # off by default since 11 October 2026
     state = State(s.state_path)
     x = DryRunClient()
     published = run_scheduler(s, POLICY, state, x)
