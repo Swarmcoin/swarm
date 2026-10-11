@@ -19,6 +19,7 @@ budget. What it may do on its own, and what it may only propose, follows X's Aut
 | Follow anyone | never | never |
 | DM anyone | never | never |
 | Answer a person who asked us to stop | never | never (opt-outs are recorded in the state) |
+| Propose a reply to one of the daily routine's target accounts (`suppressed_accounts`, `marketing/engage/targets.json`) | never | never (their mentions of us are still answered) |
 
 `auto` needs two variables: `SWARM_SOCIAL_APPROVAL=auto` **and** `SWARM_SOCIAL_X_AI_APPROVAL=<reference of
 X's written approval>`. X's Automation Rules (April 2026, II.B.3) require "prior written and explicit

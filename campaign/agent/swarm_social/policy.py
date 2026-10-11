@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -21,6 +22,27 @@ class Violation:
         return f"{self.rule}: {self.detail}"
 
 
+def _handles_in(data: Any) -> list[str]:
+    """Handles from a targets file: a list of strings, a list of objects with a handle-like field,
+    or an object holding such a list under targets/accounts/handles."""
+    if isinstance(data, dict):
+        for key in ("targets", "accounts", "handles"):
+            if isinstance(data.get(key), list):
+                return _handles_in(data[key])
+        return []
+    out: list[str] = []
+    for item in data if isinstance(data, list) else []:
+        if isinstance(item, str):
+            out.append(item.strip().lstrip("@").lower())
+        elif isinstance(item, dict):
+            for key in ("handle", "username", "x", "x_handle", "account", "screen_name"):
+                v = item.get(key)
+                if isinstance(v, str) and v.strip():
+                    out.append(v.strip().split("/")[-1].lstrip("@").lower())
+                    break
+    return [h for h in out if h]
+
+
 class Policy:
     def __init__(self, data: dict[str, Any]):
         self.data = data
@@ -36,6 +58,10 @@ class Policy:
         self.budget: dict[str, Any] = data.get("budget", {})
         self.do_not_engage = [re.compile(r) for r in data.get("do_not_engage_regex", [])]
         self.never_reply_handles = {h.lower().lstrip("@") for h in data.get("never_reply_handles", [])}
+        # Accounts another process answers (the daily routine's target list): never proposed to.
+        self.suppressed_accounts = {h.lower().lstrip("@") for h in data.get("suppressed_accounts", [])}
+        self.suppressed_accounts_files: list[str] = list(data.get("suppressed_accounts_files", []))
+        self.base_dir: Path | None = None
         self.max_replies_per_account_per_day = int(data.get("max_replies_per_account_per_day", 2))
         self.reply_once_per_post = bool(data.get("reply_once_per_post", True))
         self.max_reply_age_hours = int(data.get("max_reply_age_hours", 36))
@@ -55,7 +81,28 @@ class Policy:
     @classmethod
     def load(cls, path: Path) -> "Policy":
         with open(path, encoding="utf-8") as f:
-            return cls(yaml.safe_load(f) or {})
+            policy = cls(yaml.safe_load(f) or {})
+        policy.base_dir = Path(path).resolve().parent
+        policy.load_suppressed_files()
+        return policy
+
+    def load_suppressed_files(self, base_dir: Path | None = None) -> int:
+        """Merge the handles found in suppressed_accounts_files (relative to the policy file). A file
+        that is missing or unreadable adds nothing. Returns how many handles are suppressed now."""
+        base = base_dir or self.base_dir or Path(".")
+        for rel in self.suppressed_accounts_files:
+            path = (base / rel).resolve()
+            if not path.exists():
+                continue
+            try:
+                data = json.loads(path.read_text(encoding="utf-8"))
+            except Exception:
+                continue
+            self.suppressed_accounts |= set(_handles_in(data))
+        return len(self.suppressed_accounts)
+
+    def is_suppressed(self, handle: str) -> bool:
+        return handle.lower().lstrip("@") in self.suppressed_accounts
 
     # ----- text checks ---------------------------------------------------
 

@@ -215,6 +215,16 @@ do_not_engage_regex:
 # Accounts we never reply to (handles without @).
 never_reply_handles: []
 
+# Accounts another process drafts replies for (Marketing Desk D-2026-10-11-MKT-DESK-10: the daily
+# cloud routine drafts replies to the owner board's 60 "Grow" accounts, the owner posts by hand).
+# The agent never *proposes* a reply to a post by one of these, so the owner never sees two drafts
+# for one post. Mentions of @swarm_coin by these accounts are still answered: they opted in.
+# Handles without @, lower-case. The files are read when present (list of handles, or objects
+# with a handle/username/x/account field, or {"targets": [...]}); a missing file is not an error.
+suppressed_accounts: []
+suppressed_accounts_files:
+  - ../../marketing/engage/targets.json      # repository root: marketing/engage/targets.json
+
 # Accounts whose public posts the engagement loop may read and, when relevant, answer.
 # Tier 1: ecosystem we build on. Tier 2: privacy advocates and journalists. Tier 3: peers.
 # See ../x/engagement-targets.md for the reasoning. Lower-case handles without @.

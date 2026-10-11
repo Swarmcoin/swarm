@@ -171,9 +171,9 @@ class AgentRun:
             tier2 = privacy advocates and journalists, tier3 = peer privacy projects). Accounts rotate by day so
             every account is read a few times a week. Replies to these posts can only be *proposed* (propose_reply),
             never published directly: X forbids automated replies that the other person did not ask for."""
-            handles = run.p.targets.get(tier, [])
+            handles = [h for h in run.p.targets.get(tier, []) if not run.p.is_suppressed(h)]
             if not handles:
-                return json.dumps({"error": f"unknown tier {tier}", "tiers": list(run.p.targets)})
+                return json.dumps({"error": f"unknown or fully suppressed tier {tier}", "tiers": list(run.p.targets)})
             day = datetime.now(timezone.utc).toordinal()
             start = (day * max_accounts) % len(handles)
             chosen = [handles[(start + i) % len(handles)] for i in range(min(max_accounts, len(handles)))]
@@ -194,7 +194,10 @@ class AgentRun:
                 return json.dumps({"error": "no such query", "queries": run.p.search_queries})
             posts = run.x.search_recent(run.p.search_queries[query_index])
             keep = [p for p in posts if run.p.may_engage_with(p.text, p.author_handle)[0] and p.author_handle.lower() != run.x.me()["handle"].lower()]
-            return json.dumps({"query": run.p.search_queries[query_index], "posts": run._remember(keep)}, ensure_ascii=False)
+            suppressed = [p.author_handle for p in keep if run.p.is_suppressed(p.author_handle)]
+            keep = [p for p in keep if not run.p.is_suppressed(p.author_handle)]
+            return json.dumps({"query": run.p.search_queries[query_index], "posts": run._remember(keep),
+                               "suppressed": sorted(set(suppressed))}, ensure_ascii=False)
 
         @beta_tool
         def check_text(text: str, is_reply: bool = False) -> str:
@@ -229,6 +232,8 @@ class AgentRun:
             p = run.seen_posts.get(post_id)
             if p is None:
                 return "refused: unknown post id; read it first with get_target_posts or search_recent."
+            if run.p.is_suppressed(p.author_handle):
+                return f"refused: @{p.author_handle} is answered by the daily reply routine, not by this agent."
             if p.id in run.st.data["replied_post_ids"] or any(i["target_post_id"] == post_id for i in run.q.items):
                 return "refused: already answered or already queued."
             problems = run.p.check_text(text, is_reply=True)

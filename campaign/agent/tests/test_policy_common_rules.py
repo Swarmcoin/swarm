@@ -214,3 +214,42 @@ def test_enqueue_shares_the_queue_and_refuses_duplicates(tmp_path, capsys):
     assert "already" in tools["propose_reply"].call({"post_id": "1976000000000000101", "text": "Hello there.", "reason": "x"})
     bad = type("A", (), {"post": "1976000000000000102", "text": "SWM trades at 4.15 on Base", "author": "a", "reason": "r", "source": "sheet"})
     assert cli.cmd_enqueue(s, POLICY, State(s.state_path), bad) == 1
+
+
+# ----- Marketing Desk D-2026-10-11-MKT-DESK-10: the daily routine's target accounts are never proposed to
+
+def test_suppressed_accounts_from_yaml_and_file(tmp_path):
+    (tmp_path / "engage").mkdir()
+    (tmp_path / "engage" / "targets.json").write_text(json.dumps({"targets": [
+        {"handle": "@zooko", "why": "grow list"}, {"x": "https://x.com/naomibrockwell"}, "sethforprivacy"]}), encoding="utf-8")
+    (tmp_path / "policy.yaml").write_text(
+        "suppressed_accounts: [lopp]\nsuppressed_accounts_files: [engage/targets.json, engage/missing.json]\n"
+        "engagement_targets: {tier1: [zcash, zooko], tier2: [naomibrockwell]}\nsearch_queries: ['swarm']\n", encoding="utf-8")
+    pol = Policy.load(tmp_path / "policy.yaml")
+    assert pol.suppressed_accounts == {"lopp", "zooko", "naomibrockwell", "sethforprivacy"}
+    assert pol.is_suppressed("@Zooko") and not pol.is_suppressed("zcash")
+    # a missing file is not an error; the shipped policy loads whether or not the targets file exists
+    assert isinstance(POLICY.suppressed_accounts, set)
+
+
+def test_agent_never_proposes_to_suppressed_but_still_answers_their_mentions(tmp_path):
+    (tmp_path / "policy.yaml").write_text(
+        (ROOT / "policy.yaml").read_text(encoding="utf-8").replace("suppressed_accounts: []", "suppressed_accounts: [grow_account]"), encoding="utf-8")
+    pol = Policy.load(tmp_path / "policy.yaml")
+    assert pol.is_suppressed("grow_account")
+    s = _settings(tmp_path, approval="review")
+    now = datetime.now(timezone.utc).isoformat()
+    found = Post(id="5001", text="Thinking about shielded payments", author_handle="grow_account", created_at=now)
+    other = Post(id="5002", text="Thinking about shielded payments", author_handle="someone_else", created_at=now)
+    x = DryRunClient(seed_mentions=[_mention("5003", "grow_account", "@swarm_coin what does shielded mean?")], seed_search=[found, other])
+    run = AgentRun(s, pol, State(s.state_path), x, ReviewQueue(s.queue_path))
+    tools = {t.name: t for t in run.tools()}
+    out = json.loads(tools["search_recent"].call({"query_index": 2}))
+    assert [p["id"] for p in out["posts"]] == ["5002"] and out["suppressed"] == ["grow_account"]
+    # even if the model learned the post id elsewhere, the proposal is refused
+    run.seen_posts["5001"] = found
+    assert "daily reply routine" in tools["propose_reply"].call({"post_id": "5001", "text": "Shielded hides sender, receiver and amount.", "reason": "x"})
+    # the mention is the person opting in: answered (queued in review mode) as before
+    mentions = json.loads(tools["get_new_mentions"].call({}))
+    assert [m["id"] for m in mentions["mentions"]] == ["5003"]
+    assert "queued" in tools["reply_to_mention"].call({"post_id": "5003", "text": "The sender, the receiver and the amount."})

@@ -47,6 +47,7 @@ def cmd_status(settings: Settings, policy: Policy, state: State, args) -> int:
     print(f"mode: {'DRY RUN' if settings.dry_run else 'LIVE'}; approval: {settings.approval}; scheduler: {'on' if settings.scheduler_enabled else 'off (Metricool)'}")
     if settings.approval != "auto" and not settings.x_ai_approval:
         print("auto mode is locked until SWARM_SOCIAL_X_AI_APPROVAL holds X's written approval reference")
+    print(f"suppressed accounts (daily routine answers them, the agent never proposes): {len(policy.suppressed_accounts)}")
     opted = state.data.get("opt_out_handles", [])
     if opted:
         print(f"opted out (never answered again): {', '.join('@' + h for h in opted)}")
