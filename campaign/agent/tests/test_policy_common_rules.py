@@ -234,7 +234,7 @@ def test_suppressed_accounts_from_yaml_and_file(tmp_path):
 
 def test_agent_never_proposes_to_suppressed_but_still_answers_their_mentions(tmp_path):
     (tmp_path / "policy.yaml").write_text(
-        (ROOT / "policy.yaml").read_text(encoding="utf-8").replace("suppressed_accounts: []", "suppressed_accounts: [grow_account]"), encoding="utf-8")
+        (ROOT / "policy.yaml").read_text(encoding="utf-8").replace("suppressed_accounts:\n", "suppressed_accounts:\n  - grow_account\n", 1), encoding="utf-8")
     pol = Policy.load(tmp_path / "policy.yaml")
     assert pol.is_suppressed("grow_account")
     s = _settings(tmp_path, approval="review")
