@@ -3,7 +3,7 @@
 > **Since 11 October 2026 Metricool publishes the calendar and the agent only handles replies
 > (your decision D-2026-10-11-OWNER-X-1; first post went out 14:37 UTC).** Before any live run the
 > repository variable `SWARM_SOCIAL_SCHEDULER` must be `0`, otherwise every calendar post goes out
-> twice. Since 29df31e the workflow treats a missing variable as `0`, so the scheduler is off
+> twice. Since 11 October the workflow treats a missing variable as `0`, so the scheduler is off
 > unless someone sets it to `1`; set the variable to `0` explicitly anyway in stage 1 (step 6)
 > so the state is written down, and keep review mode (item 444).
 
