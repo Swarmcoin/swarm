@@ -12,8 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Check links
+        # campaign/research (citations), campaign/x/calendar.md (source replies) and the texts people publish by
+        # hand (campaign/articles, reddit, forums, pr) cite archives, courts and newspapers that answer automated
+        # requests inconsistently; people check those links when they publish. SWARM's own links in those texts
+        # are held to the official hosts by campaign/tools/check_prose.py instead.
         uses: lycheeverse/lychee-action@v2
         with:
           # x.com answers 403 to robots; the SWARM hosts rate-limit them. Both are checked by people, not by this job.
-          args: --no-progress --exclude-all-private --accept 200,204,429 --timeout 30 --exclude 'x\.com' --exclude 'swarm\.green' './**/*.md'
+          args: --no-progress --exclude-all-private --accept 200,204,429 --timeout 30 --exclude 'x\.com' --exclude 'swarm\.green' --exclude-path 'campaign/research' --exclude-path 'campaign/x/calendar.md' --exclude-path 'campaign/articles' --exclude-path 'campaign/reddit' --exclude-path 'campaign/forums' --exclude-path 'campaign/pr' './**/*.md'
           fail: true
