@@ -221,7 +221,75 @@ never_reply_handles: []
 # for one post. Mentions of @swarm_coin by these accounts are still answered: they opted in.
 # Handles without @, lower-case. The files are read when present (list of handles, or objects
 # with a handle/username/x/account field, or {"targets": [...]}); a missing file is not an error.
-suppressed_accounts: []
+# The 60 Grow-list accounts, pasted from the vault export marketing/engagement/grow-list-2026-10-11.txt
+# (Marketing Desk, 2026-10-11 15:44 UTC) because the repository file is not reachable from this PC;
+# the vault export is the source until marketing/engage/targets.json lands on a reachable branch.
+# Four rows of the export do not resolve on X (2minerspool, f2pool_official, theblock__, eff); the
+# real accounts pool2miners, f2pool and theblockco are suppressed as well, as the routine moves to them.
+suppressed_accounts:
+  - 2minerspool
+  - a_greenberg
+  - aantonop
+  - adam3us
+  - bankless
+  - beamprivacy
+  - beincrypto
+  - bitcoinmagazine
+  - blockworks
+  - brave
+  - camirusso
+  - chainalysis
+  - coindesk
+  - coingecko
+  - coinmarketcap
+  - cointelegraph
+  - cryptoslate
+  - decryptmedia
+  - douglastuman
+  - eff
+  - electriccoinco
+  - f2pool_official
+  - firoorg
+  - glassnode
+  - grincoin
+  - hashrateindex
+  - herominers
+  - k1pool
+  - lopp
+  - luxortechnology
+  - matthew_d_green
+  - miningpoolstats
+  - monero
+  - monerotalk
+  - mullvadnet
+  - naomibrockwell
+  - optoutpod
+  - pirate_chain
+  - privacy_guides
+  - protonprivacy
+  - railgun_project
+  - secretnetwork
+  - sethforprivacy
+  - shieldedlabs
+  - signalapp
+  - snowden
+  - techloreinc
+  - the_hatedone_
+  - theblock__
+  - torproject
+  - woolypooly
+  - wublockchain
+  - zano_project
+  - zcash
+  - zcashcommgrants
+  - zcashfoundation
+  - zechub
+  - zingolabs
+  - zodl_app
+  - zooko
+  - pool2miners
+  - f2pool
+  - theblockco
 suppressed_accounts_files:
   - ../../marketing/engage/targets.json      # repository root: marketing/engage/targets.json
 
