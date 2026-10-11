@@ -1,4 +1,11 @@
-# Owner setup for the @swarm_coin agent (verified 9 October 2026)
+# Owner setup for the @swarm_coin agent (verified 9 October 2026; scheduler rule added 11 October)
+
+> **Since 11 October 2026 Metricool publishes the calendar and the agent only handles replies
+> (your decision D-2026-10-11-OWNER-X-1; first post went out 14:37 UTC).** Before any live run the
+> repository variable `SWARM_SOCIAL_SCHEDULER` must be `0`, otherwise every calendar post goes out
+> twice. Since 29df31e the workflow treats a missing variable as `0`, so the scheduler is off
+> unless someone sets it to `1`; set the variable to `0` explicitly anyway in stage 1 (step 6)
+> so the state is written down, and keep review mode (item 444).
 
 What you, and only you, do so that `swarm-social` can run from GitHub Actions. Agents never hold
 these tokens, never set the variables and never read the secrets. Every step below was checked
@@ -133,7 +140,7 @@ agent session reads three days of summaries and reports.
 | --- | --- | --- |
 | `SWARM_SOCIAL_LIVE` | `0` | dry run (the default when the variable is missing) |
 | `SWARM_SOCIAL_APPROVAL` | `review` | everything waits for a human (the default) |
-| `SWARM_SOCIAL_SCHEDULER` | `0` **if** Metricool publishes the calendar, otherwise leave it unset | prevents double posting |
+| `SWARM_SOCIAL_SCHEDULER` | `0` **required**: Metricool publishes the calendar since 11 October 2026 (D-2026-10-11-OWNER-X-1) | prevents double posting; the workflow defaults to `0` when the variable is missing |
 
 **Stage 2, review mode.** Only after the agent session recommends it in writing: set
 `SWARM_SOCIAL_LIVE` to `1`. Mentions are still answered only after your approval: once a day

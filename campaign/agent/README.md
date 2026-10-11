@@ -54,7 +54,7 @@ sent. Without `ANTHROPIC_API_KEY`, `engage` cannot run; `post-due` does not need
 | `SWARM_SOCIAL_LIVE` | `1` to publish. Default: dry run |
 | `SWARM_SOCIAL_APPROVAL` | `review` (default) or `auto` |
 | `SWARM_SOCIAL_X_AI_APPROVAL` | reference of X's written approval for an AI reply bot; empty = `auto` is ignored |
-| `SWARM_SOCIAL_SCHEDULER` | `0` when Metricool owns the calendar |
+| `SWARM_SOCIAL_SCHEDULER` | `0` (Metricool owns the calendar since 11 October 2026; the workflow defaults to `0`, only `1` lets the agent post the calendar) |
 | `SWARM_SOCIAL_MODEL`, `SWARM_SOCIAL_EFFORT` | default `claude-opus-5-5`, `medium` |
 | `X_API_KEY`, `X_API_SECRET`, `X_ACCESS_TOKEN`, `X_ACCESS_SECRET` | OAuth 1.0a user context for @swarm_coin |
 | `X_BEARER_TOKEN` | optional |

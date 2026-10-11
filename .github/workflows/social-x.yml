@@ -13,7 +13,9 @@
 #   SWARM_SOCIAL_X_AI_APPROVAL  reference (date or ticket) of X's written approval for an AI reply bot
 #                               (X Automation Rules, April 2026, II.B.3). Stage 3: without it "auto"
 #                               is ignored and the run stays in review mode.
-#   SWARM_SOCIAL_SCHEDULER      "0" when Metricool publishes the calendar, so posts do not go out twice
+#   SWARM_SOCIAL_SCHEDULER      Metricool publishes the calendar since 11 October 2026 (owner decision
+#                               D-2026-10-11-OWNER-X-1): the agent only replies. Missing or "0" = scheduler
+#                               off (default). Only "1" would let this workflow post the calendar.
 #   SWARM_SOCIAL_EFFORT         "medium" (default) | "low" | "high"
 #
 # The cron only runs on the repository's default branch; until the pull request is merged use
@@ -58,7 +60,7 @@ jobs:
       SWARM_SOCIAL_LIVE: ${{ vars.SWARM_SOCIAL_LIVE }}
       SWARM_SOCIAL_APPROVAL: ${{ vars.SWARM_SOCIAL_APPROVAL || 'review' }}
       SWARM_SOCIAL_X_AI_APPROVAL: ${{ vars.SWARM_SOCIAL_X_AI_APPROVAL }}
-      SWARM_SOCIAL_SCHEDULER: ${{ vars.SWARM_SOCIAL_SCHEDULER || '1' }}
+      SWARM_SOCIAL_SCHEDULER: ${{ vars.SWARM_SOCIAL_SCHEDULER || '0' }}
       SWARM_SOCIAL_EFFORT: ${{ vars.SWARM_SOCIAL_EFFORT || 'medium' }}
     steps:
       - uses: actions/checkout@v4
