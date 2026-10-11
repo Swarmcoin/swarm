@@ -3,6 +3,16 @@
 Built from `calendar.yaml`; edit that file, then run `python tools/build_calendar.py`.
 
 
+## Sunday 11 October 2026
+
+**14:37 UTC** · `d09-a` · quote
+
+> "Watch someone long enough, and you'll find something to arrest, or just blackmail, with."  
+> Bruce Schneier, 18 May 2006. The question was never whether you have something to hide. It is whether someone with power over you wants to find it.
+>
+> ↳ *first reply:* The essay, "The Eternal Value of Privacy": https://www.schneier.com/essays/archives/2006/05/the_eternal_value_of.html
+
+
 ## Monday 12 October 2026
 
 **07:30 UTC** · `d06-a` · story
@@ -11,13 +21,11 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 >
 > ↳ *first reply:* Zimmermann's own note on the day the case was dropped, 11 January 1996: https://www.mit.edu/~prz/EN/news/PRZ_case_dropped.html
 
-**13:30 UTC** · `d06-b` · value
+**13:30 UTC** · `d06-b` · story
 
-> Thirty seconds that protect your money. Before you install a wallet, check its SHA-256:  
-> Linux: sha256sum file  
-> macOS: shasum -a 256 file  
-> Windows: Get-FileHash file  
-> Compare it with the download page. One character different means a different file. Do not install it.
+> On 20 February 2016 linuxmint.com handed out an operating system with a backdoor. The site had been hacked; the file looked normal. Those who checked its hash against a second source saw the mismatch. Everyone else installed it. That is what the SHA-256 line is for.
+>
+> ↳ *first reply:* The Linux Mint team's own account, 21 February 2016: https://blog.linuxmint.com/?p=2994 Thirty seconds: Linux sha256sum FILE, macOS shasum -a 256 FILE, Windows Get-FileHash FILE; compare every character. Every SWARM download lists its SHA-256: https://swarm.green/ecosystem
 
 **16:00 UTC** · `c-t21` · promo
 
@@ -61,12 +69,12 @@ Built from `calendar.yaml`; edit that file, then run `python tools/build_calenda
 
 ## Thursday 15 October 2026
 
-**07:30 UTC** · `d09-a` · quote
+**07:30 UTC** · `d09-q` · quote
 
-> "Watch someone long enough, and you'll find something to arrest, or just blackmail, with."  
-> Bruce Schneier, 18 May 2006. The question was never whether you have something to hide. It is whether someone with power over you wants to find it.
+> "Arguing that you don't care about the right to privacy because you have nothing to hide is no different than saying you don't care about free speech because you have nothing to say."  
+> Edward Snowden, Reddit AMA, 21 May 2015.
 >
-> ↳ *first reply:* The essay, "The Eternal Value of Privacy": https://www.schneier.com/essays/archives/2006/05/the_eternal_value_of.html
+> ↳ *first reply:* The comment, in the r/IAmA thread of 21 May 2015: https://www.reddit.com/r/IAmA/comments/36ru89/just_days_left_to_kill_mass_surveillance_under/crglgh2/
 
 **13:30 UTC** · `d09-b` · promo
 

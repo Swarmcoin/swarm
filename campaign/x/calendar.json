@@ -1,7 +1,16 @@
 {
-  "built": "2026-10-09T16:58:08+00:00",
+  "built": "2026-10-11T14:57:11+00:00",
   "source": "x/calendar.yaml",
   "posts": [
+    {
+      "id": "d09-a",
+      "when": "2026-10-11T14:37:00Z",
+      "pillar": "quote",
+      "posted": "2026-10-11T14:37:00Z",
+      "text": "\"Watch someone long enough, and you'll find something to arrest, or just blackmail, with.\"\nBruce Schneier, 18 May 2006. The question was never whether you have something to hide. It is whether someone with power over you wants to find it.",
+      "reply": "The essay, \"The Eternal Value of Privacy\": https://www.schneier.com/essays/archives/2006/05/the_eternal_value_of.html",
+      "notes": "seed E9. POSTED live 2026-10-11 14:37 UTC (Metricool API test, D-2026-10-11-OWNER-X-1); do not schedule again. Owner: \"awesome, more like this\"."
+    },
     {
       "id": "d06-a",
       "when": "2026-10-12T07:30:00Z",
@@ -13,8 +22,10 @@
     {
       "id": "d06-b",
       "when": "2026-10-12T13:30:00Z",
-      "pillar": "value",
-      "text": "Thirty seconds that protect your money. Before you install a wallet, check its SHA-256:\nLinux: sha256sum file\nmacOS: shasum -a 256 file\nWindows: Get-FileHash file\nCompare it with the download page. One character different means a different file. Do not install it."
+      "pillar": "story",
+      "text": "On 20 February 2016 linuxmint.com handed out an operating system with a backdoor. The site had been hacked; the file looked normal. Those who checked its hash against a second source saw the mismatch. Everyone else installed it. That is what the SHA-256 line is for.",
+      "reply": "The Linux Mint team's own account, 21 February 2016: https://blog.linuxmint.com/?p=2994\nThirty seconds: Linux sha256sum FILE, macOS shasum -a 256 FILE, Windows Get-FileHash FILE; compare every character. Every SWARM download lists its SHA-256: https://swarm.green/ecosystem",
+      "notes": "Linux Mint 17.3 Cinnamon ISO, served 20 February 2016 from a hacked site, blog post of 21 February 2016 (read 2026-10-11). The checksum on the hacked page could have been changed too, hence \"from a second place\". Owner hold of 2026-10-11 applies to the old text; this version needs the owner's OK on the board."
     },
     {
       "id": "c-t21",
@@ -22,7 +33,7 @@
       "pillar": "promo",
       "text": "In 20 days, on 1 November at 15:42 UTC, anyone can mine SWARM. No sale, no VC round. 80 percent of every block to the miner who found it, 20 percent to three published project addresses. Until 31 October only the project's own machines mine. No coins are promised.",
       "reply": "Please keep ASICs and rented hash power off the network. The closed start with its dates and amounts, stated in full: https://swarm.green/network Height on SWARM mainnet when this went out: [read on the day] https://mainnet.explore.swarm.green",
-      "notes": "Countdown opener (launch campaign T-21), merged by Marketing Desk 2026-10-09; the daily T-n posts go to the community home and the site overlay, not to X."
+      "notes": "Countdown opener (launch campaign T-21), merged by Marketing Desk 2026-10-09; the daily T-n posts go to the community home and the site overlay, not to X. OPERATOR RULE (Desk task 3, 2026-10-11): the reply keeps \"[read on the day]\" in the source; the Metricool operator replaces it with the current block height read from https://mainnet.explore.swarm.green at posting time, and the post stays a DRAFT until that is done."
     },
     {
       "id": "d07-a",
@@ -64,12 +75,12 @@
       "notes": "seeds A3 and F3. Image for post 1 - the Clipper chip photo at the Crypto Museum is a good candidate; check the licence. Image cleared by Video and Creative 2026-10-09 (CC BY 2.0; crop allowed, no restyling)."
     },
     {
-      "id": "d09-a",
+      "id": "d09-q",
       "when": "2026-10-15T07:30:00Z",
       "pillar": "quote",
-      "text": "\"Watch someone long enough, and you'll find something to arrest, or just blackmail, with.\"\nBruce Schneier, 18 May 2006. The question was never whether you have something to hide. It is whether someone with power over you wants to find it.",
-      "reply": "The essay, \"The Eternal Value of Privacy\": https://www.schneier.com/essays/archives/2006/05/the_eternal_value_of.html",
-      "notes": "seed E9"
+      "text": "\"Arguing that you don't care about the right to privacy because you have nothing to hide is no different than saying you don't care about free speech because you have nothing to say.\"\nEdward Snowden, Reddit AMA, 21 May 2015.",
+      "reply": "The comment, in the r/IAmA thread of 21 May 2015: https://www.reddit.com/r/IAmA/comments/36ru89/just_days_left_to_kill_mass_surveillance_under/crglgh2/",
+      "notes": "Added 2026-10-11 for the slot d09-a left (owner wants more quotes from privacy voices). Wording and source checked against Wikiquote's citation (Reddit r/IAmA, 21 May 2015) on 2026-10-11; reddit itself not reachable from the session, so the operator opens the link once before posting."
     },
     {
       "id": "d09-b",

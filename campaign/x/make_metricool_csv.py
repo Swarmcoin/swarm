@@ -132,6 +132,7 @@ def write_threads(path, posts):
 def main():
     data = json.loads(CALENDAR.read_text(encoding="utf-8"))
     posts = sorted(data["posts"], key=lambda p: parse_utc(p["when"]))
+    posts = [p for p in posts if not p.get("posted")]  # already published outside the schedule (e.g. d09-a on 2026-10-11); never load again
     part1, part2 = posts[:PART1_SIZE], posts[PART1_SIZE:]
     write_csv(PART1, part1)
     write_csv(PART2, part2)
